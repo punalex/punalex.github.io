@@ -179,7 +179,8 @@ var timeslot = [
 [357291,"2020年6月20日(六) 晚上8:00-8:30"]
 ];
 function query() {
-  document.getElementById("time").innerHTML = timeslot.join().split(',')[timeslot.join().split(',').indexOf(document.getElementById('member').innerHTML)+1];
+  //document.getElementById("time").innerHTML = timeslot.join().split(',')[timeslot.join().split(',').indexOf(document.getElementById('member').innerHTML)+1];
+  document.getElementById("time").innerHTML = document.getElementById('member').innerHTML;
 }
 </SCRIPT>
 <LABEL for="member">請輸入會員號碼 </LABEL><INPUT type="number" id="member" name="member">
