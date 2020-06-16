@@ -6,7 +6,7 @@
 </TITLE>
 </HEAD>
 <BODY>
-＜pre>
+<PRE>
 注意事項：
 - 因籤數有限，我們將於20/6/2020(六)完成所有會員優先報名。
 - 因疫情關係，請會員按抽籤結果之時段到達中心3樓報名，避免過早或延遲到達，減少人流聚集。
@@ -16,7 +16,7 @@
 3. 足夠現金/支票
 4. 已填妥之報名表及健康申報表 (每位參加者1份)
 - 如欲退回100周年會費優惠，請亦帶備會員費之收據。
-</pre>
+</PRE>
 <SCRIPT TYPE="text/javascript">
 var timeslot = [
 [357002,2020年6月20日(六) 上午10:30-11:00],
@@ -178,12 +178,12 @@ var timeslot = [
 [357137,2020年6月20日(六) 晚上8:00-8:30],
 [357291,2020年6月20日(六) 晚上8:00-8:30]
 ];
-function submit() {
+function query() {
 document.getElementById('time').innerHTML = timeslot.join().split(',').indexOf(document.getElementById('member').innerHTML));
 }
 </SCRIPT>
 <LABEL for="member">請輸入會員號碼 </LABEL><INPUT type="number" id="member" name="member">
-<BUTTON onclick="submit()">確定</button>
+<BUTTON onclick="query()">確定</button>
 <BR>
 <DIV id="time">
 </DIV>
