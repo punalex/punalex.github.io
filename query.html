@@ -2,11 +2,15 @@
 <HEAD>
 <META charset="UTF-8">
 <TITLE>
-香港基督教女青年會樂華綜合社會服務處 2020暑期活動抽籤結果
+香港基督教女青年會樂華綜合社會服務處 暑期活動2020 會員優先報名時段抽籤結果
 </TITLE>
 </HEAD>
 <BODY>
-<PRE>
+<PRE STYLE="font-size:150%">
+<H1>
+香港基督教女青年會
+樂華綜合社會服務處</H1>
+<H2>暑期活動2020 會員優先報名時段抽籤結果</H2>
 注意事項：
 - 因籤數有限，我們將於20/6/2020(六)完成所有會員優先報名。
 - 因疫情關係，請會員按抽籤結果之時段到達中心3樓報名，避免過早或延遲到達，減少人流聚集。
@@ -16,6 +20,7 @@
 3. 足夠現金/支票
 4. 已填妥之報名表及健康申報表 (每位參加者1份)
 - 如欲退回100周年會費優惠，請亦帶備會員費之收據。
+
 </PRE>
 <SCRIPT TYPE="text/javascript">
 var timeslot = [
@@ -179,13 +184,19 @@ var timeslot = [
 [357291,"2020年6月20日(六) 晚上8:00-8:30"]
 ];
 function query() {
-  //document.getElementById("time").innerHTML = timeslot.join().split(',')[timeslot.join().split(',').indexOf(document.getElementById('member').innerHTML)+1];
-  document.getElementById("time").innerHTML = document.getElementById('member').innerHTML;
+var found="";
+for (var i=0; i<timeslot.length; i++){
+  if (timeslot[i][0] == document.getElementById('member').value)
+    found = timeslot[i][1];
+}
+document.getElementById("result").innerHTML = "會員號號 - "+document.getElementById('member').value;
+document.getElementById("time").innerHTML = "報名時間 - "+found;
 }
 </SCRIPT>
 <LABEL for="member">請輸入會員號碼 </LABEL><INPUT type="number" id="member" name="member">
 <BUTTON onclick="query()">確定</button>
-<BR>
-<DIV id="time"></DIV>
+<BR><BR>
+<DIV id="result" style="color: red"></DIV>
+<DIV id="time" style="color: red"></DIV>
 <BODY>
 </HTML>
