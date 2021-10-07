@@ -1,0 +1,1 @@
+{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"URL":"http://192.168.1.1\n","機樓名":"YTG"},"geometry":{"type":"Point","coordinates":[114.232396,22.310915]}},{"type":"Feature","properties":{"機樓名":"KTG"},"geometry":{"type":"Point","coordinates":[114.223647,22.313078]}}],"crs":{"type":"name","properties":{"name":"EPSG:4326"}}}
