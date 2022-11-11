@@ -10,9 +10,7 @@ function LoadHash(){
 		
 	if (clickid != ''){
 		xmlhttp.onreadystatechange = function(){
-			alert(xmlhttp.status);
 			if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
-				alert("test"+xmlhttp.responseText+"))");
 				replacehtml(xmlhttp.responseText);
 //				Menu_Out();
 //				Resize((size == '-l')?(3):((size == '-s')?(-3):(0)));
