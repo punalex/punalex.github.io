@@ -29,6 +29,10 @@ function LoadHash(){
 $(window).on('hashchange', function(){
 	LoadHash();
 })
+function OnClick() {
+	clickid = (this.id != undefined)?(this.id):((window.location.href.indexOf('#') != -1 && window.location.href.indexOf('!') != -1 && window.location.href.split("!")[1] != '')?(window.location.href.split("!")[1]):('main'));
+	location.hash = ((clickid.substr(0, 4) == 'main')?('#!'):((location.hash == '#!'+clickid)?('#!'+clickid):('#!'+clickid)));
+}
 function replacehtml(text){
 	$('#main').html(text);
 	$('#login').unbind('click');
