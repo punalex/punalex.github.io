@@ -31,6 +31,12 @@ $(window).on('hashchange', function(){
 })
 function replacehtml(text){
 	$('#main').html(text);
+	$('#login').unbind('click');
+	$('#howlogin').unbind('click');
+	$('#howgroup').unbind('click');
+	$('#login').click(OnClick);
+	$('#howlogin').click(OnClick);
+	$('#howgroup').click(OnClick);
 	$('html,body').animate({scrollTop:0}, 'slow');
 }
 $(document).ready(function(){
