@@ -17,8 +17,10 @@ function LoadHash(){
 			}
 		}
 		if (clickid.substr(0, 4) == 'main'){
-			$(document).prop('title', '待定');
 			xmlhttp.open('GET', 'content/main.html?'+timetag, true);
+		}
+		else if (clickid.substr(0, 5) == 'login'){
+			xmlhttp.open('GET', 'content/info.html?'+timetag, true);
 		}
 		else if (clickid.substr(0, 7) == 'aboutus'){
 			xmlhttp.open('GET', 'content/aboutus.html?time='+timetag, true);
@@ -42,7 +44,21 @@ function replacehtml(text){
 	$('#howlogin').click(OnClick);
 	$('#howgroup').click(OnClick);
 	$('html,body').animate({scrollTop:0}, 'slow');
+	direction();
+}
+function direction(){
+	if (window.orientation == 90 || window.orientation == -90 || (window.orientation == undefined && $(window).width() >= $(window).height())){
+		$('#cssland').removeAttr("disabled");
+		$('#cssport').attr("disabled", "disabled");
+	}
+	else if (window.orientation == 0 || window.orientation == 180 || (window.orientation == undefined && $(window).width() < $(window).height())){
+		$('#cssport').removeAttr("disabled");
+		$('#cssland').attr("disabled", "disabled");
+	}
 }
 $(document).ready(function(){
 	LoadHash();
+})
+$(window).on('orientationchange', function(){
+	direction();
 })
