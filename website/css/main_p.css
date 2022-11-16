@@ -155,45 +155,44 @@
 	height			: 21vh;
 }
 #buttonbox{
-	height			: 12.5vh;
-	margin-left		: 4vw;
+	margin-left		: 5vw;
+	margin-right	: 5vw;
 	margin-top		: 4vh;
 }
-#infobtn{
-	width			: 22vw;
-	height			: 22vw;
+#info{
+	width			: 21vw;
+	height			: 21vw;
 }
-#supportbtn{
-	width			: 22vw;
-	height			: 22vw;
-	margin-left		: 0.5vh;
+#support{
+	width			: 21vw;
+	height			: 21vw;
+	margin-left		: 1.5vw;
 }
-#membtn{
-	width			: 22vw;
-	height			: 22vw;
-	margin-left		: 0.5vh;
+#member{
+	width			: 21vw;
+	height			: 21vw;
+	margin-left		: 1.5vw;
 }
-#timebtn{
-	width			: 22vw;
-	height			: 22vw;
-	margin-left		: 0.5vh;
+#timetable{
+	width			: 21vw;
+	height			: 21vw;
+	margin-left		: 1.5vw;
 }
-#infoframe{
-	left			: 10%;
-	top				: 21.5%;
-	width			: 79vw;
-	height			: 71.5vh;
+#whiteframe{
+	left			: 10vw;
+	top				: calc(21vw + 7vh);
+	width			: 80vw;
+	height			: calc(100vh - 21vw - 11vh);
 	position		: absolute;
 	display			: block;
 	background-color	: #FFFFFF;
 	border-radius	: 15px;
 }
-#infotitle{
+#title{
 	position		: absolute;
-	top				: 18%;
-	right			: 5%;
-	width			: 20vh;
-	height			: 7vh;
+	top				: calc(21vw + 4.5vh);
+	right			: 5vw;
+	height			: 5.5vh;
 }
 #infolabel{
 	display			: inline-block;
@@ -214,15 +213,18 @@
 	margin-bottom	: 1vh;
 }
 #nick{
-	font-size		: 3.5vh;
+	font-size		: 2.5vh;
 	vertical-align	: top;
 	margin-top		: 19.5vh;
 	outline			: none!important;
 	border			: 0;
 	margin-left		: 2vw;
-	width			: 42.5vw;
+	width			: calc(67vw - 10vh);
 	background-color	: #E6DCDB;
 	border-radius	: 15px;
+	padding-left	: 1vw;
+	padding-top		: 0.5vh;
+	padding-bottom	: 0.5vh;
 }
 #grouptext{
 	margin-left		: 5vw;
@@ -235,15 +237,18 @@
 	margin-bottom	: 1vh;
 }
 #group{
-	font-size		: 3.5vh;
+	font-size		: 2.5vh;
 	vertical-align	: top;
 	margin-top		: 2.4vh;
 	outline			: none!important;
 	border			: 0;
 	margin-left		: 2vw;
-	width			: 42.5vw;
+	width			: calc(67vw - 10vh);
 	background-color	: #E6DCDB;
 	border-radius	: 15px;
+	padding-left	: 1vw;
+	padding-top		: 0.5vh;
+	padding-bottom	: 0.5vh;
 }
 #liketext{
 	margin-left		: 5vw;
@@ -266,15 +271,18 @@
 	margin-bottom	: 1vh;
 }
 #like{
-	font-size		: 3.5vh;
+	font-size		: 2.5vh;
 	vertical-align	: top;
 	margin-top		: 2.4vh;
 	outline			: none!important;
 	border			: 0;
 	margin-left		: 2vw;
-	width			: 42.5vw;
+	width			: calc(67vw - 10vh);
 	background-color	: #E6DCDB;
 	border-radius	: 15px;
+	padding-left	: 1vw;
+	padding-top		: 0.5vh;
+	padding-bottom	: 0.5vh;
 }
 #goodtext{
 	margin-left		: 5vw;
@@ -287,15 +295,18 @@
 	margin-bottom	: 1vh;
 }
 #good{
-	font-size		: 3.5vh;
+	font-size		: 2.5vh;
 	vertical-align	: top;
 	margin-top		: 2.4vh;
 	outline			: none!important;
 	border			: 0;
 	margin-left		: 2vw;
-	width			: 42.5vw;
+	width			: calc(67vw - 10vh);
 	background-color	: #E6DCDB;
 	border-radius	: 15px;
+	padding-left	: 1vw;
+	padding-top		: 0.5vh;
+	padding-bottom	: 0.5vh;
 }
 #occutext{
 	margin-left		: 5vw;
@@ -318,15 +329,18 @@
 	margin-bottom	: 1vh;
 }
 #occu{
-	font-size		: 3.5vh;
+	font-size		: 2.5vh;
 	vertical-align	: top;
 	margin-top		: 2.4vh;
 	outline			: none!important;
 	border			: 0;
 	margin-left		: 2vw;
-	width			: 42.5vw;
+	width			: calc(67vw - 10vh);
 	background-color	: #E6DCDB;
 	border-radius	: 15px;
+	padding-left	: 1vw;
+	padding-top		: 0.5vh;
+	padding-bottom	: 0.5vh;
 }
 #introtext{
 	margin-left		: 5vw;
@@ -339,7 +353,7 @@
 	margin-bottom	: 1vh;
 }
 #introtext2{
-	margin-left		: 31vw;
+	margin-left		: calc(7vw + 10vh);
 	font-size		: 1.5vh;
 	line-height		: 2.5vh;
 	display			: inline-block;
@@ -347,7 +361,7 @@
 	font-weight		: bold;
 	margin-top		: -5vh;
 	margin-bottom	: 1vh;
-	width			: 45vw;
+	width			: calc(68vw - 10vh);
 }
 #intro{
 	font-size		: 3.5vh;
@@ -356,19 +370,22 @@
 	outline			: none!important;
 	border			: 0;
 	margin-left		: 5vw;
-	width			: 68vw;
+	width			: 70vw;
 	background-color	: #E6DCDB;
 	border-radius	: 15px;
 	height			: 12vh;
 }
-#infophoto{
+#photo{
 	display			: inline-block;
 	position		: absolute;
 	left			: 6vw;
 	top				: 3vh;
 }
-#infophotoimg{
+#photoimg{
 	width			: 12vh;
+	height			: 12vh;
+	border-radius	: 6vh;
+	object-fit		: cover;	
 }
 #infothemelogo{
 	display			: inline-block;
@@ -387,4 +404,85 @@
 }
 #infoeditimg{
 	width			: 5vh;
+}
+#memtortext{
+	margin-left		: 5vw;
+	font-size		: 2.5vh;
+	line-height		: 4.5vh;
+	display			: inline-block;
+	color			: #683325;
+	font-weight		: bold;
+	margin-top		: 19vh;
+	margin-bottom	: 1vh;
+}
+#memtor{
+	font-size		: 2.5vh;
+	vertical-align	: top;
+	margin-top		: 19.5vh;
+	outline			: none!important;
+	border			: 0;
+	margin-left		: 2vw;
+	width			: calc(67vw - 10vh);
+	background-color	: #E6DCDB;
+	border-radius	: 15px;
+	padding-left	: 1vw;
+	padding-top		: 0.5vh;
+	padding-bottom	: 0.5vh;
+}
+#organtext{
+	margin-left		: 5vw;
+	font-size		: 2.5vh;
+	line-height		: 4.5vh;
+	display			: inline-block;
+	color			: #683325;
+	font-weight		: bold;
+	margin-top		: 1vh;
+	margin-bottom	: 1vh;
+}
+#organ{
+	font-size		: 2.5vh;
+	vertical-align	: top;
+	margin-top		: 2.4vh;
+	outline			: none!important;
+	border			: 0;
+	margin-left		: 2vw;
+	width			: calc(67vw - 10vh);
+	background-color	: #E6DCDB;
+	border-radius	: 15px;
+	padding-left	: 1vw;
+	padding-top		: 0.5vh;
+	padding-bottom	: 0.5vh;
+}
+#contacttext{
+	margin-left		: 5vw;
+	font-size		: 2.5vh;
+	line-height		: 4.5vh;
+	display			: inline-block;
+	color			: #683325;
+	font-weight		: bold;
+	margin-top		: 1vh;
+	margin-bottom	: 1vh;
+}
+#contact{
+	font-size		: 2.5vh;
+	vertical-align	: top;
+	margin-top		: 2.4vh;
+	outline			: none!important;
+	border			: 0;
+	margin-left		: 2vw;
+	width			: calc(67vw - 10vh);
+	background-color	: #E6DCDB;
+	border-radius	: 15px;
+	padding-left	: 1vw;
+	padding-top		: 0.5vh;
+	padding-bottom	: 0.5vh;
+}
+#supportthemelogo{
+	display			: inline-block;
+	position		: absolute;
+	right			: 5vw;
+	bottom			: 3.5vh;
+}
+#supportthemelogoimg{
+	width			: 36.5vh;
 }

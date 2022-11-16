@@ -155,45 +155,45 @@
 	height			: 35vh;
 }
 #buttonbox{
-	width			: 17.5vh;
+	width			: 21vh;
 	margin-left		: 3vw;
-	margin-top		: 8vh;
-}
-#infobtn{
-	width			: 17.5vh;
-	height			: 17.5vh;
-}
-#supportbtn{
-	width			: 17.5vh;
-	height			: 17.5vh;
 	margin-top		: 5vh;
+	margin-bottom	: 5vh;
 }
-#membtn{
-	width			: 17.5vh;
-	height			: 17.5vh;
-	margin-top		: 5vh;
+#info{
+	width			: 21vh;
+	height			: 21vh;
 }
-#timebtn{
-	width			: 17.5vh;
-	height			: 17.5vh;
-	margin-top		: 5vh;
+#support{
+	width			: 21vh;
+	height			: 21vh;
+	margin-top		: 1.5vh;
 }
-#infoframe{
-	left			: 17.5%;
-	top				: 8.5%;
-	width			: 77vw;
-	height			: 83vh;
+#member{
+	width			: 21vh;
+	height			: 21vh;
+	margin-top		: 1.5vh;
+}
+#timetable{
+	width			: 21vh;
+	height			: 21vh;
+	margin-top		: 1.5vh;
+}
+#whiteframe{
+	left			: calc(21vh + 5vw);
+	top				: 10vh;
+	width			: calc(91vw - 21vh);
+	height			: 80vh;
 	position		: absolute;
 	display			: block;
 	background-color	: #FFFFFF;
 	border-radius	: 15px;
 }
-#infotitle{
+#title{
 	position		: absolute;
-	top				: 3%;
-	left			: 20%;
-	width			: 33vh;
-	height			: 12vh;
+	top				: 5vh;
+	left			: calc(21vh + 10vw);
+	height			: 11vh;
 }
 #infolabel{
 	display			: inline-block;
@@ -209,19 +209,22 @@
 	display			: inline-block;
 	color			: #683325;
 	font-weight		: bold;
-	margin-top		: 11vh;
+	margin-top		: 9vh;
 	margin-bottom	: 1vh;
 }
 #nick{
-	font-size		: 6vh;
+	font-size		: 5vh;
 	vertical-align	: top;
-	margin-top		: 9.5vh;
+	margin-top		: 7.5vh;
 	outline			: none!important;
 	border			: 0;
-	margin-left		: 3vw;
-	width			: 32vw;
+	margin-left		: 2vw;
+	width			: calc(69vw - 53vh);
 	background-color	: #E6DCDB;
 	border-radius	: 15px;
+	padding-left	: 1vw;
+	padding-top		: 0.5vh;
+	padding-bottom	: 0.5vh;
 }
 #grouptext{
 	margin-left		: 3.5vw;
@@ -234,15 +237,18 @@
 	margin-bottom	: 1vh;
 }
 #group{
-	font-size		: 6vh;
+	font-size		: 5vh;
 	vertical-align	: top;
 	margin-top		: 3.5vh;
 	outline			: none!important;
 	border			: 0;
-	margin-left		: 3vw;
-	width			: 32vw;
+	margin-left		: 2vw;
+	width			: calc(69vw - 53vh);
 	background-color	: #E6DCDB;
 	border-radius	: 15px;
+	padding-left	: 1vw;
+	padding-top		: 0.5vh;
+	padding-bottom	: 0.5vh;	
 }
 #liketext{
 	margin-left		: 3.5vw;
@@ -265,15 +271,18 @@
 	margin-bottom	: 1vh;
 }
 #like{
-	font-size		: 6vh;
+	font-size		: 5vh;
 	vertical-align	: top;
 	margin-top		: 3.5vh;
 	outline			: none!important;
 	border			: 0;
-	margin-left		: 3vw;
-	width			: 32vw;
+	margin-left		: 2vw;
+	width			: calc(69vw - 53vh);
 	background-color	: #E6DCDB;
 	border-radius	: 15px;
+	padding-left	: 1vw;
+	padding-top		: 0.5vh;
+	padding-bottom	: 0.5vh;
 }
 #goodtext{
 	margin-left		: 3.5vw;
@@ -286,15 +295,18 @@
 	margin-bottom	: 1vh;
 }
 #good{
-	font-size		: 6vh;
+	font-size		: 5vh;
 	vertical-align	: top;
 	margin-top		: 3.5vh;
 	outline			: none!important;
 	border			: 0;
-	margin-left		: 3vw;
-	width			: 32vw;
+	margin-left		: 2vw;
+	width			: calc(69vw - 53vh);
 	background-color	: #E6DCDB;
 	border-radius	: 15px;
+	padding-left	: 1vw;
+	padding-top		: 0.5vh;
+	padding-bottom	: 0.5vh;
 }
 #occutext{
 	margin-left		: 3.5vw;
@@ -317,15 +329,18 @@
 	margin-bottom	: 1vh;
 }
 #occu{
-	font-size		: 6vh;
+	font-size		: 5vh;
 	vertical-align	: top;
 	margin-top		: 3.5vh;
 	outline			: none!important;
 	border			: 0;
-	margin-left		: 3vw;
-	width			: 32vw;
+	margin-left		: 2vw;
+	width			: calc(69vw - 53vh);
 	background-color	: #E6DCDB;
 	border-radius	: 15px;
+	padding-left	: 1vw;
+	padding-top		: 0.5vh;
+	padding-bottom	: 0.5vh;
 }
 #introtext{
 	margin-left		: 3vw;
@@ -346,6 +361,7 @@
 	font-weight		: bold;
 	margin-top		: -1vh;
 	margin-bottom	: 1vh;
+	width			: calc(65vw - 9.5vh);
 }
 #intro{
 	font-size		: 6vh;
@@ -354,18 +370,21 @@
 	outline			: none!important;
 	border			: 0;
 	margin-left		: 3vw;
-	width			: 58vw;
+	width			: calc(65vw - 9.5vh);
 	background-color	: #E6DCDB;
 	border-radius	: 15px;
 }
-#infophoto{
+#photo{
 	display			: inline-block;
 	position		: absolute;
 	right			: 3vw;
 	top				: 4vh;
 }
-#infophotoimg{
-	width			: 24.5vh;
+#photoimg{
+	width			: 24vh;
+	height			: 24vh;
+	border-radius	: 12vh;
+	object-fit		: cover;
 }
 #infothemelogo{
 	display			: inline-block;
@@ -384,4 +403,85 @@
 }
 #infoeditimg{
 	width			: 9.5vh;
+}
+#memtortext{
+	margin-left		: 3.5vw;
+	font-size		: 4vh;
+	line-height		: 4.5vh;
+	display			: inline-block;
+	color			: #683325;
+	font-weight		: bold;
+	margin-top		: 11vh;
+	margin-bottom	: 1vh;
+}
+#memtor{
+	font-size		: 5vh;
+	vertical-align	: top;
+	margin-top		: 9.5vh;
+	outline			: none!important;
+	border			: 0;
+	margin-left		: 2vw;
+	width			: calc(69vw - 53vh);
+	background-color	: #E6DCDB;
+	border-radius	: 15px;
+	padding-left	: 1vw;
+	padding-top		: 0.5vh;
+	padding-bottom	: 0.5vh;
+}
+#organtext{
+	margin-left		: 3.5vw;
+	font-size		: 4vh;
+	line-height		: 4.5vh;
+	display			: inline-block;
+	color			: #683325;
+	font-weight		: bold;
+	margin-top		: 5vh;
+	margin-bottom	: 1vh;
+}
+#organ{
+	font-size		: 5vh;
+	vertical-align	: top;
+	margin-top		: 3.5vh;
+	outline			: none!important;
+	border			: 0;
+	margin-left		: 2vw;
+	width			: calc(69vw - 53vh);
+	background-color	: #E6DCDB;
+	border-radius	: 15px;
+	padding-left	: 1vw;
+	padding-top		: 0.5vh;
+	padding-bottom	: 0.5vh;
+}
+#contacttext{
+	margin-left		: 3.5vw;
+	font-size		: 4vh;
+	line-height		: 4.5vh;
+	display			: inline-block;
+	color			: #683325;
+	font-weight		: bold;
+	margin-top		: 5vh;
+	margin-bottom	: 1vh;
+}
+#contact{
+	font-size		: 5vh;
+	vertical-align	: top;
+	margin-top		: 3.5vh;
+	outline			: none!important;
+	border			: 0;
+	margin-left		: 2vw;
+	width			: calc(69vw - 53vh);
+	background-color	: #E6DCDB;
+	border-radius	: 15px;
+	padding-left	: 1vw;
+	padding-top		: 0.5vh;
+	padding-bottom	: 0.5vh;
+}
+#supportthemelogo{
+	display			: inline-block;
+	position		: absolute;
+	right			: 7vw;
+	top				: 44vh;
+}
+#supportthemelogoimg{
+	width			: 43vh;
 }
