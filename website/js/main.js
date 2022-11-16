@@ -18,12 +18,26 @@ function LoadHash(){
 		}
 		if (clickid.substr(0, 4) == 'main'){
 			xmlhttp.open('GET', 'content/main.html?'+timetag, true);
+			$('#buttonbox').css('visibility', 'hidden');
 		}
-		else if (clickid.substr(0, 5) == 'login'){
-			xmlhttp.open('GET', 'content/info.html?'+timetag, true);
-		}
-		else if (clickid.substr(0, 7) == 'aboutus'){
-			xmlhttp.open('GET', 'content/aboutus.html?time='+timetag, true);
+		else{
+			$('#info').attr('src', 'images/btn_elders_info_on.png');
+			$('#support').attr('src', 'images/btn_elders_info_on.png');
+			$('#member').attr('src', 'images/btn_elders_info_on.png');
+			$('#timetable').attr('src', 'images/btn_elders_info_on.png');
+			$('#buttonbox').css('visibility', 'visible');
+			if (clickid.substr(0, 5) == 'login'){
+				$('#info').attr('src', 'images/btn_elders_info.png');
+				xmlhttp.open('GET', 'content/info.html?'+timetag, true);
+			}
+			else if (clickid.substr(0, 4) == 'info'){
+				$('#info').attr('src', 'images/btn_elders_info.png');
+				xmlhttp.open('GET', 'content/info.html?'+timetag, true);
+			}				
+			else if (clickid.substr(0, 7) == 'support'){
+				$('#support').attr('src', 'images/btn_elders_info.png');
+				xmlhttp.open('GET', 'content/support.html?'+timetag, true);
+			}				
 		}
 		xmlhttp.send();
 	}
@@ -40,7 +54,15 @@ function replacehtml(text){
 	$('#login').unbind('click');
 	$('#howlogin').unbind('click');
 	$('#howgroup').unbind('click');
+	$('#info').unbind('click');
+	$('#support').unbind('click');
+	$('#member').unbind('click');
+	$('#timetable').unbind('click');
 	$('#login').click(OnClick);
+	$('#info').click(OnClick);
+	$('#support').click(OnClick);
+	$('#member').click(OnClick);
+	$('#timetable').click(OnClick);
 	$('#howlogin').click(OnClick);
 	$('#howgroup').click(OnClick);
 	$('html,body').animate({scrollTop:0}, 'slow');
