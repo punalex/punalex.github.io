@@ -22,9 +22,9 @@ function LoadHash(){
 		}
 		else{
 			$('#info').attr('src', 'images/btn_elders_info_on.png');
-			$('#support').attr('src', 'images/btn_elders_info_on.png');
-			$('#member').attr('src', 'images/btn_elders_info_on.png');
-			$('#timetable').attr('src', 'images/btn_elders_info_on.png');
+			$('#support').attr('src', 'images/btn_elders_support_on.png');
+			$('#member').attr('src', 'images/btn_elders_members_on.png');
+			$('#timetable').attr('src', 'images/btn_elders_timetable_on.png');
 			$('#buttonbox').css('visibility', 'visible');
 			if (clickid.substr(0, 5) == 'login'){
 				$('#info').attr('src', 'images/btn_elders_info.png');
@@ -35,8 +35,12 @@ function LoadHash(){
 				xmlhttp.open('GET', 'content/info.html?'+timetag, true);
 			}				
 			else if (clickid.substr(0, 7) == 'support'){
-				$('#support').attr('src', 'images/btn_elders_info.png');
+				$('#support').attr('src', 'images/btn_elders_support.png');
 				xmlhttp.open('GET', 'content/support.html?'+timetag, true);
+			}				
+			else if (clickid.substr(0, 6) == 'member'){
+				$('#support').attr('src', 'images/btn_elders_members.png');
+				xmlhttp.open('GET', 'content/member.html?'+timetag, true);
 			}				
 		}
 		xmlhttp.send();
