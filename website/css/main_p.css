@@ -220,7 +220,7 @@
 	outline			: none!important;
 	border			: 0;
 	margin-left		: 2vw;
-	width			: 43.5vw;
+	width			: 42.5vw;
 	background-color	: #E6DCDB;
 	border-radius	: 15px;
 }
@@ -241,7 +241,7 @@
 	outline			: none!important;
 	border			: 0;
 	margin-left		: 2vw;
-	width			: 43.5vw;
+	width			: 42.5vw;
 	background-color	: #E6DCDB;
 	border-radius	: 15px;
 }
@@ -252,12 +252,12 @@
 	display			: inline-block;
 	color			: #683325;
 	font-weight		: bold;
-	margin-top		: 0vh;
+	margin-top		: 0.5vh;
 	margin-bottom	: 1vh;
 }
 #liketext2{
 	margin-left		: 5vw;
-	font-size		: 2vh;
+	font-size		: 1.5vh;
 	line-height		: 4.5vh;
 	display			: inline-block;
 	color			: #683325;
@@ -272,7 +272,7 @@
 	outline			: none!important;
 	border			: 0;
 	margin-left		: 2vw;
-	width			: 43.5vw;
+	width			: 42.5vw;
 	background-color	: #E6DCDB;
 	border-radius	: 15px;
 }
@@ -293,7 +293,7 @@
 	outline			: none!important;
 	border			: 0;
 	margin-left		: 2vw;
-	width			: 43.5vw;
+	width			: 42.5vw;
 	background-color	: #E6DCDB;
 	border-radius	: 15px;
 }
@@ -309,12 +309,12 @@
 }
 #occutext2{
 	margin-left		: 5vw;
-	font-size		: 2vh;
+	font-size		: 1.5vh;
 	line-height		: 4.5vh;
 	display			: inline-block;
 	color			: #683325;
 	font-weight		: bold;
-	margin-top		: -2.5vh;
+	margin-top		: -3vh;
 	margin-bottom	: 1vh;
 }
 #occu{
@@ -324,7 +324,7 @@
 	outline			: none!important;
 	border			: 0;
 	margin-left		: 2vw;
-	width			: 43.5vw;
+	width			: 42.5vw;
 	background-color	: #E6DCDB;
 	border-radius	: 15px;
 }
@@ -339,15 +339,15 @@
 	margin-bottom	: 1vh;
 }
 #introtext2{
-	margin-left		: 25vw;
-	font-size		: 2vh;
+	margin-left		: 31vw;
+	font-size		: 1.5vh;
 	line-height		: 2.5vh;
 	display			: inline-block;
 	color			: #683325;
 	font-weight		: bold;
 	margin-top		: -5vh;
 	margin-bottom	: 1vh;
-	width			: 48vw;
+	width			: 45vw;
 }
 #intro{
 	font-size		: 3.5vh;
@@ -368,12 +368,12 @@
 	top				: 3vh;
 }
 #infophotoimg{
-	width			: 14vh;
+	width			: 12vh;
 }
 #infothemelogo{
 	display			: inline-block;
 	position		: absolute;
-	left			: 36vw;
+	left			: 33vw;
 	top				: 5.5vh;
 }
 #infothemelogoimg{
