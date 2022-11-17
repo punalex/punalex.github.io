@@ -206,7 +206,7 @@
 	left				: 10vw;
 	top					: calc(21vw + 7vh);
 	width				: 80vw;
-	height				: calc(100vh - 21vw - 11vh);
+	height				: calc(100% - 21vw - 11vh);
 	position			: absolute;
 	display				: block;
 	background-color	: #FFFFFF;
