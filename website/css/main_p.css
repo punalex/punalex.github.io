@@ -287,7 +287,7 @@
 	width				: 70vw;
 	background-color	: #E6DCDB;
 	border-radius		: 15px;
-	height				: calc(23vh - 21vw);
+	height				: calc(100% - 21vw - 50vh);
 	padding-left		: 1vw;
 	padding-top			: 0.5vh;
 	padding-bottom		: 0.5vh;
