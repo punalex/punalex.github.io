@@ -39,7 +39,7 @@ function LoadHash(){
 				xmlhttp.open('GET', 'content/support.html?'+timetag, true);
 			}				
 			else if (clickid.substr(0, 6) == 'member'){
-				$('#support').attr('src', 'images/btn_elders_members.png');
+				$('#member').attr('src', 'images/btn_elders_members.png');
 				xmlhttp.open('GET', 'content/member.html?'+timetag, true);
 			}				
 		}
