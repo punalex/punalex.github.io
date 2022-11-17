@@ -1,487 +1,417 @@
-#frame{
-	left			: 6.5%;
-	top				: 8.5%;
-	width			: 88vw;
-	height			: 83vh;
-	position		: absolute;
-	display			: block;
-	background-color	: #FFFFFF;
-	border-radius	: 15px;
+:not(.font){
+	font-family			: 'Noto Sans TC', cwTeXHei;
+	font-weight			: bold;	
 }
-#logintext{
-	font-size		: 8.8vh;
-	position		: relative;
-	top				: 5%;
-	color			: #683325;
-	font-weight		: bold;
-	text-align		: center;
+.memtext{
+	font-size			: 4vh;
+	width				: 29vw;
+	outline				: none!important;
+	border				: 0;
+	text-align			: center;
+	padding-top			: 1vh;
+	padding-bottom		: 2vh;
+	color				: #000000;
 }
-#logindesc{
-	font-size		: 3.3vh;
-	position		: relative;
-	top				: 6%;
-	left			: 16%;
-	width			: 70%;
-	color			: #000000;
-	font-weight		: bold;
-	text-align		: center;
+.memphoto{
+	width				: 27vw;
+	height				: 20vh;
+	object-fit			: contain;
 }
-#inputbox{
-	margin-left		: -13vw;
-	position		: relative;
-	top				: 6%;
-	color			: #000000;
-	font-size		: 18px;
-	font-weight		: bold;
-	text-align		: center;
+.infotext{
+	margin-left			: 3.5vw;
+	font-size			: 4vh;
+	line-height			: 4.5vh;
+	display				: inline-block;
+	color				: #683325;
+	margin-bottom		: 1vh;
 }
-#userlogo{
-	margin-top		: 6vh;
-	width			: 9vh;
-	height			: 10.5vh;
+.infotext2{
+	margin-left			: 4vw;
+	font-size			: 3vh;
+	line-height			: 4.5vh;
+	display				: inline-block;
+	color				: #683325;
+	margin-bottom		: 1vh;
 }
-#userinput{
-	margin-top		: 6vh;
-	height			: 10vh;
-	display			: inline-block;
-	vertical-align	: top;
-	width			: 47vw;
-	border-radius	: 15px;
-	border-color	: #683325;
+.infoinput{
+	font-size			: 4.5vh;
+	vertical-align		: top;
+	outline				: none!important;
+	border				: 0;
+	margin-left			: 2vw;
+	width				: calc(69vw - 53vh);
+	background-color	: #E6DCDB;
+	border-radius		: 15px;
+	padding-left		: 1vw;
+	padding-top			: 0.5vh;
+	padding-bottom		: 0.5vh;
+}
+.inputborder{
+	height				: 10vh;
+	display				: inline-block;
+	vertical-align		: top;
+	width				: 47vw;
+	border-radius		: 15px;
+	border-color		: #683325;
 	border-left-width	: 16px;
 	border-left-color	: #FFFFFF;
 	border-top-width	: 2px;
 	border-right-width	: 2px;
 	border-bottom-width	: 2px;
-	border-style	: solid;
+	border-style		: solid;
+	text-align			: left;
+}
+.logininput{
+	font-size			: 5vh;
+	vertical-align		: top;
+	margin-top			: 0.8vh;
+/*	outline				: none!important;*/
+	border				: 0;
+	margin-left			: 2vw;
+	width				: calc(42vw - 8vh);
+	padding-left		: 1vw;
+	padding-top			: 0.5vh;
+	padding-bottom		: 0.5vh;
+}
+.logindesctext{
+	margin-left			: 0vw;
+	font-size			: 4vh;
+	display				: inline-block;
+	color				: #683325;
+	margin-top			: 0.5vh;
+	margin-bottom		: 1vh;
+}
+#frame{
+	left				: 6.5%;
+	top					: 8.5%;
+	width				: 88vw;
+	height				: 83vh;
+	position			: absolute;
+	display				: block;
+	background-color	: #FFFFFF;
+	border-radius		: 15px;
+	box-shadow			: 0px 0px min(3vw, 3vh) #555555, -0px -0px min(3vw, 3vh) #555555	
+}
+#logintext{
+	font-size			: 8.8vh;
+	position			: relative;
+	top					: 5%;
+	color				: #683325;
+	text-align			: center;
+}
+#logindesc{
+	font-size			: 3.3vh;
+	position			: relative;
+	top					: 6%;
+	left				: 11%;
+	width				: 80%;
+	color				: #000000;
+	text-align			: center;
+}
+#inputbox{
+	margin-left			: -13vw;
+	position			: relative;
+	top					: 6%;
+	color				: #000000;
+	font-size			: 18px;
+	text-align			: center;
+}
+#userlogo{
+	margin-top			: 6vh;
+	width				: 9vh;
+	height				: 10.5vh;
+}
+#userinput{
+	margin-top			: 6vh;
 }
 #usertext{
-	margin-left		: -3vw;
-	font-size		: 4vh;
-	line-height		: 4.5vh;
-	display			: inline-block;
-	color			: #683325;
-	font-weight		: bold;
-	margin-top		: 1vh;
-	margin-bottom	: 1vh;
+	line-height			: 4.5vh;
 }
 #id{
-	font-size		: 6vh;
-	vertical-align	: top;
-	margin-top		: 1.5vh;
-	outline			: none!important;
-	border			: 0;
-	margin-left		: 2vw;
-	width			: 34vw;
 }
 #passlogo{
-	width			: 9vh;
-	height			: 10.5vh;
-	margin-top		: 4vh;
+	width				: 9vh;
+	height				: 10.5vh;
+	margin-top			: 4vh;
 }
 #passinput{
-	height	: 10vh;
-	display			: inline-block;
-	vertical-align	: top;
-	width			: 47vw;
-	margin-top		: 4vh;
-	border-radius	: 15px;
-	border-color	: #683325;
-	border-left-width	: 16px;
-	border-left-color	: #FFFFFF;
-	border-top-width	: 2px;
-	border-right-width	: 2px;
-	border-bottom-width : 2px;
-	border-style	:solid;
+	margin-top			: 4vh;
 }
 #passtext{
-	margin-left		: -3vw;
-	margin-top		: 3vh;
-	font-size		: 4vh;
-	line-height		: 4.5vh;
-	display			: inline-block;
-	color			: #683325;
-	font-weight		: bold;
-	margin-bottom	: 1vh;
+	line-height			: 9vh;
 }
 #password{
-	font-size		: 6vh;
-	vertical-align	: top;
-	margin-top		: 1.5vh;
-	outline			: none!important;
-	border			: 0;
-	margin-left		: 2vw;
-	width			: 34vw;
 }
 #login{
-	top				: 8vh;
-	right			: 4vw;
-	width			: 19vh;
-	height			: 19vh;
-	position		: absolute;
+	top					: calc(18.5vh - min(9.5vh, 7vw));
+	right				: 4vw;
+	width				: calc(min(19vh, 14vw));
+	height				: calc(min(19vh, 14vw));
+	position			: absolute;
 }
 #howtext{
-	margin-top		: 7vh;
-	margin-left		: -20vw;
-	font-size		: 6vh;
-	width			: 10vw;
-	height			: 7vh;
-	display			: inline-block;
-	color			: #683325;
-	font-weight		: bold;
-	text-align		: center;
-	vertical-align	: top;	
+	margin-top			: 7vh;
+	margin-left			: -20vw;
+	font-size			: 6vh;
+	width				: 10vw;
+	height				: 7vh;
+	display				: inline-block;
+	color				: #683325;
+	text-align			: center;
+	vertical-align		: top;	
 }
 #howgroup{
-	width			: 40vh;
-	height			: 7vh;
-	margin-top		: 8vh;
-	margin-left		: 2vw;
-	vertical-align	: top;	
+	width				: 40vh;
+	height				: 7vh;
+	margin-top			: 8vh;
+	margin-left			: 2vw;
+	vertical-align		: top;	
 }
 #howlogin{
-	margin-top		: 1vh;
-	margin-left		: -8vw;
-	width			: 40vh;
-	height			: 7vh;
-	vertical-align	: top;	
+	margin-top			: 1vh;
+	margin-left			: -8vw;
+	width				: 40vh;
+	height				: 7vh;
+	vertical-align		: top;	
 }
 #themelogo{
-	position		: absolute;
-	bottom			: 0;
-	right			: 1vw;
-	margin-top		: 3vh;
-	width			: 54vh;
-	height			: 35vh;
+	position			: absolute;
+	bottom				: 0;
+	right				: 1vw;
+	margin-top			: 3vh;
+	height				: calc(min(27vw, 35vh));
 }
 #buttonbox{
-	width			: 21vh;
-	margin-left		: 3vw;
-	margin-top		: 5vh;
-	margin-bottom	: 5vh;
+	width				: 21vh;
+	margin-left			: 3vw;
+	margin-top			: 5vh;
+	margin-bottom		: 5vh;
 }
 #info{
-	width			: 21vh;
-	height			: 21vh;
+	width				: 21vh;
+	height				: 21vh;
 }
 #support{
-	width			: 21vh;
-	height			: 21vh;
-	margin-top		: 1.5vh;
+	width				: 21vh;
+	height				: 21vh;
+	margin-top			: 1.5vh;
 }
 #member{
-	width			: 21vh;
-	height			: 21vh;
-	margin-top		: 1.5vh;
+	width				: 21vh;
+	height				: 21vh;
+	margin-top			: 1.5vh;
 }
 #timetable{
-	width			: 21vh;
-	height			: 21vh;
-	margin-top		: 1.5vh;
+	width				: 21vh;
+	height				: 21vh;
+	margin-top			: 1.5vh;
 }
 #whiteframe{
-	left			: calc(21vh + 5vw);
-	top				: 10vh;
-	width			: calc(91vw - 21vh);
-	height			: 80vh;
-	position		: absolute;
-	display			: block;
+	left				: calc(21vh + 5vw);
+	top					: 10vh;
+	width				: calc(91vw - 21vh);
+	height				: 80vh;
+	position			: absolute;
+	display				: block;
 	background-color	: #FFFFFF;
-	border-radius	: 15px;
+	border-radius		: 15px;
+	box-shadow			: 0px 0px min(3vw, 3vh) #555555, -0px -0px min(3vw, 3vh) #555555	
 }
 #title{
-	position		: absolute;
-	top				: 5vh;
-	left			: calc(21vh + 10vw);
-	height			: 11vh;
+	position			: absolute;
+	top					: 5vh;
+	left				: calc(21vh + 10vw);
+	height				: 11vh;
 }
-#infolabel{
-	display			: inline-block;
+#label{
+	display				: inline-block;
 }
-#infoinput{
-	display			: inline-block;
-	vertical-align	: top;
+#input{
+	display				: inline-block;
+	vertical-align		: top;
 }
 #nicktext{
-	margin-left		: 3.5vw;
-	font-size		: 4vh;
-	line-height		: 4.5vh;
-	display			: inline-block;
-	color			: #683325;
-	font-weight		: bold;
-	margin-top		: 9vh;
-	margin-bottom	: 1vh;
+	margin-top			: 9vh;
 }
 #nick{
-	font-size		: 5vh;
-	vertical-align	: top;
-	margin-top		: 7.5vh;
-	outline			: none!important;
-	border			: 0;
-	margin-left		: 2vw;
-	width			: calc(69vw - 53vh);
-	background-color	: #E6DCDB;
-	border-radius	: 15px;
-	padding-left	: 1vw;
-	padding-top		: 0.5vh;
-	padding-bottom	: 0.5vh;
+	margin-top			: 7vh;
 }
 #grouptext{
-	margin-left		: 3.5vw;
-	font-size		: 4vh;
-	line-height		: 4.5vh;
-	display			: inline-block;
-	color			: #683325;
-	font-weight		: bold;
-	margin-top		: 5vh;
-	margin-bottom	: 1vh;
+	margin-top			: 3.5vh;
 }
 #group{
-	font-size		: 5vh;
-	vertical-align	: top;
-	margin-top		: 3.5vh;
-	outline			: none!important;
-	border			: 0;
-	margin-left		: 2vw;
-	width			: calc(69vw - 53vh);
-	background-color	: #E6DCDB;
-	border-radius	: 15px;
-	padding-left	: 1vw;
-	padding-top		: 0.5vh;
-	padding-bottom	: 0.5vh;	
+	margin-top			: 2vh;
 }
 #liketext{
-	margin-left		: 3.5vw;
-	font-size		: 4vh;
-	line-height		: 4.5vh;
-	display			: inline-block;
-	color			: #683325;
-	font-weight		: bold;
-	margin-top		: 3.5vh;
-	margin-bottom	: 1vh;
+	margin-top			: 2vh;
 }
 #liketext2{
-	margin-left		: 3vw;
-	font-size		: 3vh;
-	line-height		: 4.5vh;
-	display			: inline-block;
-	color			: #683325;
-	font-weight		: bold;
-	margin-top		: -1vh;
-	margin-bottom	: 1vh;
+	margin-left			: 4vw;
+	font-size			: 3vh;
+	line-height			: 4.5vh;
+	display				: inline-block;
+	color				: #683325;
+	margin-top			: -1vh;
+	margin-bottom		: 1vh;
 }
 #like{
-	font-size		: 5vh;
-	vertical-align	: top;
-	margin-top		: 3.5vh;
-	outline			: none!important;
-	border			: 0;
-	margin-left		: 2vw;
-	width			: calc(69vw - 53vh);
-	background-color	: #E6DCDB;
-	border-radius	: 15px;
-	padding-left	: 1vw;
-	padding-top		: 0.5vh;
-	padding-bottom	: 0.5vh;
+	margin-top			: 2vh;
 }
 #goodtext{
-	margin-left		: 3.5vw;
-	font-size		: 4vh;
-	line-height		: 4.5vh;
-	display			: inline-block;
-	color			: #683325;
-	font-weight		: bold;
-	margin-top		: 3vh;
-	margin-bottom	: 1vh;
+	margin-top			: 1.5vh;
 }
 #good{
-	font-size		: 5vh;
-	vertical-align	: top;
-	margin-top		: 3.5vh;
-	outline			: none!important;
-	border			: 0;
-	margin-left		: 2vw;
-	width			: calc(69vw - 53vh);
-	background-color	: #E6DCDB;
-	border-radius	: 15px;
-	padding-left	: 1vw;
-	padding-top		: 0.5vh;
-	padding-bottom	: 0.5vh;
+	margin-top			: 2vh;
 }
 #occutext{
-	margin-left		: 3.5vw;
-	font-size		: 4vh;
-	line-height		: 4.5vh;
-	display			: inline-block;
-	color			: #683325;
-	font-weight		: bold;
-	margin-top		: 3.5vh;
-	margin-bottom	: 1vh;
+	margin-top			: 2vh;
 }
 #occutext2{
-	margin-left		: 3vw;
-	font-size		: 3vh;
-	line-height		: 4.5vh;
-	display			: inline-block;
-	color			: #683325;
-	font-weight		: bold;
-	margin-top		: -1vh;
-	margin-bottom	: 1vh;
+	margin-left			: 4vw;
+	font-size			: 3vh;
+	line-height			: 4.5vh;
+	display				: inline-block;
+	color				: #683325;
+	margin-top			: -1vh;
+	margin-bottom		: 1vh;
 }
 #occu{
-	font-size		: 5vh;
-	vertical-align	: top;
-	margin-top		: 3.5vh;
-	outline			: none!important;
-	border			: 0;
-	margin-left		: 2vw;
-	width			: calc(69vw - 53vh);
-	background-color	: #E6DCDB;
-	border-radius	: 15px;
-	padding-left	: 1vw;
-	padding-top		: 0.5vh;
-	padding-bottom	: 0.5vh;
+	margin-top			: 2vh;
 }
 #introtext{
-	margin-left		: 3vw;
-	font-size		: 4vh;
-	line-height		: 4.5vh;
-	display			: inline-block;
-	color			: #683325;
-	font-weight		: bold;
-	margin-top		: 1vh;
-	margin-bottom	: 1vh;
+	margin-top			: 2vh;
 }
 #introtext2{
-	margin-left		: 3vw;
-	font-size		: 3vh;
-	line-height		: 4.5vh;
-	display			: inline-block;
-	color			: #683325;
-	font-weight		: bold;
-	margin-top		: -1vh;
-	margin-bottom	: 1vh;
-	width			: calc(65vw - 9.5vh);
+	margin-left			: 4vw;
+	font-size			: 3vh;
+	line-height			: 4.5vh;
+	display				: inline-block;
+	color				: #683325;
+	margin-top			: -1vh;
+	margin-bottom		: 1vh;
+	width				: calc(62vw - 9.5vh);
 }
 #intro{
-	font-size		: 6vh;
-	vertical-align	: top;
-	margin-top		: -1vh;
-	outline			: none!important;
-	border			: 0;
-	margin-left		: 3vw;
-	width			: calc(65vw - 9.5vh);
+	font-size			: 4.5vh;
+	vertical-align		: top;
+	margin-top			: -0.5vh;
+	outline				: none!important;
+	border				: 0;
+	margin-left			: 3.5vw;
+	width				: calc(60.5vw - 9.5vh);
 	background-color	: #E6DCDB;
-	border-radius	: 15px;
+	border-radius		: 15px;
+	padding-left		: 1vw;
+	padding-top			: 0.5vh;
+	padding-bottom		: 0.5vh;
+	resize				: none;
+	overflow			: auto;
+	height				: 6.5vh;
 }
 #photo{
-	display			: inline-block;
-	position		: absolute;
-	right			: 3vw;
-	top				: 4vh;
+	display				: inline-block;
+	position			: absolute;
+	right				: 3vw;
+	top					: 4vh;
 }
 #photoimg{
-	width			: 24vh;
-	height			: 24vh;
-	border-radius	: 12vh;
-	object-fit		: cover;
+	width				: 24vh;
+	height				: 24vh;
+	border-radius		: 12vh;
+	object-fit			: cover;
 }
 #infothemelogo{
-	display			: inline-block;
-	position		: absolute;
-	right			: 3vw;
-	top				: 33vh;
+	display				: inline-block;
+	position			: absolute;
+	right				: 3vw;
+	top					: 33vh;
 }
 #infothemelogoimg{
-	width			: 22vh;
+	width				: 22vh;
 }
 #infoedit{
-	display			: inline-block;
-	position		: absolute;
-	right			: 4vw;
-	top				: 66vh;
+	display				: inline-block;
+	position			: absolute;
+	right				: 3vw;
+	top					: 66vh;
 }
 #infoeditimg{
-	width			: 9.5vh;
+	width				: 9.5vh;
 }
-#memtortext{
-	margin-left		: 3.5vw;
-	font-size		: 4vh;
-	line-height		: 4.5vh;
-	display			: inline-block;
-	color			: #683325;
-	font-weight		: bold;
-	margin-top		: 11vh;
-	margin-bottom	: 1vh;
+#mentortext{
+	margin-top			: 11vh;
 }
-#memtor{
-	font-size		: 5vh;
-	vertical-align	: top;
-	margin-top		: 9.5vh;
-	outline			: none!important;
-	border			: 0;
-	margin-left		: 2vw;
-	width			: calc(69vw - 53vh);
-	background-color	: #E6DCDB;
-	border-radius	: 15px;
-	padding-left	: 1vw;
-	padding-top		: 0.5vh;
-	padding-bottom	: 0.5vh;
+#mentor{
+	margin-top			: 9.5vh;
 }
 #organtext{
-	margin-left		: 3.5vw;
-	font-size		: 4vh;
-	line-height		: 4.5vh;
-	display			: inline-block;
-	color			: #683325;
-	font-weight		: bold;
-	margin-top		: 5vh;
-	margin-bottom	: 1vh;
+	margin-top			: 5vh;
 }
 #organ{
-	font-size		: 5vh;
-	vertical-align	: top;
-	margin-top		: 3.5vh;
-	outline			: none!important;
-	border			: 0;
-	margin-left		: 2vw;
-	width			: calc(69vw - 53vh);
-	background-color	: #E6DCDB;
-	border-radius	: 15px;
-	padding-left	: 1vw;
-	padding-top		: 0.5vh;
-	padding-bottom	: 0.5vh;
+	margin-top			: 3.5vh;
 }
 #contacttext{
-	margin-left		: 3.5vw;
-	font-size		: 4vh;
-	line-height		: 4.5vh;
-	display			: inline-block;
-	color			: #683325;
-	font-weight		: bold;
-	margin-top		: 5vh;
-	margin-bottom	: 1vh;
+	margin-top			: 5vh;
 }
 #contact{
-	font-size		: 5vh;
-	vertical-align	: top;
-	margin-top		: 3.5vh;
-	outline			: none!important;
-	border			: 0;
-	margin-left		: 2vw;
-	width			: calc(69vw - 53vh);
-	background-color	: #E6DCDB;
-	border-radius	: 15px;
-	padding-left	: 1vw;
-	padding-top		: 0.5vh;
-	padding-bottom	: 0.5vh;
+	margin-top			: 3vh;
 }
 #supportthemelogo{
-	display			: inline-block;
-	position		: absolute;
-	right			: 7vw;
-	top				: 44vh;
+	display				: inline-block;
+	position			: absolute;
+	right				: 7vw;
+	top					: 44vh;
 }
 #supportthemelogoimg{
-	width			: 43vh;
+	width				: 43vh;
+}
+#groupnametext{
+	margin-top			: 11vh;
+}
+#groupname{
+	margin-top			: 9.5vh;
+	width				: calc(75vw - 53vh);
+}
+#groupsong{
+	display				: inline-block;
+	position			: absolute;
+	right				: 4vw;
+	top					: 2.5vh;
+}
+#groupsongimg{
+	width				: 11.5vh;
+}
+#mentorbox{
+	display				: inline-block;
+	margin-left			: 7vw;
+	margin-top			: 3vh;
+}
+#mentorphoto{
+}
+#mentorname{
+}
+#mem1box{
+	display				: inline-block;
+	margin-left			: 3vw;
+	margin-top			: 3vh;
+}
+#mem1photo{
+}
+#mem1name{
+}
+#mem2box{
+	display				: inline-block;
+	margin-left			: 7vw;
+}
+#mem2photo{
+}
+#mem2name{
+}
+#mem3box{
+	display				: inline-block;
+	margin-left			: 3vw;
+}
+#mem3photo{
+}
+#mem3name{
 }
