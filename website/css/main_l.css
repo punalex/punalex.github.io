@@ -24,7 +24,7 @@
 .infotext{
 	margin-left			: 3.5vw;
 	font-size			: calc(var(--vh, 1vh) * 4);
-	line-height			: 4.5vh;
+	line-height			: calc(var(--vh, 1vh) * 4.5);
 	display				: inline-block;
 	color				: #683325;
 	margin-bottom		: 1vh;
@@ -32,7 +32,7 @@
 .infotext2{
 	margin-left			: 4vw;
 	font-size			: calc(var(--vh, 1vh) * 3);
-	line-height			: 4.5vh;
+	line-height			: calc(var(--vh, 1vh) * 4.5);
 	display				: inline-block;
 	color				: #683325;
 	margin-bottom		: 1vh;
