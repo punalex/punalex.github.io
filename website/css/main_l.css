@@ -345,7 +345,7 @@
 	bottom				: 4vh;
 }
 #supportthemelogoimg{
-	width				: calc(var(--vh, 1vh) * 43vh);
+	width				: calc(var(--vh, 1vh) * 43);
 }
 #groupnametext{
 	margin-top			: 11vh;
