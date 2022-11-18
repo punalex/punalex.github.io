@@ -151,11 +151,11 @@
 	margin-top			: calc(var(--vh, 1vh) * 7);
 	margin-left			: 0;
 	font-size			: calc(var(--vh, 1vh) * 6);
-	width				: 12vw;
+	width				: calc(var(--vh, 1vh) * 16);
 	height				: calc(var(--vh, 1vh) * 7);
 	display				: inline-block;
 	color				: #683325;
-	text-align			: center;
+	text-align			: left;
 	vertical-align		: top;	
 }
 #howgroup{
@@ -166,7 +166,7 @@
 }
 #howlogin{
 	margin-top			: 1vh;
-	margin-left			: 14vw;
+	margin-left			: calc(var(--vh, 1vh) * 16 + 2vw);
 	height				: calc(var(--vh, 1vh) * 7);
 	vertical-align		: top;	
 }
@@ -174,7 +174,7 @@
 	position			: absolute;
 	bottom				: 0;
 	right				: 1vw;
-	height				: calc(min(66vw - (var(--vh) * 792 * 7 / 119), 35vh));
+	height				: calc(min((62vw - 9vh - min(19vh, 14vw)) / 2 + var(--vh, 1vh) * 62.5, var(--vh, 1vh) * 38));
 }
 #buttonbox{
 	width				: calc(81.5vh / 4);
