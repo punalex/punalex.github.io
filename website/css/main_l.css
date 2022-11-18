@@ -66,16 +66,16 @@
 	text-align			: left;
 }
 .logininput{
-	font-size			: 5vh;
+	font-size			: calc(var(--vh, 1vh) * 5);
 	vertical-align		: top;
-	margin-top			: 0.8vh;
+	margin-top			: calc(var(--vh, 1vh) * 0.8);
 /*	outline				: none!important;*/
 	border				: 0;
 	margin-left			: 2vw;
 	width				: calc(42vw - 8vh);
 	padding-left		: 1vw;
-	padding-top			: 0.5vh;
-	padding-bottom		: 0.5vh;
+	padding-top			: calc(var(--vh, 1vh) * 0.5);
+	padding-bottom		: calc(var(--vh, 1vh) * 0.5);
 }
 .logindesctext{
 	margin-left			: 0vw;
