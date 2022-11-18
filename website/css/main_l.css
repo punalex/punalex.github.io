@@ -3,8 +3,7 @@
 	font-weight			: bold;	
 }
 .button{
-	width				: 21vh;
-	height				: 21vh;
+	height				: calc((100% - 13vh) / 4 + 0.3vh);
 	margin-top			: 1.5vh;
 }
 .memtext{
@@ -183,16 +182,17 @@
 	height				: calc(min(27vw, 35vh));
 }
 #buttonbox{
-	width				: 21vh;
+	width				: calc(81.5vh / 4);
+	height				: calc(100% - 5.5vh);
 	left				: 3vw;
-	top					: calc((100% - 88.5vh) / 2);
+	top					: 5.5vh;
 	position			: absolute;
 }
 #whiteframe{
 	left				: calc(21vh + 5vw);
-	top					: 10vh;
+	top					: 7vh;
 	width				: calc(91vw - 21vh);
-	height				: calc(100% - 20vh);
+	height				: calc(100% - 14vh);
 	position			: absolute;
 	display				: block;
 	background-color	: #FFFFFF;
@@ -201,7 +201,7 @@
 }
 #title{
 	position			: absolute;
-	top					: 5vh;
+	top					: 2vh;
 	left				: calc(21vh + 10vw);
 	height				: 11vh;
 }
