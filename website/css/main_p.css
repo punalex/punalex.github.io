@@ -51,7 +51,7 @@
 	padding-bottom		: 0.5vh;
 }
 .inputborder{
-	height				: 6.5vh;
+	height				: calc(var(--vh, 1vh) * 6.5);
 	display				: inline-block;
 	vertical-align		: top;
 	width				: 47vw;
@@ -66,9 +66,9 @@
 	text-align			: left;
 }
 .logininput{
-	font-size			: 3vh;
+	font-size			: calc(var(--vh, 1vh) * 3);
 	vertical-align		: top;
-	margin-top			: 1vh;
+	margin-top			: calc(var(--vh, 1vh) * 1);
 /*	outline				: none!important;*/
 	border				: 0;
 	margin-left			: 2vw;
@@ -76,11 +76,11 @@
 }
 .logindesctext{
 	margin-left			: 0vw;
-	font-size			: 2.5vh;
+	font-size			: calc(var(--vh, 1vh) * 2.5);
 	display				: inline-block;
 	color				: #683325;
-	margin-top			: 1vh;
-	margin-bottom		: 1vh;
+	margin-top			: calc(var(--vh, 1vh) * 1);
+	margin-bottom		: calc(var(--vh, 1vh) * 1);
 }
 #frame{
 	left				: 6.5%;
