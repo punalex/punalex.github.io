@@ -89,7 +89,7 @@
 	left				: 6.5%;
 	top					: 8.5%;
 	width				: 88vw;
-	height				: 83vh;
+	height				: calc(var(--vh, 1vh) * 83);
 	position			: absolute;
 	display				: block;
 	background-color	: #FFFFFF;
@@ -97,14 +97,14 @@
 	box-shadow			: 0px 0px min(3vw, 3vh) #555555, -0px -0px min(3vw, 3vh) #555555	
 }
 #logintext{
-	font-size			: 8.8vh;
+	font-size			: calc(var(--vh, 1vh) * 8.8);
 	position			: relative;
 	top					: 5%;
 	color				: #683325;
 	text-align			: center;
 }
 #logindesc{
-	font-size			: 3.3vh;
+	font-size			: calc(var(--vh, 1vh) * 3.3);
 	position			: relative;
 	top					: 6%;
 	left				: 11%;
@@ -117,22 +117,21 @@
 	position			: relative;
 	top					: 6%;
 	color				: #000000;
-	font-size			: 18px;
 	text-align			: center;
 }
 #userlogo{
-	margin-top			: 6vh;
+	margin-top			: calc(var(--vh, 1vh) * 6);
 	width				: 9vh;
 	height				: 10.5vh;
 }
 #userinput{
-	margin-top			: 6vh;
+	margin-top			: calc(var(--vh, 1vh) * 6);
 }
 #usertext{
 	line-height			: 4.5vh;
 }
 #passlogo{
-	width				: 9vh;
+	width				: calc(var(--vh, 1vh) * 9);
 	height				: 10.5vh;
 	margin-top			: 4vh;
 }
@@ -140,7 +139,7 @@
 	margin-top			: 4vh;
 }
 #passtext{
-	line-height			: 9vh;
+	line-height			: calc(var(--vh, 1vh) * 9);
 }
 #login{
 	top					: calc(18.5vh - min(9.5vh, 7vw));
@@ -150,36 +149,33 @@
 	position			: absolute;
 }
 #howtext{
-	margin-top			: 7vh;
-	margin-left			: -20vw;
-	font-size			: 6vh;
-	width				: 10vw;
-	height				: 7vh;
+	margin-top			: calc(var(--vh, 1vh) * 7);
+	margin-left			: 0;
+	font-size			: calc(var(--vh, 1vh) * 6);
+	width				: 12vw;
+	height				: calc(var(--vh, 1vh) * 7);
 	display				: inline-block;
 	color				: #683325;
 	text-align			: center;
 	vertical-align		: top;	
 }
 #howgroup{
-	width				: 40vh;
-	height				: 7vh;
-	margin-top			: 8vh;
+	height				: calc(var(--vh, 1vh) * 7);
+	margin-top			: calc(var(--vh, 1vh) * 8);
 	margin-left			: 2vw;
 	vertical-align		: top;	
 }
 #howlogin{
 	margin-top			: 1vh;
-	margin-left			: -8vw;
-	width				: 40vh;
-	height				: 7vh;
+	margin-left			: 14vw;
+	height				: calc(var(--vh, 1vh) * 7);
 	vertical-align		: top;	
 }
 #themelogo{
 	position			: absolute;
 	bottom				: 0;
 	right				: 1vw;
-	margin-top			: 3vh;
-	height				: calc(min(27vw, 35vh));
+	height				: calc(min(66vw - (var(--vh) * 792 * 7 / 119), 35vh));
 }
 #buttonbox{
 	width				: calc(81.5vh / 4);
