@@ -2,6 +2,11 @@
 	font-family			: 'Noto Sans TC', cwTeXHei;
 	font-weight			: bold;	
 }
+.button{
+	width				: 21vh;
+	height				: 21vh;
+	margin-top			: 1.5vh;
+}
 .memtext{
 	font-size			: 4vh;
 	width				: 29vw;
@@ -127,8 +132,6 @@
 #usertext{
 	line-height			: 4.5vh;
 }
-#id{
-}
 #passlogo{
 	width				: 9vh;
 	height				: 10.5vh;
@@ -139,8 +142,6 @@
 }
 #passtext{
 	line-height			: 9vh;
-}
-#password{
 }
 #login{
 	top					: calc(18.5vh - min(9.5vh, 7vw));
@@ -183,34 +184,15 @@
 }
 #buttonbox{
 	width				: 21vh;
-	margin-left			: 3vw;
-	margin-top			: 5vh;
-	margin-bottom		: 5vh;
-}
-#info{
-	width				: 21vh;
-	height				: 21vh;
-}
-#support{
-	width				: 21vh;
-	height				: 21vh;
-	margin-top			: 1.5vh;
-}
-#member{
-	width				: 21vh;
-	height				: 21vh;
-	margin-top			: 1.5vh;
-}
-#timetable{
-	width				: 21vh;
-	height				: 21vh;
-	margin-top			: 1.5vh;
+	left				: 3vw;
+	top					: calc((100% - 88.5vh) / 2);
+	position			: absolute;
 }
 #whiteframe{
 	left				: calc(21vh + 5vw);
 	top					: 10vh;
 	width				: calc(91vw - 21vh);
-	height				: 80vh;
+	height				: calc(100% - 20vh);
 	position			: absolute;
 	display				: block;
 	background-color	: #FFFFFF;
@@ -386,32 +368,16 @@
 	margin-left			: 7vw;
 	margin-top			: 3vh;
 }
-#mentorphoto{
-}
-#mentorname{
-}
 #mem1box{
 	display				: inline-block;
 	margin-left			: 3vw;
 	margin-top			: 3vh;
 }
-#mem1photo{
-}
-#mem1name{
-}
 #mem2box{
 	display				: inline-block;
 	margin-left			: 7vw;
 }
-#mem2photo{
-}
-#mem2name{
-}
 #mem3box{
 	display				: inline-block;
 	margin-left			: 3vw;
-}
-#mem3photo{
-}
-#mem3name{
 }
