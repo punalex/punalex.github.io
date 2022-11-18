@@ -213,64 +213,46 @@
 	vertical-align		: top;
 }
 #nicktext{
-	margin-top			: 9vh;
+	margin-top			: calc(var(--vh, 1vh) * 9);
 }
 #nick{
-	margin-top			: 7vh;
+	margin-top			: calc(var(--vh, 1vh) * 7);
 }
 #grouptext{
-	margin-top			: 3.5vh;
+	margin-top			: calc(var(--vh, 1vh) * 3.5);
 }
 #group{
-	margin-top			: 2vh;
+	margin-top			: calc(var(--vh, 1vh) * 2);
 }
 #liketext{
-	margin-top			: 2vh;
+	margin-top			: calc(var(--vh, 1vh) * 2);
 }
 #liketext2{
-	margin-left			: 4vw;
-	font-size			: 3vh;
-	line-height			: 4.5vh;
-	display				: inline-block;
-	color				: #683325;
-	margin-top			: -1vh;
-	margin-bottom		: 1vh;
+	margin-top			: calc(var(--vh, 1vh) * -1);
 }
 #like{
-	margin-top			: 2vh;
+	margin-top			: calc(var(--vh, 1vh) * 2);
 }
 #goodtext{
-	margin-top			: 1.5vh;
+	margin-top			: calc(var(--vh, 1vh) * 1.5);
 }
 #good{
-	margin-top			: 2vh;
+	margin-top			: calc(var(--vh, 1vh) * 2);
 }
 #occutext{
-	margin-top			: 2vh;
+	margin-top			: calc(var(--vh, 1vh) * 2);
 }
 #occutext2{
-	margin-left			: 4vw;
-	font-size			: 3vh;
-	line-height			: 4.5vh;
-	display				: inline-block;
-	color				: #683325;
-	margin-top			: -1vh;
-	margin-bottom		: 1vh;
+	margin-top			: calc(var(--vh, 1vh) * -1);
 }
 #occu{
-	margin-top			: 2vh;
+	margin-top			: calc(var(--vh, 1vh) * 2);
 }
 #introtext{
-	margin-top			: 2vh;
+	margin-top			: calc(var(--vh, 1vh) * 2);
 }
 #introtext2{
-	margin-left			: 4vw;
-	font-size			: 3vh;
-	line-height			: 4.5vh;
-	display				: inline-block;
-	color				: #683325;
-	margin-top			: -1vh;
-	margin-bottom		: 1vh;
+	margin-top			: calc(var(--vh, 1vh) * -1);
 	width				: calc(62vw - 9.5vh);
 }
 #intro{
