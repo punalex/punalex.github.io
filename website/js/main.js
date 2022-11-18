@@ -83,6 +83,8 @@ function direction(){
 	}
 }
 $(document).ready(function(){
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
 	LoadHash();
 })
 $(window).on('orientationchange', function(){
