@@ -94,14 +94,14 @@
 	box-shadow			: 0px 0px min(3vw, 3vh) #555555, -0px -0px min(3vw, 3vh) #555555
 }
 #logintext{
-	font-size			: 6vh;
+	font-size			: calc(var(--vh, 1vh) * 6);
 	position			: relative;
 	top					: 5%;
 	color				: #683325;
 	text-align			: center;	
 }
 #logindesc{
-	font-size			: 2.4vh;
+	font-size			: calc(var(--vh, 1vh) * 2.4);
 	position			: relative;
 	top					: 6%;
 	left				: 16%;
@@ -114,44 +114,42 @@
 	position			: relative;
 	top					: 6%;
 	color				: #000000;
-	font-size			: 18px;
 	text-align			: center;
 }
 #userlogo{
-	margin-top			: 2vh;
+	margin-top			: calc(var(--vh, 1vh) * 2);
 	width				: 5.5vh;
-	height				: 6.5vh;
+	height				: calc(var(--vh, 1vh) * 6.5);
 }
 #userinput{
-	margin-top			: 2vh;
+	margin-top			: calc(var(--vh, 1vh) * 2);
 }
 #usertext{
-	line-height			: 2.5vh;
+	line-height			: calc(var(--vh, 1vh) * 2.5);
 }
 #passlogo{
 	width				: 5.5vh;
-	height				: 6.5vh;
-	margin-top			: 4vh;
+	height				: calc(var(--vh, 1vh) * 6.5);
+	margin-top			: calc(var(--vh, 1vh) * 4);
 }
 #passinput{
-	margin-top			: 4vh;
+	margin-top			: calc(var(--vh, 1vh) * 4);
 }
 #passtext{
-	line-height			: 5vh;
+	line-height			: calc(var(--vh, 1vh) * 5);
 }
 #login{
-	top					: 22vh;
-	right				: calc(45vw - 6vh);
-	width				: 12vh;
-	height				: 12vh;
+	top					: calc(var(--vh, 1vh) * 22);
+	right				: calc(45vw - (var(--vh, 1vh) * 6));
+	height				: calc(var(--vh, 1vh) * 12);
 	position			: absolute;
 }
 #howtext{
-	margin-top			: 19vh;
+	margin-top			: calc(var(--vh, 1vh) * 18.5);
 	margin-left			: -5vw;
-	font-size			: 4vh;
+	font-size			: calc(var(--vh, 1vh) * 4);
 	width				: 20vw;
-	height				: 7vh;
+	height				: calc(var(--vh, 1vh) * 7);
 	display				: inline-block;
 	color				: #683325;
 	text-align			: center;
@@ -159,25 +157,22 @@
 }
 #howgroup{
 	width				: 26.5vh;
-	height				: 4vh;
-	margin-top			: 19.5vh;
+	margin-top			: calc(var(--vh, 1vh) * 19.5);
 	margin-left			: 2vw;
 	vertical-align		: top;	
 }
 #howlogin{
-	margin-top			: -1.5vh;
+	margin-top			: calc(var(--vh, 1vh) * -1.5);
 	margin-left			: 17vw;
 	width				: 26.5vh;
-	height				: 4vh;
 	vertical-align		: top;	
 }
 #themelogo{
 	position			: absolute;
 	bottom				: 0;
 	right				: 1vw;
-	margin-top			: 3vh;
 	width				: 30vh;
-	height				: 21vh;
+	height				: calc(var(--vh, 1vh) * 21);
 }
 #buttonbox{
 	margin-left			: 3.5vw;
