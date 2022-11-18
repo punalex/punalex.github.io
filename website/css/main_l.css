@@ -51,7 +51,7 @@
 	padding-bottom		: 0.5vh;
 }
 .inputborder{
-	height				: 10vh;
+	height				: calc(var(--vh, 1vh) * 10);
 	display				: inline-block;
 	vertical-align		: top;
 	width				: 47vw;
