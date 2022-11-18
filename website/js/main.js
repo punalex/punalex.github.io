@@ -89,4 +89,5 @@ $(document).ready(function(){
 })
 $(window).on('orientationchange', function(){
 	direction();
+	window.location.reload();
 })
