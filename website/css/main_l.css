@@ -113,16 +113,15 @@
 	text-align			: center;
 }
 #inputbox{
-	margin-left			: -13vw;
+	margin-left			: calc((41vw - 9vh - min(19vh, 14vw)) / 2);
 	position			: relative;
 	top					: 6%;
 	color				: #000000;
-	text-align			: center;
 }
 #userlogo{
 	margin-top			: calc(var(--vh, 1vh) * 6);
-	width				: 9vh;
-	height				: 10.5vh;
+	width				: calc(var(--vh, 1vh) * 9);
+	height				: calc(var(--vh, 1vh) * 10.5);
 }
 #userinput{
 	margin-top			: calc(var(--vh, 1vh) * 6);
@@ -132,11 +131,11 @@
 }
 #passlogo{
 	width				: calc(var(--vh, 1vh) * 9);
-	height				: 10.5vh;
-	margin-top			: 4vh;
+	height				: calc(var(--vh, 1vh) * 10.5);
+	margin-top			: calc(var(--vh, 1vh) * 4);
 }
 #passinput{
-	margin-top			: 4vh;
+	margin-top			: calc(var(--vh, 1vh) * 4);
 }
 #passtext{
 	line-height			: calc(var(--vh, 1vh) * 9);
