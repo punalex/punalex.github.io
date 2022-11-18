@@ -8,7 +8,7 @@
 }
 .memtext{
 	font-size			: calc(var(--vh, 1vh) * 4);
-	width				: 29vw;
+	width				: 27vw;
 	outline				: none!important;
 	border				: 0;
 	text-align			: center;
