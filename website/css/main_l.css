@@ -23,7 +23,7 @@
 }
 .infotext{
 	margin-left			: 3.5vw;
-	font-size			: 4vh;
+	font-size			: calc(var(--vh, 1vh) * 4);
 	line-height			: 4.5vh;
 	display				: inline-block;
 	color				: #683325;
@@ -31,14 +31,14 @@
 }
 .infotext2{
 	margin-left			: 4vw;
-	font-size			: 3vh;
+	font-size			: calc(var(--vh, 1vh) * 3);
 	line-height			: 4.5vh;
 	display				: inline-block;
 	color				: #683325;
 	margin-bottom		: 1vh;
 }
 .infoinput{
-	font-size			: 4.5vh;
+	font-size			: calc(var(--vh, 1vh) * 4.5);
 	vertical-align		: top;
 	outline				: none!important;
 	border				: 0;
@@ -288,7 +288,7 @@
 	padding-bottom		: 0.5vh;
 	resize				: none;
 	overflow			: auto;
-	height				: calc(100% - 72vh);
+	height				: calc(100% - var(--vh, 1vh) * 72);
 }
 #photo{
 	display				: inline-block;
