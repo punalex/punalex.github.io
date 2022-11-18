@@ -79,7 +79,7 @@
 }
 .logindesctext{
 	margin-left			: 0vw;
-	font-size			: 4vh;
+	font-size			: calc(var(--vh, 1vh) * 4);
 	display				: inline-block;
 	color				: #683325;
 	margin-top			: 0.5vh;
