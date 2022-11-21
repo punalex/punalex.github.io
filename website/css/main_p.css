@@ -5,6 +5,9 @@
 .fa{
 	color				: orange;
 }
+.eventtext{
+	font-size			: 2.5vw;
+}
 .timetitle{
 	display				: inline-block;
 	color				: #FFFFFF;
@@ -37,6 +40,9 @@
 	padding-bottom		: 0.5vw;	
 	margin-right		: 0.7vw;
 	vertical-align		: top;
+}
+pre{
+	fontsize			: 8vw;
 }
 .eventdetail{
 	background-color	: #E6DCDB;
