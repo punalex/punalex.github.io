@@ -2,7 +2,7 @@
 	font-family			: 'Noto Sans TC', cwTeXHei;
 	font-weight			: bold;	
 }
-.checked{
+.fa{
 	color				: orange;
 }
 .timetitle{
@@ -445,7 +445,8 @@
 	font-size			: 1vw;
 	font-weight			: normal;
 	position			: absolute;
-	left				: 0;
+	color				: #1EA199;
+	left				: 0.2vw;
 	top					: 1vw;
 }
 #month{
@@ -453,18 +454,20 @@
 	font-size			: 1vw;
 	font-weight			: normal;
 	position			: absolute;
+	color				: #1EA199;
 	top					: 1vw;
-	right				: 0;
+	right				: 0.2vw;
 	text-align			: right;
 }
 #day{
 	display				: inline-block;
 	font-size			: 5vw;
 	width				: 9vw;
+	color				: #1EA199;
 	font-weight			: normal;
 	position			: absolute;
 	text-align			: center;
-	top					: 3vw;
+	top					: 2.5vw;
 	left				: 0;
 	text-align			: center;
 }
@@ -472,6 +475,7 @@
 	display				: inline-block;
 	width				: 9vw;
 	font-size			: 2vw;
+	color				: #1EA199;
 	font-weight			: normal;
 	position			: absolute;
 	bottom				: 1vw;
