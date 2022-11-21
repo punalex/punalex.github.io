@@ -42,6 +42,10 @@ function LoadHash(){
 				$('#member').attr('src', 'images/btn_elders_members.png');
 				xmlhttp.open('GET', 'content/member.html?'+timetag, true);
 			}				
+			else if (clickid.substr(0, 9) == 'timetable'){
+				$('#timetable').attr('src', 'images/btn_elders_timetable.png');
+				xmlhttp.open('GET', 'content/timetable.html?'+timetag, true);
+			}				
 		}
 		xmlhttp.send();
 	}
@@ -89,5 +93,8 @@ $(document).ready(function(){
 })
 $(window).on('orientationchange', function(){
 	direction();
-	window.location.reload();
+	$(window).resize('resize', function(){
+		let vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+	});
 })
