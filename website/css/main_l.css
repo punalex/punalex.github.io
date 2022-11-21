@@ -3,8 +3,13 @@
 	font-weight			: bold;	
 }
 .button{
-	height				: calc((100% - 13vh) / 4 + 0.3vh);
-	margin-top			: 1.5vh;
+	height				: calc((100% - (var(--vh, 1vh) * 13)) / 4 + (var(--vh, 1vh) * 0.3));
+	margin-top			: calc(var(--vh, 1vh) * 1.5);
+}
+.membox{
+	display				: inline-block;
+	margin-left			: 5vw;
+	margin-top			: calc(var(--vh, 1vh) * 2);
 }
 .memtext{
 	font-size			: calc(var(--vh, 1vh) * 4);
@@ -12,8 +17,8 @@
 	outline				: none!important;
 	border				: 0;
 	text-align			: center;
-	padding-top			: 1vh;
-	padding-bottom		: 2vh;
+	padding-top			: calc(var(--vh, 1vh));
+	padding-bottom		: calc(var(--vh, 1vh) * 2);
 	color				: #000000;
 }
 .memphoto{
@@ -27,7 +32,7 @@
 	line-height			: calc(var(--vh, 1vh) * 4.5);
 	display				: inline-block;
 	color				: #683325;
-	margin-bottom		: 1vh;
+	margin-bottom		: calc(var(--vh, 1vh));
 }
 .infotext2{
 	margin-left			: 4vw;
@@ -35,7 +40,7 @@
 	line-height			: calc(var(--vh, 1vh) * 4.5);
 	display				: inline-block;
 	color				: #683325;
-	margin-bottom		: 1vh;
+	margin-bottom		: calc(var(--vh, 1vh));
 }
 .infoinput{
 	font-size			: calc(var(--vh, 1vh) * 4.5);
@@ -43,12 +48,12 @@
 	outline				: none!important;
 	border				: 0;
 	margin-left			: 2vw;
-	width				: calc(69vw - 53vh);
+	width				: calc(69vw - (var(--vh, 1vh) * 53));
 	background-color	: #E6DCDB;
 	border-radius		: 15px;
 	padding-left		: 1vw;
-	padding-top			: 0.5vh;
-	padding-bottom		: 0.5vh;
+	padding-top			: calc(var(--vh, 1vh) * 0.5);
+	padding-bottom		: calc(var(--vh, 1vh) * 0.5);
 }
 .inputborder{
 	height				: calc(var(--vh, 1vh) * 10);
@@ -72,7 +77,7 @@
 /*	outline				: none!important;*/
 	border				: 0;
 	margin-left			: 2vw;
-	width				: calc(42vw - 8vh);
+	width				: calc(42vw - (var(--vh, 1vh) * 8));
 	padding-left		: 1vw;
 	padding-top			: calc(var(--vh, 1vh) * 0.5);
 	padding-bottom		: calc(var(--vh, 1vh) * 0.5);
@@ -113,7 +118,7 @@
 	text-align			: center;
 }
 #inputbox{
-	margin-left			: calc((41vw - 9vh - min(19vh, 14vw)) / 2);
+	margin-left			: calc((41vw - (var(--vh, 1vh) * 9) - min(var(--vh, 1vh) * 19, 14vw)) / 2);
 	position			: relative;
 	top					: 6%;
 	color				: #000000;
@@ -141,7 +146,7 @@
 	line-height			: calc(var(--vh, 1vh) * 9);
 }
 #login{
-	top					: calc(18.5vh - min(9.5vh, 7vw));
+	top					: calc(var(--vh, 1vh) * 18.5 - min(var(--vh, 1vh) * 9.5, 7vw));
 	right				: 4vw;
 	width				: calc(min(19vh, 14vw));
 	height				: calc(min(19vh, 14vw));
@@ -174,20 +179,20 @@
 	position			: absolute;
 	bottom				: 0;
 	right				: 1vw;
-	height				: calc(min((62vw - 9vh - min(19vh, 14vw)) / 2 + var(--vh, 1vh) * 62.5, var(--vh, 1vh) * 38));
+	height				: calc(min((62vw - (var(--vh, 1vh) * 9) - min(var(--vh, 1vh) * 19, 14vw)) / 2 + var(--vh, 1vh) * 62.5, var(--vh, 1vh) * 38));
 }
 #buttonbox{
-	width				: calc(81.5vh / 4);
-	height				: calc(100% - 5.5vh);
+	width				: calc(var(--vh, 1vh) * 81.5 / 4);
+	height				: calc(100% - (var(--vh, 1vh) * 5.5));
 	left				: 3vw;
-	top					: 5.5vh;
+	top					: calc(var(--vh, 1vh) * 5.5);
 	position			: absolute;
 }
 #whiteframe{
-	left				: calc(21vh + 5vw);
-	top					: 7vh;
-	width				: calc(91vw - 21vh);
-	height				: calc(100% - 14vh);
+	left				: calc(var(--vh, 1vh) * 21 + 5vw);
+	top					: calc(var(--vh, 1vh) * 7);
+	width				: calc(91vw - (var(--vh, 1vh) * 21));
+	height				: calc(100% - (var(--vh, 1vh) * 14));
 	position			: absolute;
 	display				: block;
 	background-color	: #FFFFFF;
@@ -196,9 +201,9 @@
 }
 #title{
 	position			: absolute;
-	top					: 2vh;
-	left				: calc(21vh + 10vw);
-	height				: 11vh;
+	top					: calc(var(--vh, 1vh) * 2);
+	left				: calc(var(--vh, 1vh) * 21 + 10vw);
+	height				: calc(var(--vh, 1vh) * 11);
 }
 #label{
 	display				: inline-block;
@@ -253,108 +258,94 @@
 #intro{
 	font-size			: calc(var(--vh, 1vh) * 4.5);
 	vertical-align		: top;
-	margin-top			: -0.5vh;
+	margin-top			: calc(var(--vh, 1vh) * -0.5);
 	outline				: none!important;
 	border				: 0;
 	margin-left			: 3.5vw;
-	width				: calc(60.5vw - 9.5vh);
+	width				: calc(60.5vw - (var(--vh, 1vh) * 9.5));
 	background-color	: #E6DCDB;
 	border-radius		: 15px;
 	padding-left		: 1vw;
-	padding-top			: 0.5vh;
-	padding-bottom		: 0.5vh;
+	padding-top			: calc(var(--vh, 1vh) * 0.5);
+	padding-bottom		: calc(var(--vh, 1vh) * 0.5);
 	resize				: none;
 	overflow			: auto;
-	height				: calc(100% - var(--vh, 1vh) * 72);
+	height				: calc(100% - var(--vh, 1vh) * 75);
 }
 #photo{
 	display				: inline-block;
 	position			: absolute;
 	right				: 3vw;
-	top					: 4vh;
+	top					: calc(var(--vh, 1vh) * 4);
 }
 #photoimg{
-	width				: 22vh;
-	height				: 22vh;
-	border-radius		: 12vh;
+	width				: calc(var(--vh, 1vh) * 22);
+	height				: calc(var(--vh, 1vh) * 22);
+	border-radius		: calc(var(--vh, 1vh) * 12);
 	object-fit			: cover;
 }
 #infothemelogo{
 	display				: inline-block;
 	position			: absolute;
 	right				: 3vw;
-	top					: 30vh;
+	top					: calc(var(--vh, 1vh) * 30);
 }
 #infothemelogoimg{
-	width				: 22vh;
+	width				: calc(var(--vh, 1vh) * 22);
 }
 #infoedit{
 	display				: inline-block;
 	position			: absolute;
 	right				: 3vw;
-	bottom				: 4vh;
+	bottom				: calc(var(--vh, 1vh) * 4);
 }
 #infoeditimg{
-	width				: 9.5vh;
+	width				: calc(var(--vh, 1vh) * 9.5);
 }
 #mentortext{
-	margin-top			: 11vh;
+	margin-top			: calc(var(--vh, 1vh) * 11);
 }
 #mentor{
-	margin-top			: 9.5vh;
+	margin-top			: calc(var(--vh, 1vh) * 9.5);
 }
 #organtext{
-	margin-top			: 5vh;
+	margin-top			: calc(var(--vh, 1vh) * 5);
 }
 #organ{
-	margin-top			: 3.5vh;
+	margin-top			: calc(var(--vh, 1vh) * 3.5);
 }
 #contacttext{
-	margin-top			: 5vh;
+	margin-top			: calc(var(--vh, 1vh) * 5);
 }
 #contact{
-	margin-top			: 3vh;
+	margin-top			: calc(var(--vh, 1vh) * 3);
 }
 #supportthemelogo{
 	display				: inline-block;
 	position			: absolute;
 	right				: 7vw;
-	bottom				: 4vh;
+	bottom				: calc(var(--vh, 1vh) * 4);
 }
 #supportthemelogoimg{
 	width				: calc(var(--vh, 1vh) * 43);
 }
 #groupnametext{
-	margin-top			: 11vh;
+	margin-top			: calc(var(--vh, 1vh) * 11);
 }
 #groupname{
-	margin-top			: 9.5vh;
-	width				: calc(75vw - 53vh);
+	margin-top			: calc(var(--vh, 1vh) * 9.5);
+	width				: calc(75vw - (var(--vh, 1vh) * 53));
 }
 #groupsong{
 	display				: inline-block;
 	position			: absolute;
 	right				: 4vw;
-	top					: 2.5vh;
+	top					: calc(var(--vh, 1vh) * 2.5);
 }
 #groupsongimg{
-	width				: 11.5vh;
+	width				: calc(var(--vh, 1vh) * 11.5);
 }
-#mentorbox{
-	display				: inline-block;
-	margin-left			: 7vw;
-	margin-top			: 3vh;
-}
-#mem1box{
-	display				: inline-block;
-	margin-left			: 3vw;
-	margin-top			: 3vh;
-}
-#mem2box{
-	display				: inline-block;
-	margin-left			: 7vw;
-}
-#mem3box{
-	display				: inline-block;
-	margin-left			: 3vw;
+#membox{
+	overflow-y			: auto;
+	height				: calc(var(--vh, 1vh) * 64);
 }

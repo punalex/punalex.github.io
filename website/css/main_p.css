@@ -2,54 +2,129 @@
 	font-family			: 'Noto Sans TC', cwTeXHei;
 	font-weight			: bold;	
 }
+.checked{
+	color				: orange;
+}
+.timetitle{
+	display				: inline-block;
+	color				: #FFFFFF;
+	background-color	: #683325;
+	font-size			: 2vw;
+	height				: 4vw;
+	line-height			: 4vw;
+	border-radius		: 2vw;
+	padding-left		: 1.5vw;
+	padding-right		: 1.5vw;
+	padding-top			: 0.5vw;
+	padding-bottom		: 0.5vw;
+	font-weight			: normal;
+	margin-right		: 0.7vw;
+	vertical-align		: middle;
+}
+.event{
+	margin-left			: 2vw;
+	margin-top			: calc(var(--vh, 1vh) * 0.5);
+}
+.eventitem{
+	display				: inline-block;
+	background-color	: #E6DCDB;
+	font-size			: 2.5vw;
+	height				: 14vw;
+	border-radius		: 2vw;
+	padding-left		: 1.5vw;
+	padding-right		: 1.5vw;
+	padding-top			: 0.5vw;
+	padding-bottom		: 0.5vw;	
+	margin-right		: 0.7vw;
+	vertical-align		: top;
+}
+.eventdetail{
+	background-color	: #E6DCDB;
+	width				: 73vw;
+	border-radius		: 2vw;
+	padding-left		: 1.5vw;
+	padding-right		: 1.5vw;
+	padding-top			: 0.5vw;
+	padding-bottom		: 0.5vw;	
+	margin-left			: 2vw;
+	margin-top			: calc(var(--vh, 1vh) * 1);	
+}
+.yesno{
+	width				: 8vw;	
+	margin-top			: 3.7vw;
+	margin-left			: 1vw;
+}
+.item1{
+	width				: 4vw;
+}
+.item2{
+	width				: 9vw;
+}
+.item3{
+	width				: 7vw;
+}
+.item4{
+	width				: 10vw;
+}
+.item5{
+	width				: 10vw;
+}
+.item6{
+	width				: 12.5vw;
+}
 .button{
 	width				: 21vw;
 	height				: 21vw;	
 	margin-left			: 1.5vw;
 }
+.membox{
+	display				: inline-block;
+	margin-left			: 5vw;
+	margin-top			: calc(var(--vh, 1vh) * 2);
+}
 .memtext{
 	font-size			: 5vw;
-	width				: 29vw;
+	width				: 70vw;
 	outline				: none!important;
 	border				: 0;
-	margin-top			: calc(max(-8vh - 2.5vw, -16.5vw));
-	position			: absolute;
+	margin-top			: calc(var(--vh, 1vh) * 0.5);
+	text-align			: center;
 }
 .memphoto{
-	width				: calc(min(16vh, 28vw));
-	height				: calc(min(16vh, 28vw));
-	border-radius		: calc(min(8vh, 14vw));
+	width				: 70vw;
+	height				: calc(var(--vh, 1vh) * 20);
+	/*border-radius		: calc(min(var(--vh, 1vh) * 8, 14vw));*/
 	object-fit			: cover;	
 }
 .infotext{
 	margin-left			: 5vw;
-	font-size			: 2.5vh;
-	line-height			: 4.5vh;
+	font-size			: calc(var(--vh, 1vh) * 2.5);
+	line-height			: calc(var(--vh, 1vh) * 4.5);
 	display				: inline-block;
 	color				: #683325;
-	margin-top			: 19vh;
-	margin-bottom		: 1vh;
+	margin-top			: calc(var(--vh, 1vh) * 19);
+	margin-bottom		: calc(var(--vh, 1vh));
 }
 .infotext2{
 	margin-left			: 5vw;
-	font-size			: 1.5vh;
-	line-height			: 4.5vh;
+	font-size			: calc(var(--vh, 1vh) * 1.5);
+	line-height			: calc(var(--vh, 1vh) * 4.5);
 	display				: inline-block;
 	color				: #683325;
-	margin-bottom		: 1vh;	
+	margin-bottom		: calc(var(--vh, 1vh));	
 }
 .infoinput{
-	font-size			: 2.5vh;
+	font-size			: calc(var(--vh, 1vh) * 2.5);
 	vertical-align		: top;
 	outline				: none!important;
 	border				: 0;
 	margin-left			: 2vw;
-	width				: calc(67vw - 10vh);
+	width				: calc(67vw - var(--vh, 1vh) * 10);
 	background-color	: #E6DCDB;
 	border-radius		: 15px;
 	padding-left		: 1vw;
-	padding-top			: 0.5vh;
-	padding-bottom		: 0.5vh;
+	padding-top			: calc(var(--vh, 1vh) * 0.5);
+	padding-bottom		: calc(var(--vh, 1vh) * 0.5);
 }
 .inputborder{
 	height				: calc(var(--vh, 1vh) * 6.5);
@@ -73,7 +148,7 @@
 /*	outline				: none!important;*/
 	border				: 0;
 	margin-left			: 2vw;
-	width				: calc(42vw - 5vh);
+	width				: calc(42vw - (var(--vh, 1vh) * 5));
 }
 .logindesctext{
 	margin-left			: 0vw;
@@ -87,7 +162,7 @@
 	left				: 6.5%;
 	top					: 8.5%;
 	width				: 88vw;
-	height				: 83vh;
+	height				: calc(var(--vh, 1vh) * 83);
 	position			: absolute;
 	display				: block;
 	background-color	: #FFFFFF;
@@ -119,7 +194,7 @@
 }
 #userlogo{
 	margin-top			: calc(var(--vh, 1vh) * 2);
-	width				: 5.5vh;
+	width				: calc(var(--vh, 1vh) * 5.5);
 	height				: calc(var(--vh, 1vh) * 6.5);
 }
 #userinput{
@@ -129,7 +204,7 @@
 	line-height			: calc(var(--vh, 1vh) * 2.5);
 }
 #passlogo{
-	width				: 5.5vh;
+	width				: calc(var(--vh, 1vh) * 5.5);
 	height				: calc(var(--vh, 1vh) * 6.5);
 	margin-top			: calc(var(--vh, 1vh) * 4);
 }
@@ -157,7 +232,7 @@
 	vertical-align		: top;	
 }
 #howgroup{
-	width				: 26.5vh;
+	width				: calc(var(--vh, 1vh) * 26.5);
 	margin-top			: calc(var(--vh, 1vh) * 19.5);
 	margin-left			: 2vw;
 	vertical-align		: top;	
@@ -165,27 +240,27 @@
 #howlogin{
 	margin-top			: calc(var(--vh, 1vh) * -1.5);
 	margin-left			: 17vw;
-	width				: 26.5vh;
+	width				: calc(var(--vh, 1vh) *26.5);
 	vertical-align		: top;	
 }
 #themelogo{
 	position			: absolute;
 	bottom				: 0;
 	right				: 1vw;
-	width				: 30vh;
+	width				: calc(var(--vh, 1vh) * 30);
 	height				: calc(var(--vh, 1vh) * 21);
 }
 #buttonbox{
 	margin-left			: 3.5vw;
 	margin-right		: 5vw;
-	margin-top			: 4vh;
+	margin-top			: calc(var(--vh, 1vh) * 4);
 	position			: absolute;
 }
 #whiteframe{
 	left				: 10vw;
-	top					: calc(21vw + 7vh);
+	top					: calc(21vw + (var(--vh, 1vh) * 7));
 	width				: 80vw;
-	height				: calc(100% - 21vw - 11vh);
+	height				: calc(100% - 21vw - (var(--vh, 1vh) * 11));
 	position			: absolute;
 	display				: block;
 	background-color	: #FFFFFF;
@@ -194,9 +269,9 @@
 }
 #title{
 	position			: absolute;
-	top					: calc(21vw + 4.5vh);
+	top					: calc(21vw + (var(--vh, 1vh) * 4.5));
 	right				: 5vw;
-	height				: 5.5vh;
+	height				: calc(var(--vh, 1vh) * 5.5);
 }
 #label{
 	display				: inline-block;
@@ -208,99 +283,99 @@
 	position			: absolute;
 }
 #nicktext{
-	margin-top			: 19vh;
+	margin-top			: calc(var(--vh, 1vh) * 19);
 }
 #nick{
-	margin-top			: 19vh;
+	margin-top			: calc(var(--vh, 1vh) * 19);
 }
 #grouptext{
-	margin-top			: 1vh;
+	margin-top			: calc(var(--vh, 1vh));
 }
 #group{
-	margin-top			: 2vh;
+	margin-top			: calc(var(--vh, 1vh) * 2);
 }
 #liketext{
-	margin-top			: 0.5vh;
+	margin-top			: calc(var(--vh, 1vh) * 0.5);
 }
 #liketext2{
-	margin-top			: -2.5vh;
+	margin-top			: calc(var(--vh, 1vh) * -2.5);
 }
 #like{
-	margin-top			: 2.5vh;
+	margin-top			: calc(var(--vh, 1vh) * 2.5);
 }
 #goodtext{
-	margin-top			: -1vh;
+	margin-top			: calc(var(--vh, 1vh) * -1);
 }
 #good{
-	margin-top			: 1.5vh;
+	margin-top			: calc(var(--vh, 1vh) * 1.5);
 }
 #occutext{
 	margin-top			: 0vh;
 }
 #occutext2{
-	margin-top			: -3vh;
+	margin-top			: calc(var(--vh, 1vh) * -3);
 }
 #occu{
-	margin-top			: 2vh;
+	margin-top			: calc(var(--vh, 1vh) * 2);
 }
 #introtext{
-	margin-top			: -1vh;
+	margin-top			: calc(var(--vh, 1vh) * -1);
 }
 #introtext2{
-	margin-left			: calc(7vw + 10vh);
-	font-size			: 1.5vh;
-	line-height			: 2.5vh;
+	margin-left			: calc(7vw + (var(--vh, 1vh) * 10));
+	font-size			: calc(var(--vh, 1vh) * 1.5);
+	line-height			: calc(var(--vh, 1vh) * 2.5);
 	display				: inline-block;
 	color				: #683325;
-	margin-top			: -5vh;
-	margin-bottom		: 1vh;
-	width				: calc(68vw - 10vh);
+	margin-top			: calc(var(--vh, 1vh) * -5);
+	margin-bottom		: calc(var(--vh, 1vh));
+	width				: calc(68vw - (var(--vh, 1vh) * 10));
 }
 #intro{
-	font-size			: 2.5vh;
+	font-size			: calc(var(--vh, 1vh) * 2.5);
 	vertical-align		: top;
-	margin-top			: -0.5vh;
+	margin-top			: calc(var(--vh, 1vh) * -0.5);
 	outline				: none!important;
 	border				: 0;
 	margin-left			: 5vw;
-	width				: 70vw;
+	width				: 69vw;
 	background-color	: #E6DCDB;
 	border-radius		: 15px;
-	height				: calc(100% - 60.5vh);
+	height				: calc(100% - (var(--vh, 1vh) * 63.5));
 	padding-left		: 1vw;
-	padding-top			: 0.5vh;
-	padding-bottom		: 0.5vh;
+	padding-top			: calc(var(--vh, 1vh) * 0.5);
+	padding-bottom		: calc(var(--vh, 1vh) * 0.5);
 	resize				: none;
 }
 #photo{
 	display				: inline-block;
 	position			: absolute;
 	left				: 6vw;
-	top					: 3vh;
+	top					: calc(var(--vh, 1vh) * 3);
 }
 #photoimg{
-	width				: 12vh;
-	height				: 12vh;
-	border-radius		: 6vh;
+	width				: calc(var(--vh, 1vh) * 12);
+	height				: calc(var(--vh, 1vh) * 12);
+	border-radius		: calc(var(--vh, 1vh) * 6);
 	object-fit			: cover;	
 }
 #infothemelogo{
 	display				: inline-block;
 	position			: absolute;
 	left				: 33vw;
-	top					: 5.5vh;
+	top					: calc(var(--vh, 1vh) * 5.5);
 }
 #infothemelogoimg{
-	width				: 15.5vh;
+	width				: calc(var(--vh, 1vh) * 15.5);
 }
 #infoedit{
 	display				: inline-block;
 	position			: absolute;
 	right				: 6vw;
-	top					: 6vh;
+	top					: calc(var(--vh, 1vh) * 6);
 }
 #infoeditimg{
-	width				: 5vh;
+	width				: calc(var(--vh, 1vh) * 5);
 }
 #mentortext{
 	margin-top			: 19vh;
@@ -309,75 +384,97 @@
 	margin-top			: 19vh;
 }
 #organtext{
-	margin-top			: 1vh;
+	margin-top			: calc(var(--vh, 1vh));
 }
 #organ{
-	margin-top			: 2vh;
+	margin-top			: calc(var(--vh, 1vh) * 2);
 }
 #contacttext{
-	margin-top			: 1vh;
+	margin-top			: calc(var(--vh, 1vh));
 }
 #contact{
-	margin-top			: 2vh;
+	margin-top			: calc(var(--vh, 1vh) * 2);
 }
 #supportthemelogo{
 	display				: inline-block;
 	position			: absolute;
 	right				: 5vw;
-	bottom				: 3.5vh;
+	bottom				: calc(var(--vh, 1vh) * 3.5);
 }
 #supportthemelogoimg{
-	width				: calc(min(33.5vh, 67vw));
+	width				: calc(min(var(--vh, 1vh) * 33.5, 67vw));
+}
+#groupdetail{
+	margin-bottom		: calc(var(--vh, 1vh) * 3);
 }
 #groupnametext{
-	margin-top			: 4vh;
+	margin-top			: calc(var(--vh, 1vh) * 4);
 }
 #groupname{
-	margin-top			: 4vh;
-	width				: calc(54vw - 10vh);
+	margin-top			: calc(var(--vh, 1vh) * 4);
+	width				: calc(54vw - (var(--vh, 1vh) * 10));
 }
 #groupsong{
 	display				: inline-block;
 	position			: absolute;
 	right				: 6vw;
-	top					: 6vh;
+	top					: calc(var(--vh, 1vh) * 5);
 }
 #groupsongimg{
-	width				: 5vh;
+	width				: calc(var(--vh, 1vh) * 5);
 }
-#mentorbox{
+#membox{
+	overflow-y			: auto;
+	height				: calc((var(--vh, 1vh) * 72.5) - 21vw);
+}
+#eventtitle{
+	margin-left			: 2vw;
+	margin-top			: calc(var(--vh, 1vh) * 1);
+}
+#date{
+	width				: 9vw;
+	height				: 12vw;
+	border-top-color	: #FF0000;
+	border-top-width	: 1vw;
+	border-top-style	: solid;
+	background-color	: #FFFFFF;
+	margin-top			: 0.5vw;
+}
+#year{
 	display				: inline-block;
-	margin-left			: 7vw;
-	margin-top			: 2vh;
+	font-size			: 1vw;
+	font-weight			: normal;
+	position			: absolute;
+	left				: 0;
+	top					: 1vw;
 }
-#mentorname{
-	text-align			: left;
-	margin-left			: min(16vh + 3vw, 31vw);
-}
-#mem1box{
+#month{
 	display				: inline-block;
-	margin-left			: calc(73vw - min(16vh, 28vw));
-	margin-top			: calc(min(8vh, 14vw) / -3 - 1vh);
-}
-#mem1name{
+	font-size			: 1vw;
+	font-weight			: normal;
+	position			: absolute;
+	top					: 1vw;
+	right				: 0;
 	text-align			: right;
-	margin-left			: -32vw;
 }
-#mem2box{
+#day{
 	display				: inline-block;
-	margin-left			: 7vw;
-	margin-top			: calc(min(8vh, 14vw) / -3 - 1vh);
+	font-size			: 5vw;
+	width				: 9vw;
+	font-weight			: normal;
+	position			: absolute;
+	text-align			: center;
+	top					: 3vw;
+	left				: 0;
+	text-align			: center;
 }
-#mem2name{
-	text-align			: left;
-	margin-left			: min(16vh + 3vw, 31vw);
-}
-#mem3box{
+#weekday{
 	display				: inline-block;
-	margin-left			: calc(73vw - min(16vh, 28vw));
-	margin-top			: calc(min(8vh, 14vw) / -3 - 1vh);
-}
-#mem3name{
-	text-align			: right;
-	margin-left			: -32vw;
+	width				: 9vw;
+	font-size			: 2vw;
+	font-weight			: normal;
+	position			: absolute;
+	bottom				: 1vw;
+	left				: 0;
+	text-align			: center;
 }
