@@ -2,7 +2,7 @@
 	font-family			: 'Noto Sans TC', cwTeXHei;
 	font-weight			: bold;	
 }
-.fa{
+.fa-star, .fa-star-o{
 	color				: orange;
 }
 .eventtext{
@@ -115,7 +115,7 @@ pre{
 	margin-left			: 5vw;
 	font-size			: calc(var(--vh, 1vh) * 1.5);
 	line-height			: calc(var(--vh, 1vh) * 4.5);
-	display				: inline-block;
+	display				: block;
 	color				: #683325;
 	margin-bottom		: calc(var(--vh, 1vh));	
 }
@@ -329,25 +329,21 @@ pre{
 }
 #introtext2{
 	margin-left			: calc(7vw + (var(--vh, 1vh) * 10));
-	font-size			: calc(var(--vh, 1vh) * 1.5);
-	line-height			: calc(var(--vh, 1vh) * 2.5);
-	display				: inline-block;
-	color				: #683325;
 	margin-top			: calc(var(--vh, 1vh) * -5);
-	margin-bottom		: calc(var(--vh, 1vh));
 	width				: calc(68vw - (var(--vh, 1vh) * 10));
+	line-height			: calc(var(--vh, 1vh) * 2);
 }
 #intro{
 	font-size			: calc(var(--vh, 1vh) * 2.5);
 	vertical-align		: top;
-	margin-top			: calc(var(--vh, 1vh) * -0.5);
+	margin-top			: calc(var(--vh, 1vh) * -2.5 + 5vw);
 	outline				: none!important;
 	border				: 0;
 	margin-left			: 5vw;
 	width				: 69vw;
 	background-color	: #E6DCDB;
 	border-radius		: 15px;
-	height				: calc(100% - (var(--vh, 1vh) * 63.5));
+	height				: calc(100% - (var(--vh, 1vh) * 60.5) + 1vw);
 	padding-left		: 1vw;
 	padding-top			: calc(var(--vh, 1vh) * 0.5);
 	padding-bottom		: calc(var(--vh, 1vh) * 0.5);
@@ -433,9 +429,44 @@ pre{
 	overflow-y			: auto;
 	height				: calc((var(--vh, 1vh) * 72.5) - 21vw);
 }
+#timebox{
+	overflow-y			: auto;
+	margin-top			: calc(var(--vh, 1vh) * 0.5);
+	height				: calc(var(--vh, 1vh) * 80.5 - 34vw);
+}
+#zoomidtext{
+	font-size			: 2.5vw;
+	color				: #4A8BFF;
+	font-weight			: normal;
+	width				: 22vw;
+	text-align			: center;
+	margin-top			: calc(var(--vh, 1vh) * 5.5);
+	margin-left			: 38vw;
+	line-height			: 3.5vw;
+}
+#zoomid{
+	font-size			: 2.5vw;
+	font-weight			: normal;
+	width				: 22vw;
+	text-align			: center;
+	margin-left			: 38vw;
+	margin-bottom		: calc(var(--vh, 1vh) * 1.5);
+	line-height			: 3.5vw;
+	background-color	: #E6DCDB;
+	border-radius		: 1.5vw;
+}
+#zoomlink{
+	display				: inline-block;
+	position			: absolute;
+	right				: 6vw;
+	top					: calc(var(--vh, 1vh) * 5);
+}
+#zoomlinkimg{
+	width				: calc(var(--vh, 1vh) * 5);
+}
 #eventtitle{
 	margin-left			: 2vw;
-	margin-top			: calc(var(--vh, 1vh) * 1);
+	margin-top			: calc(var(--vh, 1vh));
 }
 #date{
 	width				: 9vw;

@@ -2,6 +2,82 @@
 	font-family			: 'Noto Sans TC', cwTeXHei;
 	font-weight			: bold;	
 }
+.fa-star, .fa-star-o{
+	color				: orange;
+}
+.eventtext{
+	font-size			: 2.5vw;
+}
+.timetitle{
+	display				: inline-block;
+	color				: #FFFFFF;
+	background-color	: #683325;
+	font-size			: 2vw;
+	height				: 2.5vw;
+	line-height			: 2.5vw;
+	border-radius		: 1vw;
+	padding-left		: 1vw;
+	padding-right		: 1vw;
+	padding-top			: calc(var(--vh, 1vh) * 0.5);
+	padding-bottom		: calc(var(--vh, 1vh) * 0.5);
+	font-weight			: normal;
+	margin-right		: 0.7vw;
+	vertical-align		: middle;
+}
+.event{
+	margin-left			: 2vw;
+	margin-top			: calc(var(--vh, 1vh) * 0.5);
+}
+.eventitem{
+	display				: inline-block;
+	background-color	: #E6DCDB;
+	font-size			: 2vw;
+	height				: 14vw;
+	border-radius		: 1vw;
+	padding-left		: 1vw;
+	padding-right		: 1vw;
+	padding-top			: calc(var(--vh, 1vh) * 0.5);
+	padding-bottom		: calc(var(--vh, 1vh) * 0.5);	
+	margin-right		: 0.7vw;
+	vertical-align		: top;
+}
+pre{
+	fontsize			: 8vw;
+}
+.eventdetail{
+	background-color	: #E6DCDB;
+	width				: calc(83.5vw - (var(--vh, 1vh) * 18.6));
+	border-radius		: 1vw;
+	padding-left		: 1vw;
+	padding-right		: 1vw;
+	padding-top			: calc(var(--vh, 1vh) * 0.5);
+	padding-bottom		: calc(var(--vh, 1vh) * 0.5);	
+	margin-left			: 2vw;
+	margin-top			: calc(var(--vh, 1vh) * 1);	
+}
+.yesno{
+	width				: 8vw;	
+	margin-top			: 3.7vw;
+	margin-left			: 1vw;
+}
+.item1{
+	width				: calc(6.5vw - (var(--vh, 1vh) * 1.8));
+}
+.item2{
+	width				: calc(11.5vw - (var(--vh, 1vh) * 3.3));
+}
+.item3{
+	width				: calc(10vw - (var(--vh, 1vh) * 2.7));
+}
+.item4{
+	width				: calc(12.5vw - (var(--vh, 1vh) * 2.4));
+}
+.item5{
+	width				: calc(12.5vw - (var(--vh, 1vh) * 2.4));
+}
+.item6{
+	width				: calc(15vw - (var(--vh, 1vh) * 6));
+}
 .button{
 	height				: calc((100% - (var(--vh, 1vh) * 13)) / 4 + (var(--vh, 1vh) * 0.3));
 	margin-top			: calc(var(--vh, 1vh) * 1.5);
@@ -192,7 +268,7 @@
 	left				: calc(var(--vh, 1vh) * 21 + 5vw);
 	top					: calc(var(--vh, 1vh) * 7);
 	width				: calc(91vw - (var(--vh, 1vh) * 21));
-	height				: calc(100% - (var(--vh, 1vh) * 14));
+	height				: calc(100% - (var(--vh, 1vh) * 12.3));
 	position			: absolute;
 	display				: block;
 	background-color	: #FFFFFF;
@@ -348,4 +424,94 @@
 #membox{
 	overflow-y			: auto;
 	height				: calc(var(--vh, 1vh) * 64);
+}
+#timebox{
+	overflow-y			: auto;
+	margin-top			: calc(var(--vh, 1vh) * 0.5);
+	height				: calc(var(--vh, 1vh) * 66 - 4vw);
+}
+#zoomidtext{
+	font-size			: calc(var(--vh, 1vh) * 2.5);
+	color				: #4A8BFF;
+	font-weight			: normal;
+	width				: 18vw;
+	text-align			: center;
+	margin-top			: calc(var(--vh, 1vh) * 7);
+	margin-left			: 48vw;
+	line-height			: calc(var(--vh, 1vh) * 3.5);
+}
+#zoomid{
+	font-size			: calc(var(--vh, 1vh) * 2.5);
+	font-weight			: normal;
+	width				: 18vw;
+	text-align			: center;
+	margin-left			: 48vw;
+	margin-bottom		: calc(var(--vh, 1vh) * 1.5);
+	line-height			: calc(var(--vh, 1vh) * 3.5);
+	background-color	: #E6DCDB;
+	border-radius		: 1.5vw;
+}
+#zoomlink{
+	display				: inline-block;
+	position			: absolute;
+	right				: 6vw;
+	top					: calc(var(--vh, 1vh) * 5);
+}
+#zoomlinkimg{
+	width				: calc(var(--vh, 1vh) * 13);
+}
+#eventtitle{
+	margin-left			: 2vw;
+	margin-top			: calc(var(--vh, 1vh) * 5);
+}
+#date{
+	width				: 9vw;
+	height				: 12vw;
+	border-top-color	: #FF0000;
+	border-top-width	: 1vw;
+	border-top-style	: solid;
+	background-color	: #FFFFFF;
+	margin-top			: 0.5vw;
+}
+#year{
+	display				: inline-block;
+	font-size			: 1vw;
+	font-weight			: normal;
+	position			: absolute;
+	color				: #1EA199;
+	left				: 0.2vw;
+	top					: 1vw;
+}
+#month{
+	display				: inline-block;
+	font-size			: 1vw;
+	font-weight			: normal;
+	position			: absolute;
+	color				: #1EA199;
+	top					: 1vw;
+	right				: 0.2vw;
+	text-align			: right;
+}
+#day{
+	display				: inline-block;
+	font-size			: 5vw;
+	width				: 9vw;
+	color				: #1EA199;
+	font-weight			: normal;
+	position			: absolute;
+	text-align			: center;
+	top					: 2.5vw;
+	left				: 0;
+	text-align			: center;
+}
+#weekday{
+	display				: inline-block;
+	width				: 9vw;
+	font-size			: 2vw;
+	color				: #1EA199;
+	font-weight			: normal;
+	position			: absolute;
+	bottom				: 1vw;
+	left				: 0;
+	text-align			: center;
 }
