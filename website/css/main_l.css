@@ -114,7 +114,7 @@ pre{
 	margin-left			: 4vw;
 	font-size			: calc(var(--vh, 1vh) * 3);
 	line-height			: calc(var(--vh, 1vh) * 4.5);
-	display				: inline-block;
+	display				: block;
 	color				: #683325;
 	margin-bottom		: calc(var(--vh, 1vh));
 }
