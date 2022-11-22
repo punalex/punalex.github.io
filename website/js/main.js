@@ -1,4 +1,5 @@
 var timetag="20221111161801";
+var audio=new Audio;
 function LoadHash(){
 	var xmlhttp, langcbutton, langebutton;
 	
@@ -45,7 +46,7 @@ function LoadHash(){
 			else if (clickid.substr(0, 9) == 'timetable'){
 				$('#timetable').attr('src', 'images/btn_elders_timetable.png');
 				xmlhttp.open('GET', 'content/timetable.html?'+timetag, true);
-			}				
+			}
 		}
 		xmlhttp.send();
 	}
@@ -55,7 +56,33 @@ $(window).on('hashchange', function(){
 })
 function OnClick() {
 	clickid = (this.id != undefined)?(this.id):((window.location.href.indexOf('#') != -1 && window.location.href.indexOf('!') != -1 && window.location.href.split("!")[1] != '')?(window.location.href.split("!")[1]):('main'));
-	location.hash = ((clickid.substr(0, 4) == 'main')?('#!'):((location.hash == '#!'+clickid)?('#!'+clickid):('#!'+clickid)));
+	if (clickid.substr(0, 5) == 'close'){
+		if ($('#'+clickid.substr(0, 6)).html().indexOf('down') != -1){
+			$('#'+clickid.substr(0, 6)).html('收起 <span class="fa fa-chevron-up">');
+			$('#e'+clickid.substr(5, 1)+'d').css('display', 'block');
+		}
+		else{
+			$('#'+clickid.substr(0, 6)).html('展開 <span class="fa fa-chevron-down">');
+			$('#e'+clickid.substr(5, 1)+'d').css('display', 'none');
+		}
+	}
+	else if (clickid.substr(0, 8) == 'infoedit'){
+	}	
+	else if (clickid.substr(0, 9) == 'groupsong'){
+		if (!audio.paused && !audio.ended)
+			audio.pause();
+		else{
+			audio.setAttribute('src', $('#groupsongimg').attr('alt'));
+			audio.load();
+			audio.loop = false;
+			audio.play();
+		}
+	}	
+	else if (clickid.substr(0, 8) == 'zoomlink'){
+		window.open($('#zoomlinkimg').attr('alt'), '_blank');
+	}	
+	else
+		location.hash = ((clickid.substr(0, 4) == 'main')?('#!'):((location.hash == '#!'+clickid)?('#!'+clickid):('#!'+clickid)));
 }
 function replacehtml(text){
 	$('#main').html(text);
@@ -66,13 +93,27 @@ function replacehtml(text){
 	$('#support').unbind('click');
 	$('#member').unbind('click');
 	$('#timetable').unbind('click');
+	$('#infoedit').unbind('click');	
+	$('#groupsong').unbind('click');
+	$('#close1').unbind('click');
+	$('#close2').unbind('click');
+	$('#close3').unbind('click');
+	$('#close4').unbind('click');
+	$('#zoomlink').unbind('click');
 	$('#login').click(OnClick);
+	$('#howlogin').click(OnClick);
+	$('#howgroup').click(OnClick);
 	$('#info').click(OnClick);
 	$('#support').click(OnClick);
 	$('#member').click(OnClick);
 	$('#timetable').click(OnClick);
-	$('#howlogin').click(OnClick);
-	$('#howgroup').click(OnClick);
+	$('#infoedit').click(OnClick);
+	$('#groupsong').click(OnClick);
+	$('#close1').click(OnClick);
+	$('#close2').click(OnClick);
+	$('#close3').click(OnClick);
+	$('#close4').click(OnClick);
+	$('#zoomlink').click(OnClick);	
 	$('html,body').animate({scrollTop:0}, 'slow');
 	direction();
 }
@@ -91,10 +132,11 @@ $(document).ready(function(){
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
 	LoadHash();
 })
+$(window).resize('resize', function(){
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+})
 $(window).on('orientationchange', function(){
 	direction();
-	$(window).resize('resize', function(){
-		let vh = window.innerHeight * 0.01;
-		document.documentElement.style.setProperty('--vh', `${vh}px`);
-	});
+	$(window).resize();
 })
