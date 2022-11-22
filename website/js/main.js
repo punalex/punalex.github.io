@@ -108,7 +108,7 @@ function replacehtml(text){
 	$('#member').click(OnClick);
 	$('#timetable').click(OnClick);
 	$('#infoedit').click(OnClick);
-	$('#groupsong').click(OnClick);
+//	$('#groupsong').click(OnClick);
 	$('#close1').click(OnClick);
 	$('#close2').click(OnClick);
 	$('#close3').click(OnClick);
