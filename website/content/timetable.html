@@ -1,4 +1,6 @@
 <div id="whiteframe">
+<div id="zoomidtext">ZOOM ID</div><div id="zoomid">123-456-789</div>
+<div id="zoomlink"><img id="zoomlinkimg" src="images/btn_webteamlink.png" alt="https://zoom.us/j/12345678901?pwd=password"/></div>
 <div id="eventtitle">
 <span class="timetitle item1">節數</span>
 <span class="timetitle item2">日期</span>
@@ -7,15 +9,16 @@
 <span class="timetitle item5">照顧者陪同</span>
 <span class="timetitle item6">詳細課堂內容</span>
 </div>
+<div id="timebox">
 <div class="event" id="e1">
 <span class="eventitem item1">1</span>
 <span class="eventitem item2"><div style="position:relative"><div id="date"><span id="year">2022</span><span id="month">九月</span><span id="day">1</span><span id="weekday">星期一</span></div></div></span>
 <span class="eventitem item3">上午<br>10:00-<br>10:45</span>
 <span class="eventitem item4"><img class="yesno" src="images/img_yes.png"/></span>
 <span class="eventitem item5"><img class="yesno" src="images/img_yes.png"/></span>
-<span class="eventitem item6">收起^</span>
+<span class="eventitem item6" id="close1">收起 <span class="fa fa-chevron-up"></span></span>
 </div>
-<div class="eventdetail" id"e1d">
+<div class="eventdetail" id="e1d">
 <pre><span class="eventtext">體能活動　開始活動：唱組歌，現實導向，討論近況，荼點
 　　　　　主要活動：十巧手，拋球
 　　　　　完結活動：唱組歌
@@ -25,4 +28,60 @@
 活動資源（如有）：link of resources
 </span></pre>
 </div>
+<div class="event" id="e2">
+<span class="eventitem item1">2</span>
+<span class="eventitem item2"><div style="position:relative"><div id="date"><span id="year">2022</span><span id="month">九月</span><span id="day">3</span><span id="weekday">星期三</span></div></div></span>
+<span class="eventitem item3">上午<br>10:00-<br>10:45</span>
+<span class="eventitem item4"><img class="yesno" src="images/img_yes.png"/></span>
+<span class="eventitem item5"><img class="yesno" src="images/img_no.png"/></span>
+<span class="eventitem item6" id="close2">展開 <span class="fa fa-chevron-down"></span></span>
 </div>
+<div class="eventdetail" id="e2d" style="display: none">
+<pre><span class="eventtext">體能活動　開始活動：討論近況
+　　　　　主要活動：待定
+　　　　　完結活動：唱組歌
+長者表現　興趣 <span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>　　溝通 <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span>
+　　　　　享受 <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>　　情緒 <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+　　　　　評語：長者很投入
+活動資源（如有）：link of resources
+</span></pre>
+</div>
+<div class="event" id="e3">
+<span class="eventitem item1">3</span>
+<span class="eventitem item2"><div style="position:relative"><div id="date"><span id="year">2022</span><span id="month">九月</span><span id="day">8</span><span id="weekday">星期一</span></div></div></span>
+<span class="eventitem item3">上午<br>10:00-<br>10:45</span>
+<span class="eventitem item4"><img class="yesno" src="images/img_yes.png"/></span>
+<span class="eventitem item5"><img class="yesno" src="images/img_no.png"/></span>
+<span class="eventitem item6" id="close3">展開 <span class="fa fa-chevron-down"></span></span>
+</div>
+<div class="eventdetail" id="e3d" style="display: none">
+<pre><span class="eventtext">體能活動　開始活動：討論近況
+　　　　　主要活動：待定
+　　　　　完結活動：唱組歌
+長者表現　興趣 <span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>　　溝通 <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span>
+　　　　　享受 <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>　　情緒 <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+　　　　　評語：長者很投入
+活動資源（如有）：link of resources
+</span></pre>
+</div>
+<div class="event" id="e4">
+<span class="eventitem item1">4</span>
+<span class="eventitem item2"><div style="position:relative"><div id="date"><span id="year">2022</span><span id="month">九月</span><span id="day">10</span><span id="weekday">星期三</span></div></div></span>
+<span class="eventitem item3">上午<br>10:00-<br>10:45</span>
+<span class="eventitem item4"><img class="yesno" src="images/img_yes.png"/></span>
+<span class="eventitem item5"><img class="yesno" src="images/img_no.png"/></span>
+<span class="eventitem item6" id="close4">展開 <span class="fa fa-chevron-down"></span></span>
+</div>
+<div class="eventdetail" id="e4d" style="display: none">
+<pre><span class="eventtext">體能活動　開始活動：討論近況
+　　　　　主要活動：待定
+　　　　　完結活動：唱組歌
+長者表現　興趣 <span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>　　溝通 <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span>
+　　　　　享受 <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>　　情緒 <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+　　　　　評語：長者很投入
+活動資源（如有）：link of resources
+</span></pre>
+</div>
+</div>
+</div>
+<img id="title" src="images/img_elders_header_timetable.png"/>
