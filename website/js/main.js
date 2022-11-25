@@ -86,21 +86,20 @@ function OnClick() {
 				if (type != '1' && type != '2')
 					type = 'error';
 				//
-				if (!Number.isNaN(Number(type)) && Number(type) > 0 && Number(type) < 3){		
+				if (!Number.isNaN(Number(type)) && Number(type) > 0 && Number(type) < 3){
 					sessionStorage.setItem('type', type);
 					location.hash = '#!info'+type;
 				}
-				else
+				else{
 					$('#logindesc').css('display', 'none');
 					$('#error').css('display', 'block');
 					clearTimeout(timeout);
 					timeout = setTimeout(function (){
 						$('#logindesc').css('display', 'block');
-						$('#error').css('display', 'none');						
+						$('#error').css('display', 'none');
 						clearTimeout(timeout);
 					}, 5000);
-//				Menu_Out();
-//				Resize((size == '-l')?(3):((size == '-s')?(-3):(0)));
+				}
 			}
 		}
 		xmlhttp.open('GET', 'login.txt?'+timetag, true);
