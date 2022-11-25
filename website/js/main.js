@@ -146,20 +146,14 @@ function replacehtml(text){
 	}
 	$('#infoedit').unbind('click');	
 	$('#groupsong').unbind('click');
-	$('#close1').unbind('click');
-	$('#close2').unbind('click');
-	$('#close3').unbind('click');
-	$('#close4').unbind('click');
+	$('span.item6').unbind('click');
 	$('#zoomlink').unbind('click');
 	$('#login').click(OnClick);
 	$('#howlogin').click(OnClick);
 	$('#howgroup').click(OnClick);
 	$('#infoedit').click(OnClick);
 //	$('#groupsong').click(OnClick);
-	$('#close1').click(OnClick);
-	$('#close2').click(OnClick);
-	$('#close3').click(OnClick);
-	$('#close4').click(OnClick);
+	$('span.item6').click(OnClick);
 	$('#zoomlink').click(OnClick);	
 	$('html,body').animate({scrollTop:0}, 'slow');
 	direction();
