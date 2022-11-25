@@ -2,8 +2,90 @@
 	font-family			: 'Noto Sans TC', cwTeXHei;
 	font-weight			: bold;	
 }
+.buttonbox{
+	margin-left			: 3.5vw;
+	margin-right		: 5vw;
+	margin-top			: calc(var(--vh, 1vh) * 4);
+	position			: absolute;
+}
 .fa-star, .fa-star-o{
 	color				: orange;
+}
+.session{
+	border-radius		: 1vw;
+	font-size			: 3.5vw;
+	width				: 12.5vw;
+	text-align			: center;
+	background-color	: #0E6634;
+	color				: #FFFFFF;
+	font-weight			: normal;
+	padding-top			: 1vw;
+	padding-left		: 1vw;
+	padding-right		: 1vw;
+	padding-bottom		: 1.5vw;
+	margin-left			: -10vw;
+}
+.meetdate{
+	font-size			: 3vw;
+	font-weight			: normal;
+	margin-left			: 8.5vw;
+	margin-top			: -11vw;
+	width				: 32vw;
+}
+.meettick{
+	border-radius		: 1vw;
+	border-color		: #0E6634;
+	border-width		: 5px;
+	border-style		: solid;
+	padding				: 1vw;
+	width				: 6vw;
+	margin-top			: calc(var(--vh, 1vh) * 1 + 2.5vw);
+	margin-left			: -2vw;
+	background-color	: #DDE3D9;
+}
+.topicbox{
+	position			: relative;
+}
+.meettopic{
+	font-size			: 3vw;
+	font-weight			: normal;
+	position			: absolute;
+	top					: calc(var(--vh, 1vh) * 1 + 4.5vw);
+	left				: 8vw;
+}
+.meetbuttonbox{
+	position			: absolute;
+	right				: 4vw;
+	top					: 1.5vw;
+	width				: 15vw;
+}
+.meetbutton{
+	border-radius		: 1vw;
+	width				: 13vw;
+	background-color	: #0E6634;
+	color				: #FFFFFF;
+	padding				: 2vw;
+	font-size			: 3vw;
+	font-weight			: normal;
+	vertical-align		: middle;
+	line-height			: 6.5vw;
+	display				: flex;
+	justify-content		: right;
+	margin-top			: 1vw;
+}
+.meetbuttonimg{
+	height				: 6.5vw;
+	position			: absolute;
+	left				: 2vw;
+}
+.detail{
+	border-radius		: 1vw;
+	background-color	: #DDE3D9;
+	margin-left			: 13vw;
+	padding-top			: calc(var(--vh, 1vh) * 1);
+	width				: 60vw;
+	position			: relative;
+	height				: 26vw;
 }
 .eventtext{
 	font-size			: 2.5vw;
@@ -78,9 +160,14 @@ pre{
 .item6{
 	width				: 12.5vw;
 }
-.button{
+.button1{
 	width				: 21vw;
 	height				: 21vw;	
+	margin-left			: 1.5vw;
+}
+.button2{
+	width				: 16.5vw;
+	height				: 16.5vw;	
 	margin-left			: 1.5vw;
 }
 .membox{
@@ -103,21 +190,26 @@ pre{
 	object-fit			: cover;	
 }
 .infotext{
-	margin-left			: 5vw;
+	height				: calc(var(--vh, 1vh) * 5.5);
 	font-size			: calc(var(--vh, 1vh) * 2.5);
-	line-height			: calc(var(--vh, 1vh) * 4.5);
-	display				: inline-block;
+	line-height			: calc(var(--vh, 1vh) * 2.5);
+	display				: table-cell;
 	color				: #683325;
-	margin-top			: calc(var(--vh, 1vh) * 19);
 	margin-bottom		: calc(var(--vh, 1vh));
+	vertical-align		: middle;
+}
+.text1{
+	width				: calc(var(--vh, 1vh) * 11);
+}
+.text2{
+	width				: calc(var(--vh, 1vh) * 10 + 8vw);
 }
 .infotext2{
-	margin-left			: 5vw;
 	font-size			: calc(var(--vh, 1vh) * 1.5);
-	line-height			: calc(var(--vh, 1vh) * 4.5);
+	line-height			: calc(var(--vh, 1vh) * 1.5);
 	display				: block;
 	color				: #683325;
-	margin-bottom		: calc(var(--vh, 1vh));	
+	margin-top			: calc(var(--vh, 1vh) * 0.5);	
 }
 .infoinput{
 	font-size			: calc(var(--vh, 1vh) * 2.5);
@@ -125,12 +217,34 @@ pre{
 	outline				: none!important;
 	border				: 0;
 	margin-left			: 2vw;
-	width				: calc(67vw - var(--vh, 1vh) * 10);
 	background-color	: #E6DCDB;
 	border-radius		: 15px;
 	padding-left		: 1vw;
 	padding-top			: calc(var(--vh, 1vh) * 0.5);
 	padding-bottom		: calc(var(--vh, 1vh) * 0.5);
+	line-height			: calc(var(--vh, 1vh) * 3.5);
+	margin-top			: calc(var(--vh, 1vh));
+}
+.input1{
+	width				: calc(67.5vw - (var(--vh, 1vh) * 11.5));
+}
+.input2{
+	width				: calc(61.5vw - (var(--vh, 1vh) * 11.5));
+}
+.inputarea{
+	font-size			: calc(var(--vh, 1vh) * 2.5);
+	vertical-align		: top;
+	margin-top			: calc(var(--vh, 1vh) * -2.5 + 5vw);
+	outline				: none!important;
+	border				: 0;
+	margin-left			: 5vw;
+	width				: 69vw;
+	background-color	: #E6DCDB;
+	border-radius		: 15px;
+	padding-left		: 1vw;
+	padding-top			: calc(var(--vh, 1vh) * 0.5);
+	padding-bottom		: calc(var(--vh, 1vh) * 0.5);
+	resize				: none;
 }
 .inputborder{
 	height				: calc(var(--vh, 1vh) * 6.5);
@@ -161,8 +275,16 @@ pre{
 	font-size			: calc(var(--vh, 1vh) * 2.5);
 	display				: inline-block;
 	color				: #683325;
-	margin-top			: calc(var(--vh, 1vh) * 1);
-	margin-bottom		: calc(var(--vh, 1vh) * 1);
+	margin-top			: calc(var(--vh, 1vh) * 0.5);
+	margin-bottom		: calc(var(--vh, 1vh) * 0.5);
+}
+.logindesc{
+	font-size			: calc(var(--vh, 1vh) * 2.4);
+	position			: relative;
+	top					: 6%;
+	left				: 16%;
+	width				: 70%;
+	text-align			: center;
 }
 #frame{
 	left				: 6.5%;
@@ -183,13 +305,11 @@ pre{
 	text-align			: center;	
 }
 #logindesc{
-	font-size			: calc(var(--vh, 1vh) * 2.4);
-	position			: relative;
-	top					: 6%;
-	left				: 16%;
-	width				: 70%;
 	color				: #000000;
-	text-align			: center;
+}
+#error{
+	color				: #FF0000;
+	display				: none;	
 }
 #inputbox{
 	margin-left 		: -1vw;
@@ -256,12 +376,6 @@ pre{
 	width				: calc(var(--vh, 1vh) * 30);
 	height				: calc(var(--vh, 1vh) * 21);
 }
-#buttonbox{
-	margin-left			: 3.5vw;
-	margin-right		: 5vw;
-	margin-top			: calc(var(--vh, 1vh) * 4);
-	position			: absolute;
-}
 #whiteframe{
 	left				: 10vw;
 	top					: calc(21vw + (var(--vh, 1vh) * 7));
@@ -282,72 +396,92 @@ pre{
 #label{
 	display				: inline-block;
 	vertical-align		: top;
+	margin-left			: 5vw;
 }
 #input{
 	display				: inline-block;
 	vertical-align		: top;
+}
+#infobox{
+	margin-top			: calc(var(--vh, 1vh) * 19);
+	height				: calc((var(--vh, 1vh) * 68) - 23vw);
+	overflow			: auto;
 	position			: absolute;
 }
-#nicktext{
-	margin-top			: calc(var(--vh, 1vh) * 19);
-}
 #nick{
-	margin-top			: calc(var(--vh, 1vh) * 19);
-}
-#grouptext{
-	margin-top			: calc(var(--vh, 1vh));
-}
-#group{
-	margin-top			: calc(var(--vh, 1vh) * 2);
-}
-#liketext{
 	margin-top			: calc(var(--vh, 1vh) * 0.5);
 }
-#liketext2{
-	margin-top			: calc(var(--vh, 1vh) * -2.5);
-}
-#like{
-	margin-top			: calc(var(--vh, 1vh) * 2.5);
-}
-#goodtext{
-	margin-top			: calc(var(--vh, 1vh) * -1);
-}
-#good{
-	margin-top			: calc(var(--vh, 1vh) * 1.5);
-}
-#occutext{
-	margin-top			: 0vh;
-}
-#occutext2{
-	margin-top			: calc(var(--vh, 1vh) * -3);
-}
-#occu{
-	margin-top			: calc(var(--vh, 1vh) * 2);
+#name{
+	margin-top			: calc(var(--vh, 1vh) * 0.5);
 }
 #introtext{
-	margin-top			: calc(var(--vh, 1vh) * -1);
+	padding-left		: 5vw;
+}
+#expecttext{
+	padding-left		: 5vw;
+	padding-top			: 1vw;
+}
+#remarktext{
+	padding-left		: 5vw;
+	padding-top			: 2vw;
 }
 #introtext2{
 	margin-left			: calc(7vw + (var(--vh, 1vh) * 10));
-	margin-top			: calc(var(--vh, 1vh) * -5);
 	width				: calc(68vw - (var(--vh, 1vh) * 10));
 	line-height			: calc(var(--vh, 1vh) * 2);
+	margin-top			: calc(var(--vh, 1vh) * -4);	
+	margin-bottom		: calc(var(--vh, 1vh));	
 }
 #intro{
-	font-size			: calc(var(--vh, 1vh) * 2.5);
-	vertical-align		: top;
-	margin-top			: calc(var(--vh, 1vh) * -2.5 + 5vw);
-	outline				: none!important;
-	border				: 0;
-	margin-left			: 5vw;
-	width				: 69vw;
-	background-color	: #E6DCDB;
-	border-radius		: 15px;
-	height				: calc(100% - (var(--vh, 1vh) * 60.5) + 1vw);
-	padding-left		: 1vw;
-	padding-top			: calc(var(--vh, 1vh) * 0.5);
-	padding-bottom		: calc(var(--vh, 1vh) * 0.5);
-	resize				: none;
+	height				: calc(100% - (var(--vh, 1vh) * 35) - 1.5vw);
+}
+#expect{
+	margin-top			: 0;
+}
+#remark{
+	margin-top			: 0;
+}
+#nametext{
+	margin-top			: calc(var(--vh, 1vh) * 0.7);
+}
+#name{
+}
+#nick2text{
+	margin-top			: calc(var(--vh, 1vh) * 1.7);
+}
+#nick2{
+	margin-top			: calc(var(--vh, 1vh) * 1);	
+}
+#eldertext{
+	margin-top			: calc(var(--vh, 1vh) * 1.7);
+}
+#elder{
+	margin-top			: calc(var(--vh, 1vh) * 1);	
+}
+#relatetext{
+	line-height			: calc(var(--vh, 1vh) * 2.5);
+	margin-top			: calc(var(--vh, 1vh) * 0.7);	
+}
+#relate{
+	margin-top			: calc(var(--vh, 1vh) * 1);	
+}
+#teltext{
+	margin-top			: calc(var(--vh, 1vh) * 0.5);
+}
+#tel{
+	margin-top			: calc(var(--vh, 1vh) * 1);	
+}
+#whatsapptext{
+	margin-top			: calc(var(--vh, 1vh) * 1.7);
+}
+#whatsapp{
+	margin-top			: calc(var(--vh, 1vh) * 1);	
+}
+#zoomtext{
+	margin-top			: calc(var(--vh, 1vh) * 0.3);
+}
+#zoom{
+	margin-top			: calc(var(--vh, 1vh) * 1);	
 }
 #photo{
 	display				: inline-block;
@@ -379,23 +513,14 @@ pre{
 #infoeditimg{
 	width				: calc(var(--vh, 1vh) * 5);
 }
-#mentortext{
-	margin-top			: 19vh;
-}
 #mentor{
-	margin-top			: 19vh;
-}
-#organtext{
-	margin-top			: calc(var(--vh, 1vh));
+	margin-top			: -0.1vh;
 }
 #organ{
-	margin-top			: calc(var(--vh, 1vh) * 2);
-}
-#contacttext{
-	margin-top			: calc(var(--vh, 1vh));
+	margin-top			: calc(var(--vh, 1vh) * 1.5);
 }
 #contact{
-	margin-top			: calc(var(--vh, 1vh) * 2);
+	margin-top			: calc(var(--vh, 1vh) * 1.5);
 }
 #supportthemelogo{
 	display				: inline-block;
@@ -410,11 +535,12 @@ pre{
 	margin-bottom		: calc(var(--vh, 1vh) * 3);
 }
 #groupnametext{
-	margin-top			: calc(var(--vh, 1vh) * 4);
+	padding-top			: calc(var(--vh, 1vh) * 3);
+	width				: calc(var(--vh, 1vh) * 6);
 }
 #groupname{
-	margin-top			: calc(var(--vh, 1vh) * 4);
 	width				: calc(54vw - (var(--vh, 1vh) * 10));
+	margin-top			: calc(var(--vh, 1vh) * 3.5);
 }
 #groupsong{
 	display				: inline-block;
@@ -432,7 +558,12 @@ pre{
 #timebox{
 	overflow-y			: auto;
 	margin-top			: calc(var(--vh, 1vh) * 0.5);
-	height				: calc(var(--vh, 1vh) * 80.5 - 34vw);
+	height				: calc(var(--vh, 1vh) * 78 - 34vw);
+}
+#timebox2{
+	overflow-y			: auto;
+	margin-top			: calc(var(--vh, 1vh) * 0.5);
+	height				: calc(var(--vh, 1vh) * 82 - 46vw);
 }
 #zoomidtext{
 	font-size			: 2.5vw;
@@ -450,7 +581,7 @@ pre{
 	width				: 22vw;
 	text-align			: center;
 	margin-left			: 38vw;
-	margin-bottom		: calc(var(--vh, 1vh) * 1.5);
+	margin-bottom		: calc(var(--vh, 1vh) * 3.5);
 	line-height			: 3.5vw;
 	background-color	: #E6DCDB;
 	border-radius		: 1.5vw;
@@ -462,7 +593,20 @@ pre{
 	top					: calc(var(--vh, 1vh) * 5);
 }
 #zoomlinkimg{
-	width				: calc(var(--vh, 1vh) * 5);
+	width				: calc(var(--vh, 1vh) * 4 + 5vw);
+}
+#note{
+	font-size			: 2.5vw;
+	color				: #0E6634;
+	text-align			: center;
+	margin-top			: calc(var(--vh, 1vh) * 5.5);
+	margin-left			: 63vw;
+	line-height			: 3.5vw;
+	width				: calc(max(var(--vh, 1vh) * 5, 11vw));
+	margin-bottom		: calc(var(--vh, 1vh) * 3);
+}
+#noteimg{
+	width				: calc(max(var(--vh, 1vh) * 5, 11vw));
 }
 #eventtitle{
 	margin-left			: 2vw;

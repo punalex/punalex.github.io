@@ -2,8 +2,91 @@
 	font-family			: 'Noto Sans TC', cwTeXHei;
 	font-weight			: bold;	
 }
+.buttonbox{
+	width				: calc(var(--vh, 1vh) * 81.5 / 4);
+	height				: calc(100% - (var(--vh, 1vh) * 5.5));
+	left				: 3vw;
+	top					: calc(var(--vh, 1vh) * 5.5);
+	position			: absolute;
+}
 .fa-star, .fa-star-o{
 	color				: orange;
+}
+.session{
+	border-radius		: 1vw;
+	font-size			: 2vw;
+	width				: 7.5vw;
+	text-align			: center;
+	background-color	: #0E6634;
+	color				: #FFFFFF;
+	font-weight			: normal;
+	padding-top			: 1vw;
+	padding-left		: 1vw;
+	padding-right		: 1vw;
+	padding-bottom		: 1.5vw;
+	margin-left			: -6vw;
+}
+.meetdate{
+	font-size			: 2.5vw;
+	font-weight			: normal;
+	margin-left			: 6.5vw;
+	margin-top			: -7vw;
+	width				: 32vw;
+}
+.meettick{
+	border-radius		: 1vw;
+	border-color		: #0E6634;
+	border-width		: 5px;
+	border-style		: solid;
+	padding				: 1vw;
+	width				: 4vw;
+	margin-top			: 1.5vw;
+	margin-left			: -2vw;
+	background-color	: #DDE3D9;
+}
+.topicbox{
+	position			: relative;
+}
+.meettopic{
+	font-size			: 2.5vw;
+	font-weight			: normal;
+	position			: absolute;
+	top					: 2.5vw;
+	left				: 6.5vw;
+}
+.meetbuttonbox{
+	position			: absolute;
+	right				: 1.5vw;
+	top					: 0.5vw;
+	width				: 12vw;
+}
+.meetbutton{
+	border-radius		: 1vw;
+	width				: 9vw;
+	background-color	: #0E6634;
+	color				: #FFFFFF;
+	padding				: 1.5vw;
+	font-size			: 2vw;
+	font-weight			: normal;
+	vertical-align		: middle;
+	line-height			: 4.5vw;
+	display				: flex;
+	justify-content		: right;
+	margin-top			: 1vw;
+}
+.meetbuttonimg{
+	height				: 4.5vw;
+	position			: absolute;
+	left				: 2vw;
+}
+.detail{
+	border-radius		: 1vw;
+	background-color	: #DDE3D9;
+	margin-left			: 9vw;
+	padding-top			: calc(var(--vh, 1vh) * 1);
+	width				: 47vw;
+	position			: relative;
+	height				: 18vw;
 }
 .eventtext{
 	font-size			: 2.5vw;
@@ -78,9 +161,13 @@ pre{
 .item6{
 	width				: calc(15vw - (var(--vh, 1vh) * 6));
 }
-.button{
+.button1{
 	height				: calc((100% - (var(--vh, 1vh) * 13)) / 4 + (var(--vh, 1vh) * 0.3));
 	margin-top			: calc(var(--vh, 1vh) * 1.5);
+}
+.button2{
+	height				: calc((100% - (var(--vh, 1vh) * 14)) / 5 + (var(--vh, 1vh) * 0.3));
+	margin-top			: calc(var(--vh, 1vh) * 1.1);
 }
 .membox{
 	display				: inline-block;
@@ -103,20 +190,27 @@ pre{
 	object-fit			: contain;
 }
 .infotext{
-	margin-left			: 3.5vw;
+	height				: calc(var(--vh, 1vh) * 9.6);
 	font-size			: calc(var(--vh, 1vh) * 4);
-	line-height			: calc(var(--vh, 1vh) * 4.5);
-	display				: inline-block;
+	line-height			: calc(var(--vh, 1vh) * 4);
+	display				: table-cell;
 	color				: #683325;
 	margin-bottom		: calc(var(--vh, 1vh));
+	vertical-align		: middle;
 }
 .infotext2{
-	margin-left			: 4vw;
 	font-size			: calc(var(--vh, 1vh) * 3);
-	line-height			: calc(var(--vh, 1vh) * 4.5);
+	line-height			: calc(var(--vh, 1vh) * 3);
 	display				: block;
 	color				: #683325;
 	margin-bottom		: calc(var(--vh, 1vh));
+	margin-top			: calc(var(--vh, 1vh) * 0.5);
+}
+.text1{
+	width				: calc(var(--vh, 1vh) * 20);
+}
+.text2{
+	width				: calc(var(--vh, 1vh) * 10 + 8vw);
 }
 .infoinput{
 	font-size			: calc(var(--vh, 1vh) * 4.5);
@@ -124,12 +218,33 @@ pre{
 	outline				: none!important;
 	border				: 0;
 	margin-left			: 2vw;
-	width				: calc(69vw - (var(--vh, 1vh) * 53));
 	background-color	: #E6DCDB;
 	border-radius		: 15px;
 	padding-left		: 1vw;
 	padding-top			: calc(var(--vh, 1vh) * 0.5);
 	padding-bottom		: calc(var(--vh, 1vh) * 0.5);
+	margin-top			: calc(var(--vh, 1vh) * 2);	
+}
+.input1{
+	width				: calc(70vw - var(--vh, 1vh) * 55);
+}
+.input2{
+	width				: calc(70vw - var(--vh, 1vh) * 55);
+}
+.inputarea{
+	font-size			: calc(var(--vh, 1vh) * 4.5);
+	vertical-align		: top;
+	outline				: none!important;
+	border				: 0;
+	margin-left			: 3.5vw;
+	width				: calc(60.5vw - (var(--vh, 1vh) * 9.5));
+	background-color	: #E6DCDB;
+	border-radius		: 15px;
+	padding-left		: 1vw;
+	padding-top			: calc(var(--vh, 1vh) * 0.5);
+	padding-bottom		: calc(var(--vh, 1vh) * 0.5);
+	resize				: none;
+	overflow			: auto;
 }
 .inputborder{
 	height				: calc(var(--vh, 1vh) * 10);
@@ -166,6 +281,14 @@ pre{
 	margin-top			: calc(var(--vh, 1vh) * 0.5);
 	margin-bottom		: calc(var(--vh, 1vh) * 1);
 }
+.logindesc{
+	font-size			: calc(var(--vh, 1vh) * 3.3);
+	position			: relative;
+	top					: 6%;
+	left				: 11%;
+	width				: 80%;
+	text-align			: center;
+}
 #frame{
 	left				: 6.5%;
 	top					: 8.5%;
@@ -185,13 +308,11 @@ pre{
 	text-align			: center;
 }
 #logindesc{
-	font-size			: calc(var(--vh, 1vh) * 3.3);
-	position			: relative;
-	top					: 6%;
-	left				: 11%;
-	width				: 80%;
 	color				: #000000;
-	text-align			: center;
+}
+#error{
+	color				: #FF0000;
+	display				: none;	
 }
 #inputbox{
 	margin-left			: calc((41vw - (var(--vh, 1vh) * 9) - min(var(--vh, 1vh) * 19, 14vw)) / 2);
@@ -255,14 +376,7 @@ pre{
 	position			: absolute;
 	bottom				: 0;
 	right				: 1vw;
-	height				: calc(min((62vw - (var(--vh, 1vh) * 9) - min(var(--vh, 1vh) * 19, 14vw)) / 2 + var(--vh, 1vh) * 62.5, var(--vh, 1vh) * 38));
-}
-#buttonbox{
-	width				: calc(var(--vh, 1vh) * 81.5 / 4);
-	height				: calc(100% - (var(--vh, 1vh) * 5.5));
-	left				: 3vw;
-	top					: calc(var(--vh, 1vh) * 5.5);
-	position			: absolute;
+	height				: calc(min(calc(54vw - (var(--vh, 1vh) * 40.5)), var(--vh, 1vh) * 38));
 }
 #whiteframe{
 	left				: calc(var(--vh, 1vh) * 21 + 5vw);
@@ -283,70 +397,37 @@ pre{
 }
 #label{
 	display				: inline-block;
+	margin-left			: 3.5vw;
 }
 #input{
 	display				: inline-block;
 	vertical-align		: top;
 }
-#nicktext{
-	margin-top			: calc(var(--vh, 1vh) * 9);
+#infobox{
+	margin-top			: calc(var(--vh, 1vh) * 7);
+	height				: calc(var(--vh, 1vh) * 77);
+	overflow			: auto;
+	position			: absolute;
 }
 #nick{
-	margin-top			: calc(var(--vh, 1vh) * 7);
-}
-#grouptext{
-	margin-top			: calc(var(--vh, 1vh) * 3.5);
-}
-#group{
-	margin-top			: calc(var(--vh, 1vh) * 2);
-}
-#liketext{
-	margin-top			: calc(var(--vh, 1vh) * 2);
-}
-#liketext2{
-	margin-top			: calc(var(--vh, 1vh) * -1);
-}
-#like{
-	margin-top			: calc(var(--vh, 1vh) * 2);
-}
-#goodtext{
-	margin-top			: calc(var(--vh, 1vh) * 1.5);
-}
-#good{
-	margin-top			: calc(var(--vh, 1vh) * 2);
-}
-#occutext{
-	margin-top			: calc(var(--vh, 1vh) * 2);
-}
-#occutext2{
-	margin-top			: calc(var(--vh, 1vh) * -1);
-}
-#occu{
-	margin-top			: calc(var(--vh, 1vh) * 2);
+	margin-top			: calc(var(--vh, 1vh) * 1);
 }
 #introtext{
-	margin-top			: calc(var(--vh, 1vh) * 2);
+	padding-left		: 3.5vw;
 }
 #introtext2{
-	margin-top			: calc(var(--vh, 1vh) * -1);
+	margin-top			: calc(var(--vh, 1vh) * -2);
+	margin-left			: 3.5vw;
 	width				: calc(62vw - 9.5vh);
 }
+#expecttext{
+	padding-left		: 3.5vw;	
+}
+#remarktext{
+	padding-left		: 3.5vw;	
+}
 #intro{
-	font-size			: calc(var(--vh, 1vh) * 4.5);
-	vertical-align		: top;
-	margin-top			: calc(var(--vh, 1vh) * -0.5);
-	outline				: none!important;
-	border				: 0;
-	margin-left			: 3.5vw;
-	width				: calc(60.5vw - (var(--vh, 1vh) * 9.5));
-	background-color	: #E6DCDB;
-	border-radius		: 15px;
-	padding-left		: 1vw;
-	padding-top			: calc(var(--vh, 1vh) * 0.5);
-	padding-bottom		: calc(var(--vh, 1vh) * 0.5);
-	resize				: none;
-	overflow			: auto;
-	height				: calc(100% - var(--vh, 1vh) * 75);
+	height				: calc(100% - var(--vh, 1vh) * 65);
 }
 #photo{
 	display				: inline-block;
@@ -378,23 +459,14 @@ pre{
 #infoeditimg{
 	width				: calc(var(--vh, 1vh) * 9.5);
 }
-#mentortext{
-	margin-top			: calc(var(--vh, 1vh) * 11);
-}
 #mentor{
-	margin-top			: calc(var(--vh, 1vh) * 9.5);
-}
-#organtext{
-	margin-top			: calc(var(--vh, 1vh) * 5);
+	margin-top			: calc(var(--vh, 1vh) * 0.5);
 }
 #organ{
-	margin-top			: calc(var(--vh, 1vh) * 3.5);
-}
-#contacttext{
-	margin-top			: calc(var(--vh, 1vh) * 5);
+	margin-top			: calc(var(--vh, 1vh) * 2.5);
 }
 #contact{
-	margin-top			: calc(var(--vh, 1vh) * 3);
+	margin-top			: calc(var(--vh, 1vh) * 2.5);
 }
 #supportthemelogo{
 	display				: inline-block;
@@ -406,7 +478,7 @@ pre{
 	width				: calc(var(--vh, 1vh) * 43);
 }
 #groupnametext{
-	margin-top			: calc(var(--vh, 1vh) * 11);
+	padding-top			: calc(var(--vh, 1vh) * 8.5);
 }
 #groupname{
 	margin-top			: calc(var(--vh, 1vh) * 9.5);
@@ -430,6 +502,12 @@ pre{
 	margin-top			: calc(var(--vh, 1vh) * 0.5);
 	height				: calc(var(--vh, 1vh) * 66 - 4vw);
 }
+#timebox2{
+	overflow-y			: auto;
+	top					: calc(var(--vh, 1vh) * 10.5);
+	height				: calc(var(--vh, 1vh) * 72);
+	position			: absolute;
+}
 #zoomidtext{
 	font-size			: calc(var(--vh, 1vh) * 2.5);
 	color				: #4A8BFF;
@@ -437,7 +515,7 @@ pre{
 	width				: 18vw;
 	text-align			: center;
 	margin-top			: calc(var(--vh, 1vh) * 7);
-	margin-left			: 48vw;
+	margin-left			: calc(62vw - var(--vh, 1vh) * 31);
 	line-height			: calc(var(--vh, 1vh) * 3.5);
 }
 #zoomid{
@@ -445,7 +523,7 @@ pre{
 	font-weight			: normal;
 	width				: 18vw;
 	text-align			: center;
-	margin-left			: 48vw;
+	margin-left			: calc(62vw - var(--vh, 1vh) * 31);
 	margin-bottom		: calc(var(--vh, 1vh) * 1.5);
 	line-height			: calc(var(--vh, 1vh) * 3.5);
 	background-color	: #E6DCDB;
@@ -459,6 +537,19 @@ pre{
 }
 #zoomlinkimg{
 	width				: calc(var(--vh, 1vh) * 13);
+}
+#note{
+	font-size			: calc(var(--vh, 1vh) * 3);
+	color				: #0E6634;
+	text-align			: center;
+	margin-top			: calc(var(--vh, 1vh) * 5.5);
+	margin-left			: calc(89vw - (var(--vh, 1vh) * 35));
+	line-height			: calc(var(--vh, 1vh) * 3.5);
+	width				: calc(var(--vh, 1vh) * 14);
+	margin-bottom		: calc(var(--vh, 1vh) * 3);
+}
+#noteimg{
+	width				: calc(var(--vh, 1vh) * 8);
 }
 #eventtitle{
 	margin-left			: 2vw;
