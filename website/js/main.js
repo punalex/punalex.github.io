@@ -47,8 +47,14 @@ function LoadHash(){
 				if ($(this).attr('src').indexOf('on.png') == -1)
 					$(this).attr('src', $(this).attr('src').substring(0, $(this).attr('src').length-4)+'_on.png');
 			})
-			$('#'+clickid).attr('src', $('#'+clickid).attr('src').substring(0, $('#'+clickid).attr('src').length-7)+'.png');
-			xmlhttp.open('GET', 'content/'+clickid+'.html?'+timetag, true);
+			if (clickid.substr(0, 5) == 'video'){
+				$('#learning2').attr('src', $('#learning2').attr('src').substring(0, $('#learning2').attr('src').length-7)+'.png');
+				xmlhttp.open('GET', 'content/video2.html?'+timetag, true);
+			}
+			else{
+				$('#'+clickid).attr('src', $('#'+clickid).attr('src').substring(0, $('#'+clickid).attr('src').length-7)+'.png');
+				xmlhttp.open('GET', 'content/'+clickid+'.html?'+timetag, true);
+			}
 /*			if (clickid.substr(0, 4) == 'info'){
 				xmlhttp.open('GET', 'content/'+clickid+'.html?'+timetag, true);
 			}				
@@ -109,10 +115,12 @@ function OnClick() {
 		if ($('#'+clickid.substr(0, 6)).html().indexOf('down') != -1){
 			$('#'+clickid.substr(0, 6)).html('收起 <span class="fa fa-chevron-up">');
 			$('#e'+clickid.substr(5, 1)+'d').css('display', 'block');
+			$('#e'+clickid.substr(5, 1)+'do').css('display', 'none');
 		}
 		else{
 			$('#'+clickid.substr(0, 6)).html('展開 <span class="fa fa-chevron-down">');
 			$('#e'+clickid.substr(5, 1)+'d').css('display', 'none');
+			$('#e'+clickid.substr(5, 1)+'do').css('display', 'inline-block');
 		}
 	}
 	else if (clickid.substr(0, 8) == 'infoedit'){
@@ -130,6 +138,19 @@ function OnClick() {
 	else if (clickid.substr(0, 8) == 'zoomlink'){
 		window.open($('#zoomlinkimg').attr('alt'), '_blank');
 	}	
+	else if (this.className == 'mcitem'){
+		let dict = [{"q":"q1", "a":"A"}, {"q":"q2", "a":"B"}, {"q":"q3", "a":"A"}];
+		$(this).children('.mcletter').css('border-color', 'rgba(14, 102, 52, 1)');
+		$(this).parent().children('.mcitem').unbind('click');
+		let answer = dict.find(question => question.q == $(this).parent().attr('id'));
+		if (answer.a == $(this).children('.mcletter').text()){
+			$(this).parent().siblings().children('.mctick').attr('src', 'images/img_yes.png');
+		}
+		else{
+			$(this).parent().find('.mcletter:eq('+(answer.a.charCodeAt(0)-'A'.charCodeAt(0))+')').css('border-color', 'rgba(255, 0, 0, 1)');
+			$(this).parent().siblings().children('.mctick').attr('src', 'images/img_no.png');
+		}
+	}
 	else
 		location.hash = ((clickid.substr(0, 4) == 'main')?('#!'):((location.hash == '#!'+clickid)?('#!'+clickid):('#!'+clickid)));
 }
@@ -144,17 +165,21 @@ function replacehtml(text){
 			$(this).click(OnClick);
 		})
 	}
+	$('.mcitem').unbind('click');	
 	$('#infoedit').unbind('click');	
 	$('#groupsong').unbind('click');
 	$('span.item6').unbind('click');
 	$('#zoomlink').unbind('click');
+	$('.learnvideo').unbind('click');
 	$('#login').click(OnClick);
 	$('#howlogin').click(OnClick);
 	$('#howgroup').click(OnClick);
+	$('.mcitem').click(OnClick);	
 	$('#infoedit').click(OnClick);
 //	$('#groupsong').click(OnClick);
 	$('span.item6').click(OnClick);
-	$('#zoomlink').click(OnClick);	
+	$('#zoomlink').click(OnClick);
+	$('.learnvideo').click(OnClick);
 	$('html,body').animate({scrollTop:0}, 'slow');
 	direction();
 }

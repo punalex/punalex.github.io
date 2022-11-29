@@ -11,6 +11,85 @@
 .fa-star, .fa-star-o{
 	color				: orange;
 }
+.mcbox{
+	display				: flex;
+	margin-bottom		: calc(var(--vh, 1vh) * 2);
+}
+.mcquestion{
+	overflow-wrap		: break-word;
+	font-weight			: normal;
+	font-size			: 3.5vw;
+}
+.mcletter{
+	font-weight			: normal;
+	border-color		: rgba(14, 102, 52, 0);
+	border-radius		: 50%;
+	border-width		: thick;
+	border-style		: solid;
+	padding-left		: 1.5vw;
+	padding-right		: 1.5vw;
+}
+.mcitem{
+	font-weight			: normal;
+}
+.mctick{
+	border-radius		: 1vw;
+	border-color		: #0E6634;
+	border-width		: 5px;
+	border-style		: solid;
+	padding				: 1vw;
+	background-color	: #DDE3D9;
+	width				: 4vw;
+	margin-right		: 2vw;
+}
+.videotext{
+	width				: 16vw;
+	margin-left			: 7vw;
+	margin-right		: 7vw;
+}
+.learnvideo{
+	width				: 30vw;
+	display				: inline-block;
+	font-size			: 3vw;
+	margin-top			: 4vw;
+}
+.notebox{
+	width				: 80vw;
+	text-align			: center;
+	position			: relative;
+}
+.notetext{
+	border-radius		: 2vw;
+	background-color	: #0E6634;
+	color				: #FFFFFF;
+	font-size			: 4vw;
+	padding				: 1vw;
+	width				: 32vw;
+	text-align			: center;
+	margin				: auto;
+}
+.closexy{
+	font-size			: 3vw;
+	position			: absolute;
+	top					: 8vw;
+	right				: 5vw;
+}
+.session2{
+	color				: #0E6634;
+}
+.topic2{
+	color				: #0E6634;
+	font-weight			: normal;
+}
+.content2{
+	color				: #000000;
+	font-weight			: normal;
+	margin-bottom		: calc(var(--vh, 1vh) * 2);
+}
+.noteimg2{
+	width				: 16vw;
+	margin-top			: calc(var(--vh, 1vh) * 2);
+}
 .session{
 	border-radius		: 1vw;
 	font-size			: 3.5vw;
@@ -309,7 +388,7 @@ pre{
 }
 #error{
 	color				: #FF0000;
-	display				: none;	
+	display				: none;
 }
 #inputbox{
 	margin-left 		: -1vw;
@@ -662,4 +741,67 @@ pre{
 	bottom				: 1vw;
 	left				: 0;
 	text-align			: center;
+}
+#notebox2{
+	overflow-y			: auto;
+	margin-top			: calc(var(--vh, 1vh) * 9);
+	height				: calc(var(--vh, 1vh) * 78 - 22vw);
+}
+#exd{
+	font-size			: 3vw;
+	text-align			: center;
+	display				: none;
+}
+#exd > pre{
+	margin				: 0;
+}
+#eyd{
+	text-align			: center;
+	display				: none;
+}
+#notebox2 > hr{
+	margin				: 5vw;
+	border-style		: solid;
+	border-color		: #0E6634;
+}
+#ytthumb{
+	width				: 30vw;
+}
+#mediabox{
+	padding-left		: 7vw;
+	padding-right		: 7vw;
+	margin-top			: calc(var(--vh, 1vh) * 9);
+	height				: calc(var(--vh, 1vh) * 78 - 22vw);
+	overflow			: auto;
+}
+#videobox > hr{
+	display				: none;
+}
+#videodesc{
+	font-size			: 3.5vw;
+	font-weight			: normal;
+}
+#mediabox > hr{
+	margin-top			: 5vw;
+	margin-bottom		: 5vw;
+	border-style		: solid;
+	border-color		: #0E6634;
+}
+audio
+{
+	transform			: scale(2);
+	transform-origin	: 0;
+}
+#audiobox{
+	margin-bottom		: calc(var(--vh, 1vh) * 3);
+}
+#mc{
+	margin-top			: calc(var(--vh, 1vh) * 3);
+}
+#mc > hr{
+	display				: none;
+}
+#videobox > iframe{
+	width				: 48vw;
+	height				: 27vw;
 }
