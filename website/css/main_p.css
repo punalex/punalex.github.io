@@ -773,6 +773,7 @@ pre{
 	margin-top			: calc(var(--vh, 1vh) * 9);
 	height				: calc(var(--vh, 1vh) * 78 - 22vw);
 	overflow			: auto;
+	position			: relative;
 }
 #videobox > hr{
 	display				: none;
@@ -804,4 +805,16 @@ audio
 #videobox > iframe{
 	width				: 48vw;
 	height				: 27vw;
+}
+#videonote{
+	position			: absolute;
+	top					: 0;
+	right				: 3vw;
+	width				: 12vw;
+	text-align			: center;
+	font-size			: 3vw;
+	color				: #0E6634;
+}
+#videonoteimg{
+	width				: 12vw;	
 }

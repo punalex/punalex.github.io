@@ -732,6 +732,7 @@ pre{
 	margin-top			: calc(var(--vh, 1vh) * 9);
 	overflow			: auto;
 	height				: calc(var(--vh, 1vh) * 74);
+	position			: relative;
 }
 #videobox{
 	display				: flex;
@@ -785,4 +786,16 @@ audio
 	flex				: calc(min(23vw - (var(--vh, 1vh) * 5), 24vw)) 0 0;
 	height				: 13.5vw;
 	border-width		: 0;
+}
+#videonote{
+	position			: absolute;
+	top					: 0;
+	right				: 3vw;
+	width				: 8vw;
+	text-align			: center;
+	font-size			: 2vw;
+	color				: #0E6634;
+}
+#videonoteimg{
+	width				: 8vw;	
 }
