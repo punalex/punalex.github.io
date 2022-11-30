@@ -88,7 +88,7 @@ function OnClick() {
 				// for testing
 				type = $('#id').val();
 				//
-				if (!Number.isNaN(Number(type)) && Number(type) > 0 && Number(type) < 4){
+				if (!Number.isNaN(Number(type)) && Number(type) > 0 && Number(type) < 5){
 					sessionStorage.setItem('type', type);
 					switch(type){
 						case '1':case '2': location.hash = '#!info'+type;break;
@@ -153,6 +153,11 @@ function OnClick() {
 	else
 		location.hash = ((clickid.substr(0, 4) == 'main')?('#!'):((location.hash == '#!'+clickid)?('#!'+clickid):('#!'+clickid)));
 }
+function OnEnter(e){
+	if (e.which == 13){
+		$('#login').click();
+	}
+}
 function replacehtml(text){
 	$('#main').html(text);
 	$('#login').unbind('click');
@@ -179,6 +184,8 @@ function replacehtml(text){
 	$('span.item6').click(OnClick);
 	$('#zoomlink').click(OnClick);
 	$('.learnvideo').click(OnClick);
+	$('#id').on('keypress', OnEnter);
+	$('#password').on('keypress', OnEnter);
 	$('html,body').animate({scrollTop:0}, 'slow');
 	direction();
 }
