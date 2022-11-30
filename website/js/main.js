@@ -30,6 +30,9 @@ function LoadHash(){
 			case '2':{
 				bk = 'bg_green.png';
 			}break;
+			case '3':{
+				bk = 'bg_blue.png';
+			}break;
 		}				
 		if ($('body').css('background-image').indexOf(bk) == -1)
 			$('body').css('background-image', 'url("images/'+bk+'")');
@@ -61,11 +64,6 @@ function LoadHash(){
 			else if (clickid.substr(0, 8) == 'support1'){
 				xmlhttp.open('GET', 'content/support1.html?'+timetag, true);
 			}				
-			else if (clickid.substr(0, 7) == 'member1'){
-				xmlhttp.open('GET', 'content/member1.html?'+timetag, true);
-			}				
-			else if (clickid.substr(0, 10) == 'timetable1'){
-				xmlhttp.open('GET', 'content/timetable1.html?'+timetag, true);
 			}*/
 		}
 		xmlhttp.send();
@@ -89,12 +87,13 @@ function OnClick() {
 				var type=xmlhttp.responseText;		
 				// for testing
 				type = $('#id').val();
-				if (type != '1' && type != '2')
-					type = 'error';
 				//
-				if (!Number.isNaN(Number(type)) && Number(type) > 0 && Number(type) < 3){
+				if (!Number.isNaN(Number(type)) && Number(type) > 0 && Number(type) < 4){
 					sessionStorage.setItem('type', type);
-					location.hash = '#!info'+type;
+					switch(type){
+						case '1':case '2': location.hash = '#!info'+type;break;
+						case '3': location.hash = '#!member'+type;break;
+					}
 				}
 				else{
 					$('#logindesc').css('display', 'none');
@@ -159,7 +158,7 @@ function replacehtml(text){
 	$('#login').unbind('click');
 	$('#howlogin').unbind('click');
 	$('#howgroup').unbind('click');
-	for (let loop=1; loop<=2; loop++){
+	for (let loop=1; loop<=3; loop++){
 		$('#buttonbox'+loop+' > img').each(function(){
 			$(this).unbind('click');
 			$(this).click(OnClick);
