@@ -183,7 +183,7 @@ div:has(> #groupnametext){
 #groupname, #songname{
 	width				: calc(75vw - (var(--vh, 1vh) * 53));
 }
-#groupsongimg, #editsongimg{
+#groupsongimg, #groupeditimg{
 	width				: calc(var(--vh, 1vh) * 11.5);
 }
 #membox{

@@ -146,7 +146,14 @@ function OnClick() {
 			$('#e'+clickid.substr(5, 1)+'do').css('display', 'inline-block');
 		}
 	}
-	else if (clickid.substr(0, 8) == 'infoedit'){
+	else if (clickid.substr(clickid.length - 7) == 'editimg'){
+		$('#whiteframe input, #whiteframe textarea').attr('readonly', ($(this).attr('src').indexOf('edit') == -1));
+		$(this).attr('src', function(index, srcname){
+			if ($(this).attr('src').indexOf('edit') != -1)
+				return srcname.replace(/edit/, 'save');
+			else
+				return srcname.replace(/save/, 'edit');
+		});
 	}	
 	else if (clickid.substr(0, 9) == 'groupsong'){
 		if (!audio.paused && !audio.ended)
@@ -203,8 +210,8 @@ function replacehtml(text){
 		})
 	}
 	$('.mcitem').unbind('click');	
-	$('#infoedit').unbind('click');	
-	$('#groupsong').unbind('click');
+	$('[id$=editimg]').unbind('click');	
+	$('#groupsongimg').unbind('click');
 	$('span.item6').unbind('click');
 	$('#zoomlink').unbind('click');
 	$('.learnvideo').unbind('click');
@@ -214,8 +221,8 @@ function replacehtml(text){
 	$('#howlogin').click(OnClick);
 	$('#howgroup').click(OnClick);
 	$('.mcitem').click(OnClick);	
-	$('#infoedit').click(OnClick);
-//	$('#groupsong').click(OnClick);
+	$('[id$=editimg]').click(OnClick);
+//	$('#groupsongimg').click(OnClick);
 	$('span.item6').click(OnClick);
 	$('#zoomlink').click(OnClick);
 	$('.learnvideo').click(OnClick);
