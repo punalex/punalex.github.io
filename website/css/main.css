@@ -1,0 +1,461 @@
+body{
+	width				: 100vw;
+	height				: calc(var(--vh, 1vh) * 100);
+	max-height			: -webkit-fill-available;
+	padding				: 0;
+	margin				: 0;
+	border				: 0;
+	background-image	: url('../images/bg_orange.png');
+	background-size		: 100% 100%;
+	background-repeat	: no-repeat;
+}
+:not(.font, .normal){
+	font-family			: 'Noto Sans TC', cwTeXHei;
+	font-weight			: bold;	
+}
+:not(.color0, .color1, .color2, .colorz1, .colorc1){
+	color				: #000000;
+}
+:not(.order){
+	z-index				: 2;
+}
+.normal{
+	font-weight			: normal;
+}
+.color0{
+	color				: #FFFFFF;
+}
+.color1{
+	color				: #683325;
+}
+.color2{
+	color				: #0E6634;
+}
+.color3{
+	color				: #252362;
+}
+.colorz1{
+	color				: #4A8BFF;
+}
+.colorc1{
+	color				: #1EA199;	
+}
+.bkcolor1{
+	background-color	: #89594B;
+}
+.bkcolor2{
+	background-color	: #E6DCDB;
+}
+.bkcolor3{
+	background-color	: #DDE3D9;
+}
+.bkcolor4{
+	background-color	: #0E6634;
+}
+.bkcolor5{
+	background-color	: #558257;
+}
+.bkcolor6{
+	background-color	: #544878;
+}
+.bkcolor7{
+	background-color	: #D3CFDE;
+}
+.bkcolor9{
+	background-color	: #D18E48;
+}
+.bdcolor1{
+	border-color		: #0E6634;
+}
+.fa-star, .fa-star-o{
+	color				: orange;
+}
+.selected{
+	color				: #95613A;
+}
+.buttonbox{
+	position			: absolute;
+	display				: flex;
+	justify-content		: space-between;
+}
+.buttonbox > img{
+	object-fit			: contain;
+}
+#whiteframe{
+	position			: absolute;
+	display				: block;
+	background-color	: #FFFFFF;
+	border-radius		: 15px;
+	box-shadow			: 0px 0px min(3vw, 3vh) #555555, -0px -0px min(3vw, 3vh) #555555;
+	z-index				: 0;
+}
+#whiteframe:has(> #logintext){
+	left				: 6.5%;
+	top					: 8.5%;
+	width				: 88vw;
+	height				: calc(var(--vh, 1vh) * 83);
+}
+#footer{
+	display				: flex;
+	position			: absolute;
+	justify-content		: space-between;
+}
+#logintext{
+	position			: relative;
+	top					: 5%;
+	text-align			: center;	
+}
+.logindesc{
+	position			: relative;
+	top					: 6%;
+	text-align			: center;	
+}
+#error{
+	color				: #FF0000;
+	display				: none;
+}
+#inputbox{
+	position			: relative;
+	top					: 6%;	
+}
+.inputborder{
+	display				: inline-block;
+	vertical-align		: top;
+	width				: 47vw;
+	border-radius		: 15px;
+	border-color		: #683325;
+	border-left-width	: 16px;
+	border-left-color	: #FFFFFF;
+	border-top-width	: 2px;
+	border-right-width	: 2px;
+	border-bottom-width	: 2px;
+	border-style		: solid;
+	text-align			: left;
+}
+.logindesctext{
+	margin-left			: 0vw;
+	display				: inline-block;
+	margin-top			: calc(var(--vh, 1vh) * 0.5);
+}
+.logininput{
+	vertical-align		: top;
+/*	outline				: none!important;*/
+	border				: 0;
+	margin-left			: 2vw;
+}
+#login{
+	position			: absolute;
+}
+#howtext{
+	height				: calc(var(--vh, 1vh) * 7);
+	display				: inline-block;
+	vertical-align		: top;	
+}
+#howgroup{
+	margin-left			: 2vw;
+	vertical-align		: top;	
+}
+#howlogin{
+	vertical-align		: top;	
+}
+#title{
+	position			: absolute;
+	top					: 0;
+}
+.accessories{
+	display				: flex;
+	position			: absolute;
+	justify-content		: space-between;
+	z-index				: 1;
+}
+.accessories:has(> div > #zoomid){
+	justify-content		: end;
+	align-items			: center;
+}
+#photoimg{
+	border-radius		: 50%;
+	object-fit			: cover;
+}
+#infobox{
+	padding-left		: 5vw;
+	padding-right		: 5vw;
+	overflow			: auto;
+}
+#carer, #logout{
+	border-radius		: 2vw;
+	border-width		: 0;
+	font-size			: calc(min(4vw, calc(var(--vh, 1vh) * 3)));
+	text-align			: center;
+}
+div:has(> .labelwidth1, > .labelwidth2, > #input){
+	display				: flex;
+	align-items			: center;
+}
+div:has(> .infoinput), div:has(> .infotext){
+	display				: grid;
+	align-items			: center;
+}
+.infotextsmall:not(#introtextsmall){
+	margin-top			: calc(var(--vh, 1vh) * 0.5)
+}
+.infoinput{
+	outline				: none!important;
+	border				: 0;
+	border-radius		: 15px;
+	padding				: calc(var(--vh, 1vh) * 0.5) 0 calc(var(--vh, 1vh) * 0.5) 1vw;
+}
+.inputarea{
+	outline				: none!important;
+	border				: 0;
+	border-radius		: 15px;
+	padding-left		: 1vw;
+	padding-top			: calc(var(--vh, 1vh) * 0.5);
+	padding-bottom		: calc(var(--vh, 1vh) * 0.5);
+	resize				: none;
+	overflow			: auto;
+	position			: relative;
+}
+div:has(> #groupname){
+	flex				: auto;
+}
+#membox, #detailbox{
+	overflow-y			: auto;
+}
+.member{
+	display				: inline-block;
+	margin-left			: 5vw;
+}
+.memphoto{
+	height				: calc(var(--vh, 1vh) * 20);
+	object-fit			: contain;	
+}
+.memtext{
+	outline				: none!important;
+	border				: 0;
+	text-align			: center;
+}
+#zoomidtext, div:has(> #noteimg), #exd, #eyd{
+	text-align			: center;
+}
+#zoomid{
+	text-align			: center;
+	border-radius		: 1.5vw;
+}
+#zoomlinkimg{
+	margin-left			: 3vw;
+}
+#eventtitle{
+	margin-left			: 2vw;
+}
+.timetitle{
+	display				: inline-block;
+	background-color	: #683325;
+	font-size			: 2vw;
+	margin-right		: 0.7vw;
+	vertical-align		: middle;
+}
+#timebox{
+	overflow-y			: auto;
+	margin-top			: calc(var(--vh, 1vh) * 0.5);
+}
+.eventitem{
+	display				: inline-block;
+	height				: 14vw;
+	margin-right		: 0.7vw;
+	vertical-align		: top;
+}
+div:has(> #date), div:has(> .meettick){
+	position			: relative;
+}
+.calendar{
+	display				: inline-block;
+	position			: absolute;
+}
+#date{
+	height				: 12vw;
+	border-top-color	: #FF0000;
+	border-top-width	: 1vw;
+	border-top-style	: solid;
+	background-color	: #FFFFFF;
+	margin-top			: 0.5vw;
+}
+#year{
+	font-size			: 1vw;
+	position			: absolute;
+	left				: 0.2vw;
+	top					: 0vw;
+}
+#month{
+	font-size			: 1vw;
+	position			: absolute;
+	top					: 0vw;
+	right				: 0.2vw;
+	text-align			: right;
+}
+#day{
+	font-size			: 5vw;
+	position			: absolute;
+	text-align			: center;
+	top					: 1vw;
+	left				: 0;
+	text-align			: center;
+}
+#weekday{
+	font-size			: 2vw;
+	position			: absolute;
+	bottom				: 1vw;
+	left				: 0;
+	text-align			: center;
+}
+.yesno{
+	width				: 8vw;	
+}
+div:has(> .yesno){
+	display				: table-cell;
+	width				: inherit;
+	height				: inherit;
+	text-align			: center;
+	vertical-align		: middle;
+}
+.event{
+	margin-left			: 2vw;
+	margin-top			: calc(var(--vh, 1vh) * 0.5);
+}
+.eventdetail{
+	margin-left			: 2vw;
+	margin-top			: calc(var(--vh, 1vh) * 1);	
+}
+.eventtext{
+	font-size			: 2.5vw;
+}
+div:has(> #expecttext, > #remarktext){
+	align-content		: end;
+}	
+div:has(> #timenoteimg){
+	text-align			: center;
+}
+.detail{
+	border-radius		: 1vw;
+	padding-top			: calc(var(--vh, 1vh) * 1);
+	position			: relative;
+}
+.session{
+	border-radius		: 1vw;
+	text-align			: center;
+	font-weight			: normal;
+	padding				: 1vw 1vw 1.5vw 1vw;
+}
+.meetdate{
+	width				: 32vw;
+}
+.meettick{
+	border-radius		: 1vw;
+	border-width		: 5px;
+	border-style		: solid;
+	padding				: 1vw;
+	margin-left			: -2vw;
+}
+.meetbuttonbox{
+	position			: absolute;
+}
+.meetbutton{
+	border-radius		: 1vw;
+	vertical-align		: middle;
+	display				: flex;
+	justify-content		: right;
+	margin-top			: 1vw;
+}
+.meetbuttonimg{
+	position			: absolute;
+	left				: 2vw;
+}
+#notebox{
+	margin-top			: calc(var(--vh, 1vh) * 7);
+}
+#notebox > hr{
+	border-style		: solid;
+}
+.notepart{
+	text-align			: center;
+	position			: relative;
+}
+.notetext{
+	border-radius		: 2vw;
+	text-align			: center;
+	margin				: auto;
+}
+.noteimg{
+	margin-top			: calc(var(--vh, 1vh) * 2);
+}
+.closexy{
+	font-size			: 3vw;
+	position			: absolute;
+	top					: 8vw;
+	right				: 5vw;
+}
+#exd > pre{
+	margin				: 0;
+}
+.learnvideo{
+	display				: inline-block;
+	margin-top			: 4vw;
+}
+#mediabox{
+	padding				: 0 7vw 0 7vw;
+	margin-top			: calc(var(--vh, 1vh) * 7);
+	overflow			: auto;
+	position			: relative;
+}
+div:has(> #videonoteimg){
+	position			: absolute;
+	top					: 0;
+	right				: 5vw;
+	text-align			: center;
+}
+#videobox > iframe{
+	border-width		: 0;
+}
+#mediabox > hr{
+	border-style		: solid;
+}
+audio
+{
+	transform-origin	: 0;
+}
+audio::-webkit-media-controls-timeline
+{
+	display: none;
+}
+.mcbox{
+	display				: flex;
+	margin-bottom		: calc(var(--vh, 1vh) * 2);
+}
+.mctick{
+	border-radius		: 1vw;
+	border-style		: solid;
+	padding				: 1vw;
+	margin-right		: 2vw;
+}
+.mcquestion{
+	overflow-wrap		: break-word;
+}
+.mcitem{
+	white-space			: nowrap;
+}
+.mcletter{
+	font-weight			: normal;
+	border-color		: rgba(14, 102, 52, 0);
+	border-radius		: 50%;
+	border-width		: medium;
+	border-style		: solid;
+	padding-left		: 1vw;
+	padding-right		: 1vw;
+}
+.mcletter{
+	border-color		: rgba(14, 102, 52, 0);
+	border-radius		: 50%;
+	border-style		: solid;
+}
+#editsongimg{
+	margin-left			: 2vw;
+}

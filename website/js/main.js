@@ -3,7 +3,7 @@ var audio=new Audio;
 var timeout=0;
 var windowresize=0;
 function LoadHash(){
-	var xmlhttp, langcbutton, langebutton, type;
+	let xmlhttp, langcbutton, langebutton, type;
 	
 	clickid = (window.location.href.indexOf('#') != -1 && window.location.href.indexOf('!') != -1 && window.location.href.split("!")[1] != '')?(window.location.href.split("!")[1]):('main');	
 	type = sessionStorage.getItem('type');
@@ -22,20 +22,41 @@ function LoadHash(){
 //				Resize((size == '-l')?(3):((size == '-s')?(-3):(0)));
 			}
 		}
-		var bk;
+		let bk, bc;
 		switch(type){
 			case '1':{
 				bk = 'bg_orange.png';
+				bc = 'bkcolor1';
+				bt = '往照顧者頁面>>';
 			}break;
 			case '2':{
 				bk = 'bg_green.png';
+				bc = 'bkcolor5';
+				bt = '往長者頁面>>';
 			}break;
 			case '3':{
 				bk = 'bg_blue.png';
+				bc = 'bkcolor6';
+				bt = '';
+			}break;
+			case '4':{
+				bk = 'bg_brown.png';
+				bc = 'bkcolor9';
+				bt = '';
 			}break;
 		}				
 		if ($('body').css('background-image').indexOf(bk) == -1)
 			$('body').css('background-image', 'url("images/'+bk+'")');
+		if ($('#carer').attr('class').indexOf(bc) == -1){
+			$('#carer, #logout').each(function(){
+				$(this).attr('class', function(index, classname){
+					return classname.replace(/bkcolor\d/, bc);
+				});
+			});
+			$('#carer').text(bt);
+			$('#carer').css('visibility', (bt == '')?('hidden'):('visible'));
+		}
+		$('#footer').css('display', (clickid.substr(0, 4) == 'main')?('none'):('flex'));
 		if (clickid.substr(0, 4) == 'main'){
 			xmlhttp.open('GET', 'content/main.html?'+timetag, true);
 			$('body > div:not(#main)').each(function(){
@@ -51,8 +72,8 @@ function LoadHash(){
 					$(this).attr('src', $(this).attr('src').substring(0, $(this).attr('src').length-4)+'_on.png');
 			})
 			if (clickid.substr(0, 5) == 'video'){
-				$('#learning2').attr('src', $('#learning2').attr('src').substring(0, $('#learning2').attr('src').length-7)+'.png');
-				xmlhttp.open('GET', 'content/video2.html?'+timetag, true);
+				$('#learning'+type).attr('src', $('#learning'+type).attr('src').substring(0, $('#learning'+type).attr('src').length-7)+'.png');
+				xmlhttp.open('GET', 'content/video'+type+'.html?'+timetag, true);
 			}
 			else{
 				$('#'+clickid).attr('src', $('#'+clickid).attr('src').substring(0, $('#'+clickid).attr('src').length-7)+'.png');
@@ -74,8 +95,11 @@ $(window).on('hashchange', function(){
 })
 function OnClick() {
 	clickid = (this.id != undefined)?(this.id):((window.location.href.indexOf('#') != -1 && window.location.href.indexOf('!') != -1 && window.location.href.split("!")[1] != '')?(window.location.href.split("!")[1]):('main'));
+	if (clickid.substr(0, 6) == 'logout'){
+		clickid = '';
+	}
 	if (clickid.substr(0, 5) == 'login'){
-		var xmlhttp, langcbutton, langebutton;
+		let xmlhttp, langcbutton, langebutton;
 	
 		if (window.XMLHttpRequest)
 			xmlhttp = new XMLHttpRequest();
@@ -84,14 +108,14 @@ function OnClick() {
 
 		xmlhttp.onreadystatechange = function(){
 			if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
-				var type=xmlhttp.responseText;		
+				let type=xmlhttp.responseText;		
 				// for testing
 				type = $('#id').val();
 				//
 				if (!Number.isNaN(Number(type)) && Number(type) > 0 && Number(type) < 5){
 					sessionStorage.setItem('type', type);
 					switch(type){
-						case '1':case '2': location.hash = '#!info'+type;break;
+						case '1':case '2':case '4': location.hash = '#!info'+type;break;
 						case '3': location.hash = '#!member'+type;break;
 					}
 				}
@@ -150,8 +174,15 @@ function OnClick() {
 			$(this).parent().siblings().children('.mctick').attr('src', 'images/img_no.png');
 		}
 	}
-	else
+	else{
+		if (clickid.substr(0, 5) == 'carer'){
+			type = sessionStorage.getItem('type');
+			type = type%2+1;
+			sessionStorage.setItem('type', type);
+			clickid = "info"+type;
+		}
 		location.hash = ((clickid.substr(0, 4) == 'main')?('#!'):((location.hash == '#!'+clickid)?('#!'+clickid):('#!'+clickid)));
+	}
 }
 function OnEnter(e){
 	if (e.which == 13){
@@ -159,11 +190,13 @@ function OnEnter(e){
 	}
 }
 function replacehtml(text){
-	$('#main').html(text);
+	$('#whiteframe').html(text);
 	$('#login').unbind('click');
+	$('#logout').unbind('click');
+	$('#carer').unbind('click');
 	$('#howlogin').unbind('click');
 	$('#howgroup').unbind('click');
-	for (let loop=1; loop<=3; loop++){
+	for (let loop=1; loop<=4; loop++){
 		$('#buttonbox'+loop+' > img').each(function(){
 			$(this).unbind('click');
 			$(this).click(OnClick);
@@ -176,6 +209,8 @@ function replacehtml(text){
 	$('#zoomlink').unbind('click');
 	$('.learnvideo').unbind('click');
 	$('#login').click(OnClick);
+	$('#logout').click(OnClick);
+	$('#carer').click(OnClick);
 	$('#howlogin').click(OnClick);
 	$('#howgroup').click(OnClick);
 	$('.mcitem').click(OnClick);	
@@ -199,20 +234,21 @@ function direction(){
 		$('#cssland').attr("disabled", "disabled");
 	}
 }
-$(document).ready(function(){
-	let vh = window.innerHeight * 0.01;
+function resetvh(){
+	let vh = Math.min(window.innerHeight, document.documentElement.clientHeight) * 0.01;
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+$(document).ready(function(){
+	resetvh();
 	LoadHash();
 })
 $(window).resize('resize', function(){
 	clearTimeout(windowresize);
 	windowresize = setTimeout(function (){
-		let vh = window.innerHeight * 0.01;	
-		document.documentElement.style.setProperty('--vh', `${vh}px`);
+		resetvh();
 		clearTimeout(windowresize);
 	}, 500);
-	let vh = window.innerHeight * 0.01;	
-	document.documentElement.style.setProperty('--vh', `${vh}px`);
+	resetvh();
 })
 $(window).on('orientationchange', function(){
 	direction();
