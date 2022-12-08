@@ -100,6 +100,11 @@ body{
 	position			: absolute;
 	justify-content		: space-between;
 }
+#themelogo{
+	position			: fixed;
+	bottom				: 0;
+	right				: 1vw;
+}
 #logintext{
 	position			: relative;
 	top					: 5%;
@@ -224,6 +229,7 @@ div:has(> #groupname){
 .member{
 	display				: inline-block;
 	margin-left			: 5vw;
+	margin-bottom		: calc(var(--vh, 1vh) * 2);
 }
 .memphoto{
 	height				: calc(var(--vh, 1vh) * 20);

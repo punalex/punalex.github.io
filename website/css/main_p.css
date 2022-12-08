@@ -15,12 +15,9 @@
 	width				: 80vw;
 }
 #carer, #logout{
-	padding				: 0.5vw 3vw 0.5vw 3vw;
+	padding				: 0.5vw 3vw;
 }
 #themelogo{
-	position			: absolute;
-	bottom				: 0;
-	right				: 1vw;
 	width				: calc(var(--vh, 1vh) * 30);
 	height				: calc(var(--vh, 1vh) * 21);
 }
@@ -186,9 +183,6 @@ div:has(> #groupnametext){
 	height				: calc((var(--vh, 1vh) * 74) - 32vw);
 	margin-top			: calc(var(--vh, 1vh) * 14 + 2vw);
 }
-.member{
-	margin-bottom		: calc(var(--vh, 1vh) * 2);
-}
 .memphoto{
 	width				: 70vw;
 }
@@ -217,7 +211,7 @@ div:has(> #groupnametext){
 	height				: 4vw;
 	line-height			: 4vw;
 	border-radius		: 2vw;
-	padding				: 0.5vw 1.5vw 0.5vw 1.5vw;
+	padding				: 0.5vw 1.5vw;
 }
 .item1{
 	width				: 4vw;
@@ -249,7 +243,7 @@ div:has(> #groupnametext){
 .eventitem{
 	font-size			: 2.5vw;
 	border-radius		: 2vw;
-	padding				: 0.5vw 1.5vw 0.5vw 1.5vw;
+	padding				: 0.5vw 1.5vw;
 }
 #date, #day, #weekday{
 	width				: 9vw;
@@ -257,7 +251,7 @@ div:has(> #groupnametext){
 .eventdetail{
 	width				: 73vw;
 	border-radius		: 2vw;
-	padding				: 0.5vw 1.5vw 0.5vw 1.5vw;
+	padding				: 0.5vw 1.5vw;
 }
 div:has(> #expecttext, > #remarktext){
 	grid-template-rows	: calc(var(--vh, 1vh) * 3.5);
@@ -396,8 +390,7 @@ audio::-webkit-media-controls-timeline
 }
 .mcletter{
 	border-width		: thick;
-	padding-left		: 1.5vw;
-	padding-right		: 1.5vw;
+	padding				: 0 1.5vw;
 }
 .accessories > #label:has(> .color3) div{
 	padding				: calc(var(--vh, 1vh) * 0.5) 0 calc(var(--vh, 1vh) * 0.5) 1vw;

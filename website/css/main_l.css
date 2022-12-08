@@ -20,15 +20,12 @@
 	align-items			: end;
 }
 #carer, #logout{
-	padding				: 0.5vw 2vw 0.5vw 2vw;
+	padding				: 0.5vw 2vw;
 }
 #logout{
 	width				: calc(var(--vh, 1vh) * 6.5);
 }
 #themelogo{
-	position			: absolute;
-	bottom				: 0;
-	right				: 1vw;
 	height				: calc(min(calc(54vw - (var(--vh, 1vh) * 40.5)), var(--vh, 1vh) * 38));
 }
 #logintext{
@@ -64,9 +61,7 @@
 	font-size			: calc(var(--vh, 1vh) * 5);
 	margin-top			: calc(var(--vh, 1vh) * 0.8);
 	width				: calc(42vw - (var(--vh, 1vh) * 8));
-	padding-left		: 1vw;
-	padding-top			: calc(var(--vh, 1vh) * 0.5);
-	padding-bottom		: calc(var(--vh, 1vh) * 0.5);
+	padding				: calc(var(--vh, 1vh) * 0.5) 0 calc(var(--vh, 1vh) * 0.5) 1vw;
 }
 #login{
 	top					: calc(var(--vh, 1vh) * 18.5 - min(var(--vh, 1vh) * 9.5, 7vw));
@@ -227,7 +222,7 @@ div:has(> #groupnametext){
 	height				: 2.5vw;
 	line-height			: 2.5vw;
 	border-radius		: 1vw;
-	padding				: calc(var(--vh, 1vh) * 0.5) 0.6vw calc(var(--vh, 1vh) * 0.5) 0.6vw;
+	padding				: calc(var(--vh, 1vh) * 0.5) 0.6vw;
 }
 .item1{
 	width				: calc(6.5vw - (var(--vh, 1vh) * 1.8));
@@ -259,7 +254,7 @@ div:has(> #groupnametext){
 .eventitem{
 	font-size			: 2vw;
 	border-radius		: 1vw;
-	padding				: calc(var(--vh, 1vh) * 0.5) 0.6vw calc(var(--vh, 1vh) * 0.5) 0.6vw;
+	padding				: calc(var(--vh, 1vh) * 0.5) 0.6vw;
 }
 #date, #day, #weekday{
 	width				: calc(11.5vw - (var(--vh, 1vh) * 3.3));
@@ -267,7 +262,7 @@ div:has(> #groupnametext){
 .eventdetail{
 	width				: calc(82.5vw - (var(--vh, 1vh) * 18.4));
 	border-radius		: 1vw;
-	padding				: calc(var(--vh, 1vh) * 0.5) 1vw calc(var(--vh, 1vh) * 0.5) 1vw;
+	padding				: calc(var(--vh, 1vh) * 0.5) 1vw;
 	padding-bottom		: calc(var(--vh, 1vh) * 0.5);	
 }
 #timenoteimg{
@@ -424,8 +419,7 @@ audio
 }
 .mcletter{
 	border-width		: medium;
-	padding-left		: 1vw;
-	padding-right		: 1vw;
+	padding				: 0 1vw;
 }
 #detaileditimg{
 	width				: calc(var(--vh, 1vh) * 4 + 3vw);
