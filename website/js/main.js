@@ -75,6 +75,9 @@ function LoadHash(){
 				$('#learning'+type).attr('src', $('#learning'+type).attr('src').substring(0, $('#learning'+type).attr('src').length-7)+'.png');
 				xmlhttp.open('GET', 'content/video'+type+'.html?'+timetag, true);
 			}
+			else if (clickid.substr(0, 5) == 'memgp'){
+				xmlhttp.open('GET', 'content/member4.html?'+timetag, true);
+			}
 			else{
 				$('#'+clickid).attr('src', $('#'+clickid).attr('src').substring(0, $('#'+clickid).attr('src').length-7)+'.png');
 				xmlhttp.open('GET', 'content/'+clickid+'.html?'+timetag, true);
@@ -168,7 +171,7 @@ function OnClick() {
 	else if (clickid.substr(0, 8) == 'zoomlink'){
 		window.open($('#zoomlinkimg').attr('alt'), '_blank');
 	}	
-	else if (this.className == 'mcitem'){
+	else if (this.className.indexOf('mcitem') != -1){
 		let dict = [{"q":"q1", "a":"A"}, {"q":"q2", "a":"B"}, {"q":"q3", "a":"A"}];
 		$(this).children('.mcletter').css('border-color', 'rgba(14, 102, 52, 1)');
 		$(this).parent().children('.mcitem').unbind('click');
@@ -197,7 +200,11 @@ function OnEnter(e){
 	}
 }
 function replacehtml(text){
-	$('#whiteframe').html(text);
+	if ($('#clientbox').length != 0){
+		$('#clientbox').html($(text).filter('#clientbox').html());
+	}
+	else
+		$('#whiteframe').html(text);
 	$('#login').unbind('click');
 	$('#logout').unbind('click');
 	$('#carer').unbind('click');
@@ -215,17 +222,19 @@ function replacehtml(text){
 	$('span.item6').unbind('click');
 	$('#zoomlink').unbind('click');
 	$('.learnvideo').unbind('click');
+	$('.membox').unbind('click');
 	$('#login').click(OnClick);
 	$('#logout').click(OnClick);
 	$('#carer').click(OnClick);
 	$('#howlogin').click(OnClick);
 	$('#howgroup').click(OnClick);
-	$('.mcitem').click(OnClick);	
+	$('.bdcolor1 +#mc .mcitem').click(OnClick);	
 	$('[id$=editimg]').click(OnClick);
 //	$('#groupsongimg').click(OnClick);
 	$('span.item6').click(OnClick);
 	$('#zoomlink').click(OnClick);
 	$('.learnvideo').click(OnClick);
+	$('.membox').click(OnClick);
 	$('#id').on('keypress', OnEnter);
 	$('#password').on('keypress', OnEnter);
 	$('html,body').animate({scrollTop:0}, 'slow');

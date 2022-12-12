@@ -13,7 +13,7 @@ body{
 	font-family			: 'Noto Sans TC', cwTeXHei;
 	font-weight			: bold;	
 }
-:not(.color0, .color1, .color2, .colorz1, .colorc1){
+:not(.color0, .color1, .color2, .color3, .colorz1, .colorc1){
 	color				: #000000;
 }
 :not(.order){
@@ -33,6 +33,9 @@ body{
 }
 .color3{
 	color				: #252362;
+}
+.color4{
+	color				: #C16D00;
 }
 .colorz1{
 	color				: #4A8BFF;
@@ -59,13 +62,37 @@ body{
 	background-color	: #544878;
 }
 .bkcolor7{
-	background-color	: #D3CFDE;
+	background-color	: #E5E2EB;
+}
+.bkcolor8{
+	background-color	: #29265B;
 }
 .bkcolor9{
 	background-color	: #D18E48;
 }
+.bkcolorA{
+	background-color	: #683325;
+}
+.bkcolorB{
+	background-color	: #CBC7D8;
+}
+.bkcolorC{
+	background-color	: #C16D00;
+}
+.bkcolorD{
+	background-color	: #F3E0CF;
+}
+.bkcolorE{
+	background-color	: #F9F0E7;
+}
 .bdcolor1{
 	border-color		: #0E6634;
+}
+.bdcolor2{
+	border-color		: #C16D00;
+}
+.bdcolor3{
+	border-color		: #95613A;
 }
 .fa-star, .fa-star-o{
 	color				: orange;
@@ -246,18 +273,15 @@ div:has(> #groupname){
 #zoomid{
 	text-align			: center;
 	border-radius		: 1.5vw;
+	border				: 0;
+	outline				: none!important;	
 }
 #zoomlinkimg{
 	margin-left			: 3vw;
 }
-#eventtitle{
-	margin-left			: 2vw;
-}
 .timetitle{
 	display				: inline-block;
-	background-color	: #683325;
 	font-size			: 2vw;
-	margin-right		: 0.7vw;
 	vertical-align		: middle;
 }
 #timebox{
@@ -267,7 +291,6 @@ div:has(> #groupname){
 .eventitem{
 	display				: inline-block;
 	height				: 14vw;
-	margin-right		: 0.7vw;
 	vertical-align		: top;
 }
 div:has(> #date), div:has(> .meettick){
@@ -323,13 +346,17 @@ div:has(> .yesno){
 	text-align			: center;
 	vertical-align		: middle;
 }
-.event{
+#eventtitle, .event{
 	margin-left			: 2vw;
-	margin-top			: calc(var(--vh, 1vh) * 0.5);
+	display				: flex;
+	justify-content		: space-between;
+}
+.event{
+	margin-bottom		: calc(var(--vh, 1vh) * 0.5);
 }
 .eventdetail{
 	margin-left			: 2vw;
-	margin-top			: calc(var(--vh, 1vh) * 1);	
+	margin-bottom		: calc(var(--vh, 1vh) * 0.5);	
 }
 .eventtext{
 	font-size			: 2.5vw;
@@ -378,6 +405,9 @@ div:has(> #timenoteimg){
 #notebox{
 	margin-top			: calc(var(--vh, 1vh) * 7);
 }
+#notebox:has(> div > .bkcolorC){
+	margin-top			: calc(var(--vh, 1vh) * 13 + 4vw);	
+}
 #notebox > hr{
 	border-style		: solid;
 }
@@ -417,6 +447,9 @@ div:has(> #videonoteimg){
 	top					: 0;
 	right				: 5vw;
 	text-align			: center;
+}
+#videobox, #mc{
+	position			: relative;
 }
 #videobox > iframe{
 	border-width		: 0;
@@ -464,4 +497,72 @@ audio::-webkit-media-controls-timeline
 }
 #groupeditimg{
 	margin-left			: 2vw;
+}
+#detailbox{
+	margin-left			: 4vw;
+	margin-right		: 4vw;
+}
+#phototitle > *{
+	text-align			: center;
+}
+#detailbox > div{
+	white-space			: nowrap;
+}
+#detailbox input{
+	outline				: none!important;
+	border				: 0;
+	text-align			: center;
+}
+.detailitem{
+	font-size			: 2vw;
+	width				: 13vw;
+	margin-top			: 1vw;
+	display				: inline-table;
+	white-space			: break-spaces;
+	margin-right		: 0.7vw;
+	border-radius		: 1vw;
+	vertical-align		: middle;
+}
+.elderbox{
+	overflow			: auto;
+}
+.elderbox .timetitle{
+	width				: 13vw;
+	margin-top			: 1vw;
+	margin-right		: 0.7vw;
+}
+.elderbox .bkcolor7{
+	text-align			: center;
+}
+.elderbox img{
+	width				: 2vw;
+}
+#upload{
+	position			: absolute;
+	text-align			: center;
+}
+#selectgroup > :not(.selected):not(#group4){
+	color				: #CABAA1;
+}
+.selectbox{
+	border-style		: solid;
+}
+#clientbox{
+	margin-top			: calc(var(--vh, 1vh) * 1);
+	overflow			: auto;
+}
+.membox{
+	border-radius		: 2vw;
+	margin-bottom		: 2vw;
+}
+.memgpphoto{
+	border-radius		: 50%;
+	object-fit			: cover;
+}
+div:has(> div > .memgpphoto), .membox > div:nth-child(2){
+	display				: flex;
+	justify-content		: center;
+}
+div:has(> .memgpphoto){
+	text-align			: center;
 }
