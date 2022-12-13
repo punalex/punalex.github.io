@@ -5,6 +5,12 @@
 	top					: calc(var(--vh, 1vh) * 9);
 	flex-direction		: column;
 }
+.button4{
+	height				: calc((100% - (var(--vh, 1vh) * 13)) / 4 + (var(--vh, 1vh) * 0.3));
+}
+.button5{
+	height				: calc((100% - (var(--vh, 1vh) * 14)) / 5 + (var(--vh, 1vh) * 0.3));
+}
 #whiteframe{
 	left				: calc(var(--vh, 1vh) * 21 + 5vw);
 	top					: calc(var(--vh, 1vh) * 9);
@@ -56,6 +62,14 @@
 }
 #usertext{
 	line-height			: calc(var(--vh, 1vh) * 4.5);
+}
+#passlogo{
+	width				: calc(var(--vh, 1vh) * 9);
+	height				: calc(var(--vh, 1vh) * 10.5);
+	margin-top			: calc(var(--vh, 1vh) * 4);
+}
+#passtext{
+	line-height			: calc(var(--vh, 1vh) * 9);
 }
 .logininput{
 	font-size			: calc(var(--vh, 1vh) * 5);
@@ -131,7 +145,7 @@ div:has(> #photoimg){
 div:has(> #infothemelogoimg){
 	flex				: auto;
 }
-#infoeditimg, #mctotalimg{
+#infoeditimg, #mctotaleditimg{
 	width				: calc(var(--vh, 1vh) * 9.5);
 }
 #infobox{
@@ -182,7 +196,7 @@ div:has(> #introtext){
 	margin-top			: calc(var(--vh, 1vh) * 1.5);
 }
 #intro{
-	height				: calc(var(--vh, 1vh) * 14 - 3vw);
+	height				: calc(var(--vh, 1vh) * 14 - 2.7vw);
 }
 #supportthemelogoimg{
 	width				: calc(var(--vh, 1vh) * 43);
@@ -197,9 +211,16 @@ div:has(> #groupnametext){
 #groupsongimg, #groupeditimg{
 	width				: calc(var(--vh, 1vh) * 11.5);
 }
-#whiteframe:has(.color3) > #membox, #membox, #detailbox{
+#reminder{
+	font-size			: 2.5vw;
+}
+#membox, #detailbox{
 	height				: calc(var(--vh, 1vh) * 58);
 	margin-top			: calc(var(--vh, 1vh) * 20);
+}
+#whiteframe:has(.color3) > #membox{
+	height				: calc(var(--vh, 1vh) * 55 - 2vw);
+	margin-top			: calc(var(--vh, 1vh) * 23 + 2vw);	
 }
 .memphoto{
 	width				: 27vw;
@@ -294,6 +315,11 @@ div:has(> #timenoteimg){
 .meettick{
 	width				: 4vw;
 	margin-top			: 1.5vw;
+}
+.meettopic{
+	font-size			: 2.5vw;
+	top					: 2.5vw;
+	left				: 6.5vw;
 }
 .meetbuttonbox{
 	right				: 1.5vw;
@@ -484,84 +510,41 @@ div:has(> .memgpphoto){
 	margin				: 4vw 1vw 0.5vw 1vw;
 	font-size			: 2.5vw;
 }
-.membox > div:nth-child(2) > .timetitle{
+.membox > div:nth-child(2) > .timetitle, .membox > div:first-child > .timetitle{
 	font-size			: 2vw;
 	padding				: 1vw 2.5vw;
 	margin				: 1vw 0.5vw;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-.session3{
-	color				: #C16D00;
+#clientbox > .membox:first-child:has(> div > .gptitle){
+	display				: block;
+	width				: 66.5vw;
 }
-.topic3{
-	color				: #C16D00;
-	font-weight			: normal;
-}
-.meettopic{
+.membox > div:first-child > .timetitle:not(.gptitle){
 	font-size			: 2.5vw;
-	font-weight			: normal;
-	position			: absolute;
-	top					: 2.5vw;
-	left				: 6.5vw;
 }
-.button4{
-	height				: calc((100% - (var(--vh, 1vh) * 13)) / 4 + (var(--vh, 1vh) * 0.3));
-}
-.button5{
-	height				: calc((100% - (var(--vh, 1vh) * 14)) / 5 + (var(--vh, 1vh) * 0.3));
-}
-#passlogo{
-	width				: calc(var(--vh, 1vh) * 9);
-	height				: calc(var(--vh, 1vh) * 10.5);
-	margin-top			: calc(var(--vh, 1vh) * 4);
-}
-#passinput{
-	margin-top			: calc(var(--vh, 1vh) * 4);
-}
-#passtext{
-	line-height			: calc(var(--vh, 1vh) * 9);
-}
-#detailimg{
-	width				: 10vw;
-	height				: 10vw;
-	border-radius		: 50%;
-	object-fit			: cover;	
-}
-#infothemelogo{
-	display				: inline-block;
-	position			: absolute;
-	right				: 3vw;
-	top					: calc(var(--vh, 1vh) * 30);
-}
-#membox2{
-	overflow-y			: auto;
-	height				: calc(var(--vh, 1vh) * 56);
-}
-#ytthumb{
-	width				: 15vw;
-}
-#headerbox{
-	display				: flex;
-	height				: 11vw;
+.membox > div:has(> .timetitle):has(> div > .memgpphoto){
+	flex-direction		: column;
 	align-items			: center;
-	margin-top			: calc(var(--vh, 1vh) * 6.5);
+	position			: relative;
 }
-#reminder{
-	font-size			: 2vw;
+.membox .item6{
+	display				: none;
 }
-#group4{
-	background-color	: #95613A;
-	color				: #FFFFFF;
-	margin-top			: calc(var(--vh, 1vh) * 10);
+.membox .infotext{
+	font-size			: calc(var(--vh, 1vh) * 3);
+	line-height			: calc(var(--vh, 1vh) * 3);
+}
+.membox .infoinput{
+	font-size			: calc(var(--vh, 1vh) * 3);
+	line-height			: calc(var(--vh, 1vh) * 4);
+}
+.membox .infotextsmall{
+	font-size			: calc(var(--vh, 1vh) * 2.5);
+	line-height			: calc(var(--vh, 1vh) * 2.5);
+}
+.membox div:has(> .infoinput, > .infotext){
+	height				: calc(var(--vh, 1vh) * 6.5);
+}
+.membox div:has(.labelwidth2, .labelwidth1) .input{
+	width				: calc(26vw - var(--vh, 1vh) * 20);
 }

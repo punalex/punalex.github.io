@@ -76,10 +76,14 @@ function LoadHash(){
 				xmlhttp.open('GET', 'content/video'+type+'.html?'+timetag, true);
 			}
 			else if (clickid.substr(0, 5) == 'memgp'){
+				$('#client4').attr('src', $('#client4').attr('src').substring(0, $('#client4').attr('src').length-7)+'.png');
 				xmlhttp.open('GET', 'content/member4.html?'+timetag, true);
 			}
 			else{
-				$('#'+clickid).attr('src', $('#'+clickid).attr('src').substring(0, $('#'+clickid).attr('src').length-7)+'.png');
+				if (clickid.substr(0, 5) == 'group')
+					$('#client4').attr('src', $('#client4').attr('src').substring(0, $('#client4').attr('src').length-7)+'.png');
+				else
+					$('#'+clickid).attr('src', $('#'+clickid).attr('src').substring(0, $('#'+clickid).attr('src').length-7)+'.png');
 				xmlhttp.open('GET', 'content/'+clickid+'.html?'+timetag, true);
 			}
 /*			if (clickid.substr(0, 4) == 'info'){
@@ -205,24 +209,27 @@ function replacehtml(text){
 	}
 	else
 		$('#whiteframe').html(text);
+	direction();
 	$('#login').unbind('click');
 	$('#logout').unbind('click');
 	$('#carer').unbind('click');
 	$('#howlogin').unbind('click');
 	$('#howgroup').unbind('click');
+	$('.mcitem').unbind('click');	
+	$('[id$=editimg]').unbind('click');	
+	$('#mctotaleditimg').unbind('click');
+	$('#groupsongimg').unbind('click');
+	$('span.item6').unbind('click');
+	$('#zoomlink').unbind('click');
+	$('.learnvideo').unbind('click');
+	$('.selectbox:not("#groupname4")').unbind('click');
+	$('[id^=memgp]').unbind('click');
 	for (let loop=1; loop<=4; loop++){
 		$('#buttonbox'+loop+' > img').each(function(){
 			$(this).unbind('click');
 			$(this).click(OnClick);
 		})
 	}
-	$('.mcitem').unbind('click');	
-	$('[id$=editimg]').unbind('click');	
-	$('#groupsongimg').unbind('click');
-	$('span.item6').unbind('click');
-	$('#zoomlink').unbind('click');
-	$('.learnvideo').unbind('click');
-	$('.membox').unbind('click');
 	$('#login').click(OnClick);
 	$('#logout').click(OnClick);
 	$('#carer').click(OnClick);
@@ -234,11 +241,11 @@ function replacehtml(text){
 	$('span.item6').click(OnClick);
 	$('#zoomlink').click(OnClick);
 	$('.learnvideo').click(OnClick);
-	$('.membox').click(OnClick);
+	$('.selectbox:not("#groupname4")').click(OnClick);
+	$('[id^=memgp]').click(OnClick);
 	$('#id').on('keypress', OnEnter);
 	$('#password').on('keypress', OnEnter);
 	$('html,body').animate({scrollTop:0}, 'slow');
-	direction();
 }
 function direction(){
 	if (window.orientation == 90 || window.orientation == -90 || (window.orientation == undefined && $(window).width() >= $(window).height())){

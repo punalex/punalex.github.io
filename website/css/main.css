@@ -37,6 +37,9 @@ body{
 .color4{
 	color				: #C16D00;
 }
+.color5{
+	color				: #CABAA1;
+}
 .colorz1{
 	color				: #4A8BFF;
 }
@@ -85,6 +88,18 @@ body{
 .bkcolorE{
 	background-color	: #F9F0E7;
 }
+.bkcolorF{
+	background-color	: #95613A;
+}
+.bkcolorG{
+	background-color	: #CCBBA1;
+}
+.bkcolorH{
+	background-color	: #645143;
+}
+.bkcolorI{
+	background-color	: #C5B3A5;
+}
 .bdcolor1{
 	border-color		: #0E6634;
 }
@@ -126,6 +141,8 @@ body{
 	display				: flex;
 	position			: absolute;
 	justify-content		: space-between;
+	z-index				: 0;
+	pointer-events		: none;
 }
 #themelogo{
 	position			: fixed;
@@ -149,6 +166,9 @@ body{
 #inputbox{
 	position			: relative;
 	top					: 6%;	
+}
+#passinput{
+	margin-top			: calc(var(--vh, 1vh) * 4);
 }
 .inputborder{
 	display				: inline-block;
@@ -218,6 +238,7 @@ body{
 	border-width		: 0;
 	font-size			: calc(min(4vw, calc(var(--vh, 1vh) * 3)));
 	text-align			: center;
+	pointer-events		: auto;
 }
 div:has(> .labelwidth1, > .labelwidth2, > #input){
 	display				: flex;
@@ -388,7 +409,7 @@ div:has(> #timenoteimg){
 	padding				: 1vw;
 	margin-left			: -2vw;
 }
-.meetbuttonbox{
+.meettopic, .meetbuttonbox{
 	position			: absolute;
 }
 .meetbutton{
@@ -523,6 +544,12 @@ audio::-webkit-media-controls-timeline
 	border-radius		: 1vw;
 	vertical-align		: middle;
 }
+.detailimg{
+	width				: 10vw;
+	height				: 10vw;
+	border-radius		: 50%;
+	object-fit			: cover;	
+}
 .elderbox{
 	overflow			: auto;
 }
@@ -541,8 +568,8 @@ audio::-webkit-media-controls-timeline
 	position			: absolute;
 	text-align			: center;
 }
-#selectgroup > :not(.selected):not(#group4){
-	color				: #CABAA1;
+#groupname4{
+	margin-top			: calc(var(--vh, 1vh) * 10);
 }
 .selectbox{
 	border-style		: solid;
@@ -554,6 +581,7 @@ audio::-webkit-media-controls-timeline
 .membox{
 	border-radius		: 2vw;
 	margin-bottom		: 2vw;
+	text-align			: center;
 }
 .memgpphoto{
 	border-radius		: 50%;
@@ -565,4 +593,26 @@ div:has(> div > .memgpphoto), .membox > div:nth-child(2){
 }
 div:has(> .memgpphoto){
 	text-align			: center;
+}
+.membox .labelwidth1, .membox .labelwidth2{
+	text-align			: left;
+}
+.membox div:has(> .labelwidth1, > .labelwidth2){
+	padding				: 3vw;
+}
+#groupbox{
+	margin				: 4vw 3vw 3vw 3vw;
+	overflow			: auto;
+}
+.groupitem{
+	font-size			: calc(var(--vh, 1vh) * 1 + 3vw);
+	line-height			: calc(var(--vh, 1vh) * 1 + 3vw);
+	border-radius		: 2vw;
+	padding				: 1vw 2vw;
+	margin-right		: 2vw;
+	text-align			: center;
+}
+div:has(> .groupitem){
+	display				: grid;
+	grid-gap			: 1vw;
 }

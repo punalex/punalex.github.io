@@ -3,6 +3,12 @@
 	top					: calc(var(--vh, 1vh) * 4);
 	width				: 90vw;
 }
+.button4{
+	width				: 21vw;
+}
+.button5{
+	width				: 16.5vw;
+}
 #whiteframe{
 	left				: 10vw;
 	top					: calc(21vw + (var(--vh, 1vh) * 7));
@@ -50,6 +56,14 @@
 }
 #usertext{
 	line-height			: calc(var(--vh, 1vh) * 2.5);
+}
+#passlogo{
+	width				: calc(var(--vh, 1vh) * 5.5);
+	height				: calc(var(--vh, 1vh) * 6.5);
+	margin-top			: calc(var(--vh, 1vh) * 4);
+}
+#passtext{
+	line-height			: calc(var(--vh, 1vh) * 5);
 }
 .logininput{
 	font-size			: calc(var(--vh, 1vh) * 3);
@@ -105,7 +119,7 @@
 	margin-top			: calc(var(--vh, 1vh) * 2.5);
 	width				: calc(var(--vh, 1vh) * 13.5);
 }
-#infoeditimg, #mctotalimg{
+#infoeditimg, #mctotaleditimg{
 	margin-top			: calc(var(--vh, 1vh) * 3);
 	width				: calc(var(--vh, 1vh) * 4 + 3vw);
 }
@@ -174,6 +188,9 @@ div:has(> #groupnametext){
 #groupsongimg, #groupeditimg, #detaileditimg{
 	width				: calc(var(--vh, 1vh) * 5);
 	margin-top			: calc(var(--vh, 1vh) * 2);
+}
+#reminder{
+	font-size			: 2.5vw;
 }
 #membox, #detailbox{
 	height				: calc((var(--vh, 1vh) * 74) - 30vw);
@@ -283,6 +300,11 @@ div:has(> #timenoteimg){
 .meettick{
 	width				: 6vw;
 	margin-top			: calc(var(--vh, 1vh) * 1 + 2.5vw);
+}
+.meettopic{
+	font-size			: 3vw;
+	top					: calc(var(--vh, 1vh) * 1 + 4.5vw);
+	left				: 8vw;
 }
 .meetbuttonbox{
 	right				: 4vw;
@@ -433,101 +455,43 @@ div:has(> .memgpphoto){
 	margin				: 4vw 2vw 1vw 2vw;
 	font-size			: 4vw;
 }
-.membox > div:nth-child(2) > .timetitle{
+.membox > div:nth-child(2) > .timetitle, .membox > div:first-child > .timetitle{
 	font-size			: 3vw;
 	padding				: 1vw 4.5vw;
 	margin				: 2vw 1vw;
 }
-.membox > div:first-child > .timetitle{
-	font-size			: 3vw;
-	margin				: auto;
+.membox > div:first-child > .timetitle:not(.gptitle){
+	font-size			: 4vw;
 }
-
-
-
-
-
-
-
-
-
-.session3{
-	color				: #C16D00;
+.membox div:has(> div > .labelwidth1, > div > .labelwidth2){
+	display				: none;
 }
-.topic3{
-	color				: #C16D00;
-	font-weight			: normal;
-}
-.meettopic{
-	font-size			: 3vw;
-	font-weight			: normal;
-	position			: absolute;
-	top					: calc(var(--vh, 1vh) * 1 + 4.5vw);
-	left				: 8vw;
-}
-.button4{
-	width				: 21vw;
-}
-.button5{
-	width				: 16.5vw;
-}
-#passlogo{
-	width				: calc(var(--vh, 1vh) * 5.5);
-	height				: calc(var(--vh, 1vh) * 6.5);
-	margin-top			: calc(var(--vh, 1vh) * 4);
-}
-#passinput{
-	margin-top			: calc(var(--vh, 1vh) * 4);
-}
-#passtext{
-	line-height			: calc(var(--vh, 1vh) * 5);
-}
-#expect{
-	margin-top			: 0;
-}
-#remark{
-	margin-top			: 0;
-}
-#detailimg{
-	width				: 10vw;
-	height				: 10vw;
-	border-radius		: 50%;
-	object-fit			: cover;	
-}
-#groupsong2{
-	display				: inline-block;
-	position			: absolute;
-	right				: 6vw;
-	top					: calc(var(--vh, 1vh) * 5);
-}
-#membox2{
-	overflow-y			: auto;
-	height				: calc((var(--vh, 1vh) * 68.5) - 21vw);
-}
-#notebox3{
-	overflow-y			: auto;
-	margin-top			: calc(var(--vh, 1vh) * 9);
-	height				: calc(var(--vh, 1vh) * 78 - 22vw);
-}
-#notebox3 > hr{
-	margin				: 5vw;
-	border-style		: solid;
-	border-color		: #C16D00;
-}
-#ytthumb{
-	width				: 30vw;
-}
-#headerbox{
-	display				: flex;
-	height				: 14vw;
+.membox > div:has(> .timetitle):has(> div > .memgpphoto){
+	flex-direction		: column;
 	align-items			: center;
-	margin-top			: 6vw;
+	position			: relative;
 }
-#reminder{
-	font-size			: 2.5vw;
+.membox .item6{
+	position			: absolute;
+	right				: 2vw;
+	top					: 12vw;
+	font-size			: 3.5vw;
 }
-#group4{
-	background-color	: #95613A;
-	color				: #FFFFFF;
-	margin-top			: calc(var(--vh, 1vh) * 10);
+.membox .infotext{
+	font-size			: calc(var(--vh, 1vh) * 1.5);
+	line-height			: calc(var(--vh, 1vh) * 1.5);
+}
+.membox .infoinput{
+	font-size			: calc(var(--vh, 1vh) * 1.5);
+	line-height			: calc(var(--vh, 1vh) * 2.5);
+}
+.membox .infotextsmall{
+	font-size			: calc(var(--vh, 1vh) * 1);
+	line-height			: calc(var(--vh, 1vh) * 1);
+}
+.membox div:has(> .infoinput, > .infotext){
+	height				: calc(var(--vh, 1vh) * 4);
+}
+.membox div:has(.labelwidth2, .labelwidth1) .input{
+	width				: calc(58.5vw - (var(--vh, 1vh) * 13.5));
 }
