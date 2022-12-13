@@ -117,7 +117,7 @@
 	height				: calc(var(--vh, 1vh) * 17);
 	width				: calc(85vw - (var(--vh, 1vh) * 21));
 }
-.accessories:has(> #reminder){
+.accessories:has(> #reminder):not(> .color1){
 	flex-direction		: row-reverse;
 	align-items			: flex-start;
 	height				: calc(var(--vh, 1vh) * 17);
@@ -145,7 +145,7 @@ div:has(> #photoimg){
 div:has(> #infothemelogoimg){
 	flex				: auto;
 }
-#infoeditimg, #mctotaleditimg{
+#infoeditimg, #mctotalimg{
 	width				: calc(var(--vh, 1vh) * 9.5);
 }
 #infobox{
@@ -214,7 +214,7 @@ div:has(> #groupnametext){
 #reminder{
 	font-size			: 2.5vw;
 }
-#membox, #detailbox{
+#membox, #detailbox, #groupbox, #mediabox{
 	height				: calc(var(--vh, 1vh) * 58);
 	margin-top			: calc(var(--vh, 1vh) * 20);
 }
@@ -389,9 +389,6 @@ div:has(> #timenoteimg){
 	width				: 12vw;
 	font-weight			: normal;
 }
-#mediabox{
-	height				: calc(var(--vh, 1vh) * 74);
-}
 #mediabox > hr{
 	margin-top			: 2vw;
 	margin-bottom		: 2vw;
@@ -547,4 +544,10 @@ div:has(> .memgpphoto){
 }
 .membox div:has(.labelwidth2, .labelwidth1) .input{
 	width				: calc(26vw - var(--vh, 1vh) * 20);
+}
+#groupbox{
+	display				: flex;
+}
+div:has(> .groupitem){
+	flex				: auto;
 }

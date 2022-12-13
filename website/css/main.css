@@ -271,7 +271,7 @@ div:has(> .infoinput), div:has(> .infotext){
 div:has(> #groupname){
 	flex				: auto;
 }
-#membox, #detailbox{
+#membox, #detailbox, #groupbox{
 	overflow-y			: auto;
 }
 .member{
@@ -601,8 +601,7 @@ div:has(> .memgpphoto){
 	padding				: 3vw;
 }
 #groupbox{
-	margin				: 4vw 3vw 3vw 3vw;
-	overflow			: auto;
+	padding				: 0 3vw;
 }
 .groupitem{
 	font-size			: calc(var(--vh, 1vh) * 1 + 3vw);

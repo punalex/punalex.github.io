@@ -79,11 +79,12 @@ function LoadHash(){
 				$('#client4').attr('src', $('#client4').attr('src').substring(0, $('#client4').attr('src').length-7)+'.png');
 				xmlhttp.open('GET', 'content/member4.html?'+timetag, true);
 			}
+			else if (clickid.substr(0, 8) == 'groupmem'){
+				$('#client4').attr('src', $('#client4').attr('src').substring(0, $('#client4').attr('src').length-7)+'.png');
+				xmlhttp.open('GET', 'content/group4.html?'+timetag, true);
+			}
 			else{
-				if (clickid.substr(0, 5) == 'group')
-					$('#client4').attr('src', $('#client4').attr('src').substring(0, $('#client4').attr('src').length-7)+'.png');
-				else
-					$('#'+clickid).attr('src', $('#'+clickid).attr('src').substring(0, $('#'+clickid).attr('src').length-7)+'.png');
+				$('#'+clickid).attr('src', $('#'+clickid).attr('src').substring(0, $('#'+clickid).attr('src').length-7)+'.png');
 				xmlhttp.open('GET', 'content/'+clickid+'.html?'+timetag, true);
 			}
 /*			if (clickid.substr(0, 4) == 'info'){
@@ -190,7 +191,7 @@ function OnClick() {
 	}
 	else{
 		if (clickid.substr(0, 5) == 'carer'){
-			type = sessionStorage.getItem('type');
+			let type = sessionStorage.getItem('type');
 			type = type%2+1;
 			sessionStorage.setItem('type', type);
 			clickid = "info"+type;
@@ -204,11 +205,15 @@ function OnEnter(e){
 	}
 }
 function replacehtml(text){
-	if ($('#clientbox').length != 0){
+	let type = sessionStorage.getItem('type');
+	if ($('#clientbox').length != 0 && type == 4 && $('#buttonbox4').html().indexOf(clickid) == -1){
 		$('#clientbox').html($(text).filter('#clientbox').html());
 	}
-	else
+	else{
 		$('#whiteframe').html(text);
+		if (clickid.indexOf('groupmem') != -1)
+			$('#groupmem').attr('id', clickid);
+	}
 	direction();
 	$('#login').unbind('click');
 	$('#logout').unbind('click');
@@ -224,6 +229,7 @@ function replacehtml(text){
 	$('.learnvideo').unbind('click');
 	$('.selectbox:not("#groupname4")').unbind('click');
 	$('[id^=memgp]').unbind('click');
+	$('[id^=groupmem]').unbind('click');
 	for (let loop=1; loop<=4; loop++){
 		$('#buttonbox'+loop+' > img').each(function(){
 			$(this).unbind('click');
@@ -243,6 +249,7 @@ function replacehtml(text){
 	$('.learnvideo').click(OnClick);
 	$('.selectbox:not("#groupname4")').click(OnClick);
 	$('[id^=memgp]').click(OnClick);
+	$('[id^=groupmem]').click(OnClick);
 	$('#id').on('keypress', OnEnter);
 	$('#password').on('keypress', OnEnter);
 	$('html,body').animate({scrollTop:0}, 'slow');
