@@ -238,7 +238,7 @@ div:has(> #groupnametext){
 	width				: calc(var(--vh, 1vh) * 13);
 	margin-right		: 3vw;
 }
-#eventtitle{
+#whiteframe > #eventtitle{
 	margin-top			: calc(var(--vh, 1vh) * 20);
 }
 .timetitle{
@@ -266,12 +266,19 @@ div:has(> #groupnametext){
 	width				: calc(27vw - (var(--vh, 1vh) * 6.5));
 }
 #timebox{
-	height				: calc(var(--vh, 1vh) * 59 - 4vw);
+	height				: calc(var(--vh, 1vh) * 73 - 15vw);
 }
 .eventitem{
 	font-size			: 2vw;
 	border-radius		: 1vw;
 	padding				: calc(var(--vh, 1vh) * 0.5) 0.6vw;
+}
+#clientbox .eventitem{
+	font-size			: 1.5vw;
+	padding				: 1vw 0.6vw;
+}
+#clientbox .item7{
+	width				: calc(25vw - (var(--vh, 1vh) * 6.5));
 }
 #date, #day, #weekday{
 	width				: calc(11.5vw - (var(--vh, 1vh) * 3.3));
@@ -550,4 +557,24 @@ div:has(> .memgpphoto){
 }
 div:has(> .groupitem){
 	flex				: auto;
+}
+#videobox +#eventtitle, #clientbox:has(> div > #videobox) div > .event{
+	width				: calc(43vw - (var(--vh, 1vh) * 12));
+	margin				: 0.5vw 0 0 0;
+}
+#clientbox:has(> div > #videobox){
+	display				: flex;
+	justify-content		: space-around;
+}
+#clientbox #videobox{
+	display				: block;
+	margin-top			: 2vw;
+}
+#clientbox:has(> div > #videobox) .item3{
+	width				: calc(6vw - (var(--vh, 1vh) * 1.7));
+	
+}
+#clientbox:has(> div > #videobox) .item6{
+	width				: calc(16vw - (var(--vh, 1vh) * 5));
+	
 }

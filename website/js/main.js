@@ -75,13 +75,9 @@ function LoadHash(){
 				$('#learning'+type).attr('src', $('#learning'+type).attr('src').substring(0, $('#learning'+type).attr('src').length-7)+'.png');
 				xmlhttp.open('GET', 'content/video'+type+'.html?'+timetag, true);
 			}
-			else if (clickid.substr(0, 5) == 'memgp'){
+			else if (clickid.substr(0, 8) == 'groupmem' || clickid.substr(0, 5) == 'memgp' || clickid.substr(0, 11) == 'servicetime' || clickid.substr(0, 9) == 'grouptime' || clickid.substr(0, 7) == 'groupmc'){
 				$('#client4').attr('src', $('#client4').attr('src').substring(0, $('#client4').attr('src').length-7)+'.png');
-				xmlhttp.open('GET', 'content/member4.html?'+timetag, true);
-			}
-			else if (clickid.substr(0, 8) == 'groupmem'){
-				$('#client4').attr('src', $('#client4').attr('src').substring(0, $('#client4').attr('src').length-7)+'.png');
-				xmlhttp.open('GET', 'content/group4.html?'+timetag, true);
+				xmlhttp.open('GET', 'content/'+clickid.substr(0, clickid.length-2)+'4.html?'+timetag, true);
 			}
 			else{
 				$('#'+clickid).attr('src', $('#'+clickid).attr('src').substring(0, $('#'+clickid).attr('src').length-7)+'.png');
@@ -206,13 +202,20 @@ function OnEnter(e){
 }
 function replacehtml(text){
 	let type = sessionStorage.getItem('type');
-	if ($('#clientbox').length != 0 && type == 4 && $('#buttonbox4').html().indexOf(clickid) == -1){
+	if ($('#clientbox').length != 0 && $(text).filter('#clientbox').length){
 		$('#clientbox').html($(text).filter('#clientbox').html());
+		$('.selected').removeClass('selected');
+		$('[id^='+((clickid.substr(0, 5) == 'memgp')?('groupmem'):(clickid.substr(0, clickid.length-2)))+']').addClass('selected');
 	}
 	else{
 		$('#whiteframe').html(text);
-		if (clickid.indexOf('groupmem') != -1)
-			$('#groupmem').attr('id', clickid);
+		if (text.indexOf('groupmem') != -1){
+			let id = clickid.substr(clickid.length-2, clickid.length);
+			$('#groupmem').attr('id', 'groupmem'+id);
+			$('#servicetime').attr('id', 'servicetime'+id);
+			$('#grouptime').attr('id', 'grouptime'+id);
+			$('#groupmc').attr('id', 'groupmc'+id);
+		}
 	}
 	direction();
 	$('#login').unbind('click');

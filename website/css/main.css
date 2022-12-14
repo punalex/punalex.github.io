@@ -578,6 +578,16 @@ audio::-webkit-media-controls-timeline
 	margin-top			: calc(var(--vh, 1vh) * 1);
 	overflow			: auto;
 }
+#clientbox:has(> #eventtitle){
+	overflow			: unset;
+}
+#clientbox .eventitem > pre{
+	margin				: 0;
+	white-space			: pre-wrap;
+}
+#clientbox .yesno{
+	width				: 2.5vw;
+}
 .membox{
 	border-radius		: 2vw;
 	margin-bottom		: 2vw;
@@ -614,4 +624,20 @@ div:has(> .memgpphoto){
 div:has(> .groupitem){
 	display				: grid;
 	grid-gap			: 1vw;
+}
+#clientbox div:has(#videobox){
+	display				: flex;
+	flex-direction		: column;
+	align-items			: center;
+}
+#clientbox:has(> div > #videobox) .eventitem{
+	height				: 2vw;
+}
+#clientbox #videodesc{
+	text-align			: center;
+	margin				: 2vw 0 4vw 0;
+}
+#clientbox:has(> div > #videobox) .item6{
+	display				: flex;
+	justify-content		: space-around;
 }

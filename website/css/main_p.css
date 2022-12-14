@@ -216,7 +216,7 @@ div:has(> #groupnametext){
 #zoomlinkimg{
 	width				: calc(var(--vh, 1vh) * 4 + 5vw);
 }
-#eventtitle{
+#whiteframe > #eventtitle{
 	margin-top			: calc(var(--vh, 1vh) * 9 + 7vw);
 }
 .timetitle{
@@ -256,6 +256,13 @@ div:has(> #groupnametext){
 	font-size			: 2.5vw;
 	border-radius		: 2vw;
 	padding				: 0.5vw 1.5vw;
+}
+#clientbox .eventitem{
+	font-size			: 1.5vw;
+	padding				: 1.5vw;
+}
+#clientbox #timebox{
+	height				: calc(var(--vh, 1vh) * 72 - 57vw);
 }
 #date, #day, #weekday{
 	width				: 9vw;
@@ -505,4 +512,10 @@ div:has(> .memgpphoto){
 	padding				: 1vw 2vw;
 	margin-right		: 2vw;
 	text-align			: center;
+}
+#videobox +#eventtitle, #clientbox:has(> div > #videobox) div > .event{
+	width				: 43vw;
+}
+#clientbox:has(> div > #videobox) > div:not(:first-child){
+	margin-top			: 8vw;
 }
