@@ -268,7 +268,7 @@ function direction(){
 	}
 }
 function resetvh(){
-	let vh = Math.min(window.innerHeight, document.documentElement.clientHeight) * 0.01;
+	let vh = document.documentElement.clientHeight * 0.01;
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 $(document).ready(function(){
