@@ -244,7 +244,7 @@ div:has(> .labelwidth1, > .labelwidth2, > #input){
 	display				: flex;
 	align-items			: center;
 }
-div:has(> .infoinput), div:has(> .infotext){
+div:has(> .infoinput):not(:has(> .mcitem)), div:has(> .infotext){
 	display				: grid;
 	align-items			: center;
 }
@@ -489,6 +489,10 @@ audio::-webkit-media-controls-timeline
 {
 	display: none;
 }
+audio::-webkit-media-controls-play-button
+{
+	height				: 54px;
+}
 .mcbox{
 	display				: flex;
 	margin-bottom		: calc(var(--vh, 1vh) * 2);
@@ -659,4 +663,7 @@ div:has(> .groupitem){
 #clientbox:has(> div > #videobox) .item6{
 	display				: flex;
 	justify-content		: space-around;
+}
+.mcquestion > div{
+	padding				: calc(var(--vh, 1vh) * 0.5) 0 calc(var(--vh, 1vh) * 0.5) 1vw;
 }
