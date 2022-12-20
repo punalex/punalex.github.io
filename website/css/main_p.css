@@ -218,6 +218,10 @@ div:has(> #groupnametext){
 #zoomlinkimg{
 	width				: calc(var(--vh, 1vh) * 4 + 5vw);
 }
+.eventinput{
+	font-size			: 2.5vw;
+	width				: 46vw;
+}
 #whiteframe > #eventtitle{
 	margin-top			: calc(var(--vh, 1vh) * 9 + 7vw);
 }
@@ -226,6 +230,11 @@ div:has(> #groupnametext){
 	line-height			: 4vw;
 	border-radius		: 2vw;
 	padding				: 0.5vw 1.5vw;
+}
+.eventcomment{
+	font-size			: 2.5vw;
+	line-height			: 3vw;
+	height				: 9vw;
 }
 .item1{
 	width				: 4vw;
@@ -419,6 +428,10 @@ audio
 	height				: 4vw;
 	line-height			: 4vw;
 	padding				: 0.5vw 1.5vw;
+}
+.detaildrop{
+	height				: 5vw;
+	width				: 16vw;
 }
 #zoomlinkeditimg{
 	width				: calc(var(--vh, 1vh) * 2.7 + 2.8vw);

@@ -300,6 +300,9 @@ div:has(> #groupname){
 #zoomlinkimg{
 	margin-left			: 3vw;
 }
+.eventinput{
+	line-height			: 3.5vw;
+}
 .timetitle{
 	display				: inline-block;
 	font-size			: 2vw;
@@ -544,6 +547,12 @@ audio::-webkit-media-controls-timeline
 	border-radius		: 1vw;
 	vertical-align		: middle;
 }
+.detaildrop{
+	padding				: 0;
+	text-align			: center;
+	border				: 0;
+	pointer-events		: none;
+}
 .detailimg{
 	width				: 10vw;
 	height				: 10vw;
@@ -557,6 +566,16 @@ audio::-webkit-media-controls-timeline
 	width				: 13vw;
 	margin-top			: 1vw;
 	margin-right		: 0.7vw;
+	display				: inline-flex;
+	flex-wrap			: wrap;
+	align-content		: center;
+	justify-content		: center;
+}
+.atttick{
+	border-radius		: 0.5vw;
+	border-style		: solid;
+	padding				: 0.2vw;
+	border-width		: 2px;
 }
 .elderbox .bkcolor7{
 	text-align			: center;

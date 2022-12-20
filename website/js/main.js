@@ -152,6 +152,7 @@ function OnClick() {
 	}
 	else if (clickid.substr(clickid.length - 7) == 'editimg'){
 		$('#whiteframe input, #whiteframe textarea').attr('readonly', ($(this).attr('src').indexOf('edit') == -1));
+		$('#whiteframe select').css('pointer-events', ($(this).attr('src').indexOf('edit') == -1)?('none'):('auto'));
 		$(this).attr('src', function(index, srcname){
 			if ($(this).attr('src').indexOf('edit') != -1)
 				return srcname.replace(/edit/, 'save');
@@ -171,7 +172,10 @@ function OnClick() {
 	}	
 	else if (clickid.substr(0, 8) == 'zoomlink'){
 		window.open($('#zoomlinkimg').attr('alt'), '_blank');
-	}	
+	}
+	else if ($(this).attr('class').indexOf('atttick') != -1){
+		$(this).attr('src', 'images/img_'+(($(this).attr('src').indexOf('yes') != -1)?('null'):('yes'))+'.png');
+	}
 	else if (this.className.indexOf('mcitem') != -1){
 		let dict = [{"q":"q1", "a":"A"}, {"q":"q2", "a":"B"}, {"q":"q3", "a":"A"}];
 		$(this).children('.mcletter').css('border-color', 'rgba(14, 102, 52, 1)');
@@ -229,6 +233,7 @@ function replacehtml(text){
 	$('#groupsongimg').unbind('click');
 	$('span.item6').unbind('click');
 	$('#zoomlink').unbind('click');
+	$('.atttick').unbind('click');
 	$('.learnvideo').unbind('click');
 	$('.selectbox:not("#groupname4")').unbind('click');
 	$('[id^=memgp]').unbind('click');
@@ -249,6 +254,7 @@ function replacehtml(text){
 //	$('#groupsongimg').click(OnClick);
 	$('span.item6').click(OnClick);
 	$('#zoomlink').click(OnClick);
+	$('.atttick').click(OnClick);
 	$('.learnvideo').click(OnClick);
 	$('.selectbox:not("#groupname4")').click(OnClick);
 	$('[id^=memgp]').click(OnClick);
