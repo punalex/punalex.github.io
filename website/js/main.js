@@ -225,6 +225,7 @@ function replacehtml(text){
 		$('#clientbox').html($(text).filter('#clientbox').html());
 		$('.selected').removeClass('selected');
 		$('[id^='+((clickid.substr(0, 5) == 'memgp')?('groupmem'):(clickid.substr(0, clickid.length-2)))+']').addClass('selected');
+		$('#infoeditimg').attr('src', 'images/btn_sw_edit.png');
 	}
 	else{
 		$('#whiteframe').html(text);
