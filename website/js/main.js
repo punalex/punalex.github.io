@@ -174,7 +174,22 @@ function OnClick() {
 		window.open($('#zoomlinkimg').attr('alt'), '_blank');
 	}
 	else if ($(this).attr('class').indexOf('atttick') != -1){
-		$(this).attr('src', 'images/img_'+(($(this).attr('src').indexOf('yes') != -1)?('null'):('yes'))+'.png');
+		if ($('[id$=editimg]').attr('src').indexOf('edit') == -1)
+			$(this).attr('src', 'images/img_'+(($(this).attr('src').indexOf('yes') != -1)?('null'):('yes'))+'.png');
+	}
+	else if ($(this).attr('class').indexOf('fa-star') != -1){
+		if ($('[id$=editimg]').attr('src').indexOf('edit') == -1){
+			if ($(this).attr('class').indexOf('fa-star-o') != -1){
+				$(this).parent().find('.fa:lt('+($(this).index()+1)+')').each(function(){
+					$(this).removeClass('fa-star-o').addClass('fa-star');
+				});
+			}
+			else{
+				$(this).parent().find('.fa:gt('+$(this).index()+'), .fa:eq('+$(this).index()+')').each(function(){
+					$(this).removeClass('fa-star').addClass('fa-star-o');
+				});
+			}
+		}
 	}
 	else if (this.className.indexOf('mcitem') != -1){
 		let dict = [{"q":"q1", "a":"A"}, {"q":"q2", "a":"B"}, {"q":"q3", "a":"A"}];
@@ -234,6 +249,7 @@ function replacehtml(text){
 	$('span.item6').unbind('click');
 	$('#zoomlink').unbind('click');
 	$('.atttick').unbind('click');
+	$('.timetitle .fa').unbind('click');
 	$('.learnvideo').unbind('click');
 	$('.selectbox:not("#groupname4")').unbind('click');
 	$('[id^=memgp]').unbind('click');
@@ -255,6 +271,7 @@ function replacehtml(text){
 	$('span.item6').click(OnClick);
 	$('#zoomlink').click(OnClick);
 	$('.atttick').click(OnClick);
+	$('.timetitle .fa').click(OnClick);
 	$('.learnvideo').click(OnClick);
 	$('.selectbox:not("#groupname4")').click(OnClick);
 	$('[id^=memgp]').click(OnClick);
