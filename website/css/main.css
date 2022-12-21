@@ -199,6 +199,7 @@ div:has(> .inputborder){
 	margin-left			: 0vw;
 	display				: inline-block;
 	margin-top			: calc(var(--vh, 1vh) * 0.5);
+	white-space			: nowrap;
 }
 .logininput{
 	vertical-align		: top;
