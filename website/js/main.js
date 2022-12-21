@@ -153,6 +153,7 @@ function OnClick() {
 	else if (clickid.substr(clickid.length - 7) == 'editimg'){
 		$('#whiteframe input, #whiteframe textarea').attr('readonly', ($(this).attr('src').indexOf('edit') == -1));
 		$('#whiteframe select').css('pointer-events', ($(this).attr('src').indexOf('edit') == -1)?('none'):('auto'));
+		$('[contentEditable="false"], [contentEditable="true"]').attr('contentEditable', ($(this).attr('src').indexOf('edit') != -1));
 		$(this).attr('src', function(index, srcname){
 			if ($(this).attr('src').indexOf('edit') != -1)
 				return srcname.replace(/edit/, 'save');

@@ -165,7 +165,7 @@ div:has(> #infothemelogoimg){
 	font-size			: calc(var(--vh, 1vh) * 4);
 	line-height			: calc(var(--vh, 1vh) * 4);
 }
-div:has(> .infoinput, > .infotext){
+div:has(> .infoinput, > .infotext):not(:has(> .mcitem)){
 	height				: calc(var(--vh, 1vh) * 9.5);
 }
 .accessories > div:has(> .infoinput.bkcolor7, > .infotext.color3){
@@ -593,4 +593,7 @@ div:has(> .groupitem){
 #clientbox:has(> div > #videobox) .item6{
 	width				: calc(16vw - (var(--vh, 1vh) * 5));
 	
+}
+.mcquestion > div{
+	width				: 42vw;
 }

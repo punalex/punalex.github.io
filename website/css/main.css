@@ -489,7 +489,7 @@ audio::-webkit-media-controls-timeline
 {
 	display: none;
 }
-audio::-webkit-media-controls
+audio::::-webkit-media-controls
 {
 	height				: 54px;
 }

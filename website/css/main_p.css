@@ -139,7 +139,7 @@
 	font-size			: calc(var(--vh, 1vh) * 2.5);
 	line-height			: calc(var(--vh, 1vh) * 2.5);
 }
-div:has(> .infoinput, > .infotext){
+div:has(> .infoinput, > .infotext):not(:has(> .mcitem)){
 	height				: calc(var(--vh, 1vh) * 5.5);
 }
 .accessories > div:has(> .infoinput.bkcolor7, > .infotext.color3){
@@ -533,4 +533,7 @@ div:has(> .memgpphoto){
 }
 #clientbox:has(> div > #videobox) > div:not(:first-child){
 	margin-top			: 8vw;
+}
+.mcquestion > div{
+	width				: 50vw;
 }
