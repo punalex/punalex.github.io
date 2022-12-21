@@ -591,11 +591,13 @@ audio::::-webkit-media-controls
 	position			: absolute;
 	text-align			: center;
 }
+
 #groupname4{
 	margin-top			: calc(var(--vh, 1vh) * 10);
 }
 .selectbox{
 	border-style		: solid;
+	white-space			: nowrap;
 }
 #clientbox{
 	margin-top			: calc(var(--vh, 1vh) * 1);
@@ -648,19 +650,19 @@ div:has(> .groupitem){
 	display				: grid;
 	grid-gap			: 1vw;
 }
-#clientbox div:has(#videobox){
+#container div:has(#videobox){
 	display				: flex;
 	flex-direction		: column;
 	align-items			: center;
 }
-#clientbox:has(> div > #videobox) .eventitem{
+#container:has(> div > #videobox) .eventitem{
 	height				: 2vw;
 }
-#clientbox #videodesc{
+#container #videodesc{
 	text-align			: center;
 	margin				: 2vw 0 4vw 0;
 }
-#clientbox:has(> div > #videobox) .item6{
+#container:has(> div > #videobox) .item6{
 	display				: flex;
 	justify-content		: space-around;
 }

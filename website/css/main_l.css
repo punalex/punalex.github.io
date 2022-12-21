@@ -280,6 +280,9 @@ div:has(> #groupnametext){
 #timebox{
 	height				: calc(var(--vh, 1vh) * 73 - 15vw);
 }
+#clientbox:has(> .membox) #timebox{
+	height				: calc(var(--vh, 1vh) * 73 - 23vw);
+}
 .eventitem{
 	font-size			: 2vw;
 	border-radius		: 1vw;
@@ -502,9 +505,6 @@ audio
 	margin-left			: 5vw;
 	margin-top			: calc(var(--vh, 1vh) * 5);
 }
-#selectgroup > br:nth-child(5){
-	display				: none;
-}
 .selectbox{
 	font-size			: 2.5vw;
 	line-height			: 5.5vw;
@@ -518,7 +518,7 @@ audio
 }
 .membox{
 	display				: inline-block;
-	width				: 32vw;
+	width				: calc(41vw - (var(--vh, 1vh) * 9.2));
 	margin-left			: 2vw;
 }
 .memgpphoto{
@@ -537,7 +537,7 @@ div:has(> .memgpphoto){
 }
 #clientbox > .membox:first-child:has(> div > .gptitle){
 	display				: block;
-	width				: 66.5vw;
+	width				: calc(84.5vw - (var(--vh, 1vh) * 18.4));
 }
 .membox > div:first-child > .timetitle:not(.gptitle){
 	font-size			: 2.5vw;
@@ -574,11 +574,11 @@ div:has(> .memgpphoto){
 div:has(> .groupitem){
 	flex				: auto;
 }
-#videobox +#eventtitle, #clientbox:has(> div > #videobox) div > .event{
+#videobox +#eventtitle, #container:has(> div > #videobox) div > .event{
 	width				: calc(43vw - (var(--vh, 1vh) * 12));
 	margin				: 0.5vw 0 0 0;
 }
-#clientbox:has(> div > #videobox){
+#container:has(> div > #videobox){
 	display				: flex;
 	justify-content		: space-around;
 }
@@ -586,11 +586,11 @@ div:has(> .groupitem){
 	display				: block;
 	margin-top			: 2vw;
 }
-#clientbox:has(> div > #videobox) .item3{
+#container:has(> div > #videobox) .item3{
 	width				: calc(6vw - (var(--vh, 1vh) * 1.7));
 	
 }
-#clientbox:has(> div > #videobox) .item6{
+#container:has(> div > #videobox) .item6{
 	width				: calc(16vw - (var(--vh, 1vh) * 5));
 	
 }

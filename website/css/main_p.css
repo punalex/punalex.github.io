@@ -275,6 +275,9 @@ div:has(> #groupnametext){
 #clientbox #timebox{
 	height				: calc(var(--vh, 1vh) * 72 - 57vw);
 }
+#clientbox:has(> .membox) #timebox{
+	height				: calc(var(--vh, 1vh) * 72 - 69vw);
+}
 #date, #day, #weekday{
 	width				: 9vw;
 }
@@ -452,6 +455,7 @@ audio
 	vertical-align		: top;
 	padding-left		: 5vw;
 	margin-top			: calc(var(--vh, 1vh) * 9);
+	width				: 60vw;
 }
 .selectbox{
 	font-size			: calc(var(--vh, 1vh) * 1 + 3vw);
@@ -528,10 +532,10 @@ div:has(> .memgpphoto){
 	margin-right		: 2vw;
 	text-align			: center;
 }
-#videobox +#eventtitle, #clientbox:has(> div > #videobox) div > .event{
+#videobox +#eventtitle, #container:has(> div > #videobox) div > .event{
 	width				: 43vw;
 }
-#clientbox:has(> div > #videobox) > div:not(:first-child){
+#container:has(> div > #videobox) > div:not(:first-child){
 	margin-top			: 8vw;
 }
 .mcquestion > div{
