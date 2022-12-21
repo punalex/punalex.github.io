@@ -35,20 +35,18 @@
 	left				: 16%;
 	width				: 70%;
 }
-#inputbox{
-	margin-left 		: -1vw;
-	text-align			: center;
+div:has(> #login){
+	display				: grid;
+	grid-gap			: inherit;
+	justify-items		: center;
+	margin-top			: calc(var(--vh, 1vh) * 2);
 }
 #userlogo{
-	margin-top			: calc(var(--vh, 1vh) * 2);
 	width				: calc(var(--vh, 1vh) * 5.5);
 	height				: calc(var(--vh, 1vh) * 6.5);
 }
 .inputborder{
 	height				: calc(var(--vh, 1vh) * 6.5);
-}
-#userinput{
-	margin-top			: calc(var(--vh, 1vh) * 2);
 }
 .logindesctext{
 	font-size			: calc(var(--vh, 1vh) * 2.5);
@@ -60,16 +58,13 @@
 #passlogo{
 	width				: calc(var(--vh, 1vh) * 5.5);
 	height				: calc(var(--vh, 1vh) * 6.5);
-	margin-top			: calc(var(--vh, 1vh) * 4);
 }
 #passtext{
 	line-height			: calc(var(--vh, 1vh) * 5);
 }
 .logininput{
 	font-size			: calc(var(--vh, 1vh) * 2.5);
-	margin-top			: calc(var(--vh, 1vh) * 1);
 	width				: calc(42vw - (var(--vh, 1vh) * 5));
-	position			: absolute;
 	line-height			: calc(var(--vh, 1vh) * 3);
 }
 #login{
@@ -78,19 +73,14 @@
 	height				: calc(var(--vh, 1vh) * 12);
 }
 #howtext{
-	margin-top			: calc(var(--vh, 1vh) * 18.5);
-	margin-left			: -5vw;
 	font-size			: calc(var(--vh, 1vh) * 4);
-	width				: 20vw;
 	text-align			: center;
+	line-height			: calc(var(--vh, 1vh) * 4);
 }
 #howgroup{
 	width				: calc(var(--vh, 1vh) * 26.5);
-	margin-top			: calc(var(--vh, 1vh) * 19.5);
 }
 #howlogin{
-	margin-top			: calc(var(--vh, 1vh) * -1.5);
-	margin-left			: 17vw;
 	width				: calc(var(--vh, 1vh) *26.5);
 }
 #title{

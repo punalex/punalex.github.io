@@ -165,13 +165,24 @@ body{
 }
 #inputbox{
 	position			: relative;
-	top					: 6%;	
+	top					: calc(var(--vh, 1vh) * 6);
+	display				: grid;
+	grid-gap			: calc(var(--vh, 1vh) * 3);
+	justify-items		: center;
 }
-#passinput{
-	margin-top			: calc(var(--vh, 1vh) * 4);
+div:has(> div > .inputborder){
+	display				: grid;
+	grid-gap			: inherit;
+	justify-items		: center;
+}
+div:has(> .inputborder){
+	display				: flex;
+	flex-direction		: row;
+	justify-content		: center;
 }
 .inputborder{
-	display				: inline-block;
+	display				: flex;
+	flex-direction		: row;
 	vertical-align		: top;
 	width				: 47vw;
 	border-radius		: 15px;
@@ -193,22 +204,18 @@ body{
 	vertical-align		: top;
 /*	outline				: none!important;*/
 	border				: 0;
-	margin-left			: 2vw;
+	margin				: calc(var(--vh, 1vh) * 0.5 + 0.5vw);
 }
-#login{
-	position			: absolute;
+div:has(> #howtext){
+	display				: flex;
+	flex-direction		: row;
+}
+div:has(> #howgroup){
+	display				: grid;
+	grid-gap			: calc(var(--vh, 1vh) * 1.5);
 }
 #howtext{
-	height				: calc(var(--vh, 1vh) * 7);
-	display				: inline-block;
-	vertical-align		: top;	
-}
-#howgroup{
-	margin-left			: 2vw;
-	vertical-align		: top;	
-}
-#howlogin{
-	vertical-align		: top;	
+	padding-right		: 2vw;
 }
 #title{
 	position			: absolute;

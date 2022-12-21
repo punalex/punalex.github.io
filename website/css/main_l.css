@@ -32,7 +32,7 @@
 	width				: calc(var(--vh, 1vh) * 6.5);
 }
 #themelogo{
-	height				: calc(min(calc(54vw - (var(--vh, 1vh) * 40.5)), var(--vh, 1vh) * 38));
+	height				: calc(min(calc(20vw + (var(--vh, 1vh) * 5)), var(--vh, 1vh) * 38));
 }
 #logintext{
 	font-size			: calc(var(--vh, 1vh) * 8.8);
@@ -42,19 +42,22 @@
 	left				: 11%;
 	width				: 80%;
 }
-#inputbox{
+div:has(> div > .inputborder){
 	margin-left			: calc((41vw - (var(--vh, 1vh) * 9) - min(var(--vh, 1vh) * 19, 14vw)) / 2);
 }
+div:has(> #login){
+	display				: flex;
+	flex-direction		: row;
+	align-items			: center;
+	grid-gap			: inherit;
+	margin-top			: calc(var(--vh, 1vh) * 3);
+}
 #userlogo{
-	margin-top			: calc(var(--vh, 1vh) * 6);
 	width				: calc(var(--vh, 1vh) * 9);
 	height				: calc(var(--vh, 1vh) * 10.5);
 }
 .inputborder{
 	height				: calc(var(--vh, 1vh) * 10);
-}
-#userinput{
-	margin-top			: calc(var(--vh, 1vh) * 6);
 }
 .logindesctext{
 	font-size			: calc(var(--vh, 1vh) * 4);
@@ -66,14 +69,12 @@
 #passlogo{
 	width				: calc(var(--vh, 1vh) * 9);
 	height				: calc(var(--vh, 1vh) * 10.5);
-	margin-top			: calc(var(--vh, 1vh) * 4);
 }
 #passtext{
 	line-height			: calc(var(--vh, 1vh) * 9);
 }
 .logininput{
 	font-size			: calc(var(--vh, 1vh) * 5);
-	margin-top			: calc(var(--vh, 1vh) * 0.8);
 	width				: calc(42vw - (var(--vh, 1vh) * 8));
 	padding				: calc(var(--vh, 1vh) * 0.5) 0 calc(var(--vh, 1vh) * 0.5) 1vw;
 }
@@ -84,21 +85,14 @@
 	height				: calc(min(19vh, 14vw));
 }
 #howtext{
-	margin-top			: calc(var(--vh, 1vh) * 7);
-	margin-left			: 0;
 	font-size			: calc(var(--vh, 1vh) * 6);
-	width				: calc(var(--vh, 1vh) * 16);
-	color				: #683325;
-	text-align			: left;
+	line-height			: calc(var(--vh, 1vh) * 6);
 }
 #howgroup{
-	height				: calc(var(--vh, 1vh) * 7);
-	margin-top			: calc(var(--vh, 1vh) * 8);
+	height				: calc(var(--vh, 1vh) * 6);
 }
 #howlogin{
-	margin-top			: 1vh;
-	margin-left			: calc(var(--vh, 1vh) * 16 + 2vw);
-	height				: calc(var(--vh, 1vh) * 7);
+	height				: calc(var(--vh, 1vh) * 6);
 }
 #title{
 	left				: 3vw;
