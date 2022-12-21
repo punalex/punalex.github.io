@@ -77,7 +77,7 @@ function LoadHash(){
 			}
 			else if (clickid.substr(0, 8) == 'groupmem' || clickid.substr(0, 5) == 'memgp' || clickid.substr(0, 11) == 'servicetime' || clickid.substr(0, 9) == 'grouptime' || clickid.substr(0, 7) == 'groupmc'){
 				$('#client4').attr('src', $('#client4').attr('src').substring(0, $('#client4').attr('src').length-7)+'.png');
-				xmlhttp.open('GET', 'content/'+clickid.substr(0, clickid.length-2)+'4.html?'+timetag, true);
+				xmlhttp.open('GET', 'content/'+clickid.substr(0, clickid.length-4)+'4.html?'+timetag, true);
 			}
 			else{
 				$('#'+clickid).attr('src', $('#'+clickid).attr('src').substring(0, $('#'+clickid).attr('src').length-7)+'.png');
@@ -227,16 +227,34 @@ function replacehtml(text){
 		$('.selected').removeClass('selected');
 		$('[id^='+((clickid.substr(0, 5) == 'memgp')?('groupmem'):(clickid.substr(0, clickid.length-2)))+']').addClass('selected');
 		$('#infoeditimg').attr('src', 'images/btn_sw_edit.png');
+		if (clickid.indexOf('memgp') != -1){
+			let id = $('[id^=groupmem]').attr('id');
+			id = id.substr(id.length-4, 2) + clickid.substr(clickid.length-2, 2);
+			$('[id^=groupmem]').attr('id', 'groupmem'+id);
+			$('[id^=grouptime]').attr('id', 'grouptime'+id);
+			$('[id^=servicetime]').attr('id', 'servicetime'+id);
+			$('[id^=groupmc]').attr('id', 'groupmc'+id);
+		}
+		$('[id^=servicetime]').css('visibility', (clickid.substr(clickid.length-2, 2) == '00')?('hidden'):('visible'));
+		$('[id^=groupmc]').css('visibility', (clickid.substr(clickid.length-2, 2) == '00')?('hidden'):('visible'));			
 	}
 	else{
 		$('#whiteframe').html(text);
 		if (text.indexOf('groupmem') != -1){
-			let id = clickid.substr(clickid.length-2, clickid.length);
+			let id = clickid.substr(clickid.length-4, 4);
 			$('#groupmem').attr('id', 'groupmem'+id);
 			$('#servicetime').attr('id', 'servicetime'+id);
 			$('#grouptime').attr('id', 'grouptime'+id);
 			$('#groupmc').attr('id', 'groupmc'+id);
+			$('[id^=servicetime]').css('visibility', (clickid.substr(clickid.length-2, 2) == '00')?('hidden'):('visible'));
+			$('[id^=groupmc]').css('visibility', (clickid.substr(clickid.length-2, 2) == '00')?('hidden'):('visible'));			
 		}
+	}
+	if (clickid.indexOf('groupmem') != -1){
+		$('[id^=memgp]').each(function(){
+			let id = $(this).attr('id');
+			$(this).attr('id', 'memgp' + clickid.substr(clickid.length-4, 2) + id.substr(id.length-2, 2));
+		});
 	}
 	direction();
 	$('#login').unbind('click');
