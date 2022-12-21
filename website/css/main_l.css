@@ -75,7 +75,7 @@ div:has(> #login){
 }
 .logininput{
 	font-size			: calc(var(--vh, 1vh) * 5);
-	width				: calc(42vw - (var(--vh, 1vh) * 8));
+	width				: calc(40vw - (var(--vh, 1vh) * 8));
 	padding				: calc(var(--vh, 1vh) * 0.5) 0 calc(var(--vh, 1vh) * 0.5) 1vw;
 }
 #login{
