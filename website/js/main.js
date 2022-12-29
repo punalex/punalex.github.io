@@ -174,7 +174,7 @@ function OnClick() {
 	else if (clickid.substr(0, 8) == 'zoomlink'){
 		window.open($('#zoomlinkimg').attr('alt'), '_blank');
 	}
-	else if ($(this).attr('class').indexOf('atttick') != -1){
+	else if ($(this).attr('class').indexOf('atttick') != -1 || $(this).attr('class').indexOf('yesno') != -1){
 		if ($('[id$=editimg]').attr('src').indexOf('edit') == -1)
 			$(this).attr('src', 'images/img_'+(($(this).attr('src').indexOf('yes') != -1)?('no'):(($(this).attr('src').indexOf('no') != -1)?('null'):('yes')))+'.png');
 	}
@@ -266,10 +266,11 @@ function replacehtml(text){
 	$('[id$=editimg]').unbind('click');	
 	$('#mctotaleditimg').unbind('click');
 	$('#groupsongimg').unbind('click');
-	$('span.item6').unbind('click');
+	$('[id^=close].item6').unbind('click');
 	$('#zoomlink').unbind('click');
 	$('.atttick').unbind('click');
 	$('.timetitle .fa').unbind('click');
+	$('#timebox .item6 .yesno').unbind('click');
 	$('.learnvideo').unbind('click');
 	$('.selectbox:not("#groupname4")').unbind('click');
 	$('[id^=memgp]').unbind('click');
@@ -288,10 +289,11 @@ function replacehtml(text){
 	$('.bdcolor1 +#mc .mcitem').click(OnClick);	
 	$('[id$=editimg]').click(OnClick);
 //	$('#groupsongimg').click(OnClick);
-	$('span.item6').click(OnClick);
+	$('[id^=close].item6').click(OnClick);
 	$('#zoomlink').click(OnClick);
 	$('.atttick').click(OnClick);
 	$('.timetitle .fa').click(OnClick);
+	$('#timebox .item6 .yesno').click(OnClick);
 	$('.learnvideo').click(OnClick);
 	$('.selectbox:not("#groupname4")').click(OnClick);
 	$('[id^=memgp]').click(OnClick);
