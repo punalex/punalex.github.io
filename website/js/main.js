@@ -176,7 +176,7 @@ function OnClick() {
 	}
 	else if ($(this).attr('class').indexOf('atttick') != -1){
 		if ($('[id$=editimg]').attr('src').indexOf('edit') == -1)
-			$(this).attr('src', 'images/img_'+(($(this).attr('src').indexOf('yes') != -1)?('null'):('yes'))+'.png');
+			$(this).attr('src', 'images/img_'+(($(this).attr('src').indexOf('yes') != -1)?('no'):(($(this).attr('src').indexOf('no') != -1)?('null'):('yes')))+'.png');
 	}
 	else if ($(this).attr('class').indexOf('fa-star') != -1){
 		if ($('[id$=editimg]').attr('src').indexOf('edit') == -1){
