@@ -221,11 +221,6 @@ div:has(> #groupnametext){
 	border-radius		: 2vw;
 	padding				: 0.5vw 1.5vw;
 }
-.eventcomment{
-	font-size			: 2.5vw;
-	line-height			: 3vw;
-	height				: 9vw;
-}
 .item1{
 	width				: 4vw;
 }
@@ -421,6 +416,11 @@ audio
 	height				: 4vw;
 	line-height			: 4vw;
 	padding				: 0.5vw 1.5vw;
+}
+.eventcomment{
+	font-size			: 2.5vw;
+	line-height			: 3vw;
+	height				: 9vw;
 }
 .detaildrop{
 	height				: 5vw;

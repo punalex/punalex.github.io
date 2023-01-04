@@ -558,6 +558,12 @@ audio::::-webkit-media-controls
 	margin-right		: 0.7vw;
 	border-radius		: 1vw;
 	vertical-align		: middle;
+	border				: 0;
+	outline				: none!important;
+}
+textarea.detailitem{
+	display				: inline-block;	
+	resize				: none;
 }
 .detaildrop{
 	padding				: 0;
