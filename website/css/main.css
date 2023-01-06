@@ -334,7 +334,7 @@ input.eventitem{
 	display				: inline-grid;
 	font-size			: 0;
 	border-radius		: 0;
-	width				: fit-content;
+	width				: 80%;
 }
 input[type=date]:before {
     position			: relative;
