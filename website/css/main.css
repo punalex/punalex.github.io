@@ -339,10 +339,10 @@ input.eventitem{
 	padding				: 0;
     position			: relative;
 }
-input[type="date"]:before {
+input[type="date"]:before{
     content				: attr(data-date);
 }
-input[type="time"]:before {
+input[type="time"]:before{
     content				: attr(data-time);
 }
 input[type="date"]::-webkit-inner-spin-button,
@@ -350,7 +350,11 @@ input[type="time"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator,
 input[type="time"]::-webkit-calendar-picker-indicator{
     display: none;
-    -webkit-appearance: none;
+    -webkit-appearance	: none;
+}
+input[type="date"],
+input[type="time"]{
+	-webkit-appearance	: none!important;
 }
 div:has(> #date), div:has(> .meettick){
 	position			: relative;
