@@ -322,11 +322,11 @@ div:has(> #groupname){
 }
 .eventitem{
 	display				: inline-block;
-	height				: 14vw;
+	height				: 16vw;
 	vertical-align		: top;
 }
 span.eventitem.bkcolorB{
-	height				: 9vw;
+	height				: 11vw;
 }
 input.eventitem{
 	height				: auto;
@@ -334,7 +334,7 @@ input.eventitem{
 	display				: inline-grid;
 	font-size			: 0;
 	border-radius		: 0;
-	width				: inherit;
+	width				: fit-content;
 }
 input[type=date]:before {
     position			: relative;
