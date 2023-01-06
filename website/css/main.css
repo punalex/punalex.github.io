@@ -456,6 +456,7 @@ div:has(> #timenoteimg){
 	display				: flex;
 	justify-content		: right;
 	margin-top			: 1vw;
+	align-items			: center;
 }
 .meetbuttonimg{
 	position			: absolute;
