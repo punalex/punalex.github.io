@@ -334,17 +334,15 @@ input.eventitem{
 	display				: inline-grid;
 	font-size			: 0;
 	border-radius		: 0;
-	width				: fit-content;
+	width				: inherit;
+	padding				: 0;
+    position			: relative;
 }
 input[type=date]:before {
-    position			: relative;
     content				: attr(data-date);
-	width				: fit-content;
 }
 input[type=time]:before {
-    position			: relative;
     content				: attr(data-time);
-	width				: fit-content;
 }
 div:has(> #date), div:has(> .meettick){
 	position			: relative;
