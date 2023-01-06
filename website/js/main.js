@@ -224,9 +224,23 @@ function OnEnter(e){
 		$('#login').click();
 	}
 }
-function OnComment(){
-	alert('comment');
-//	$(this).css('height', $(this).prop('scrollHeight')+"px");
+function OnComment(e){
+	$('#commentbox').css('top', e.pageY);
+	$('#commentbox').css('left', e.pageX);
+	$('#commentbox').css('display', 'block');
+	// for test only
+	if ($(this).parent().parent().parent().attr('id').substr(2, 1) == '1')
+		$('#commentbox').text('主要關注如何回應重覆的問題');
+	else if ($(this).parent().parent().parent().attr('id').substr(2, 1) == '2')
+		$('#commentbox').text('發現媽媽重覆洗衫是因為受腦退化症影響');
+	else if ($(this).parent().parent().parent().attr('id').substr(2, 1) == '3')
+		$('#commentbox').text('因生症未能參與小組。日期待定');
+	else if ($(this).parent().parent().parent().attr('id').substr(2, 1) == '4')
+		$('#commentbox').text('No comment');
+	//
+}
+function OnHideComment(){
+	$('#commentbox').css('display', 'none');
 }
 function OnDate(){
     this.setAttribute('data-date', moment(this.value).locale('zh-hk').format("YYYY年M月D日 (dddd)"));
@@ -302,10 +316,11 @@ function replacehtml(text){
 	$('#password').off('keypress');
 	$("input.eventitem").off("change", OnDate).trigger("change");
 	$("input.eventitem").off('click');
+	$('.meetbutton.color0').off('mouseenter');
 	for (let loop=1; loop<=4; loop++){
 		$('#buttonbox'+loop+' > img').each(function(){
-			$(this).unbind('click');
-			$(this).click(OnClick);
+			$(this).off('click');
+			$(this).on('click', OnClick);
 		})
 	}
 	$('#login').on('click', OnClick);
@@ -331,8 +346,7 @@ function replacehtml(text){
 	$("input[type=date]").click(OnClick);
 	$("input[type=time]").on("change", OnTime).trigger("change");
 	$("input[type=time]").click(OnClick);
-	$('.meetbutton.color0').on('mouseenter', OnComment);
-	$('.meetbutton.color0').on('click', OnComment);
+	$('.meetbutton.color0').hover(OnComment, OnHideComment);
 	$('html,body').animate({scrollTop:0}, 'slow');
 }
 function direction(){

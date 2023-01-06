@@ -287,12 +287,6 @@ input.eventitem.bkcolorB:before{
 input.eventitem.bkcolor2:before{
 	font-size			: 1.5vw;
 }
-input[type=time]{
-	padding				: calc(var(--vh, 1vh) * 0.5) 0 calc(var(--vh, 1vh) * 0.5) 0.6vw;
-}
-input[type=time].bkcolor2, input[type=date].bkcolor2{
-	padding				: 0;
-}
 #clientbox .item7{
 	width				: calc(25vw - (var(--vh, 1vh) * 6.5));
 }

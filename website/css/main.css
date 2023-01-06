@@ -321,9 +321,10 @@ div:has(> #groupname){
 	margin-top			: calc(var(--vh, 1vh) * 0.5);
 }
 .eventitem{
-	display				: inline-block;
+	display				: inline-grid;
 	height				: 16vw;
 	vertical-align		: top;
+	align-items			: baseline;
 }
 span.eventitem.bkcolorB{
 	height				: 11vw;
@@ -331,18 +332,25 @@ span.eventitem.bkcolorB{
 input.eventitem{
 	height				: auto;
 	border				: 0;
-	display				: inline-grid;
+	display				: inline;
 	font-size			: 0;
 	border-radius		: 0;
 	width				: inherit;
 	padding				: 0;
     position			: relative;
 }
-input[type=date]:before {
+input[type="date"]:before {
     content				: attr(data-date);
 }
-input[type=time]:before {
+input[type="time"]:before {
     content				: attr(data-time);
+}
+input[type="date"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator{
+    display: none;
+    -webkit-appearance: none;
 }
 div:has(> #date), div:has(> .meettick){
 	position			: relative;

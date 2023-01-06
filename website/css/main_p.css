@@ -251,7 +251,7 @@ div:has(> #groupnametext){
 .eventitem{
 	font-size			: 2.5vw;
 	border-radius		: 2vw;
-	padding				: 0.5vw 1.5vw;
+	padding				: 1vw 1.5vw;
 }
 #clientbox .eventitem:not(input){
 	font-size			: 1.5vw;
