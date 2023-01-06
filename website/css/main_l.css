@@ -277,9 +277,21 @@ div:has(> #groupnametext){
 	border-radius		: 1vw;
 	padding				: calc(var(--vh, 1vh) * 0.5) 0.6vw;
 }
-#clientbox .eventitem{
+#clientbox .eventitem:not(input){
 	font-size			: 1.5vw;
 	padding				: 1vw 0.6vw;
+}
+input.eventitem.bkcolorB:before{
+	font-size			: 2vw;
+}
+input.eventitem.bkcolor2:before{
+	font-size			: 1.5vw;
+}
+input[type=time]{
+	padding				: calc(var(--vh, 1vh) * 0.5) 0 calc(var(--vh, 1vh) * 0.5) 0.6vw;
+}
+input[type=time].bkcolor2, input[type=date].bkcolor2{
+	padding				: 0;
 }
 #clientbox .item7{
 	width				: calc(25vw - (var(--vh, 1vh) * 6.5));
@@ -342,6 +354,9 @@ div:has(> #timenoteimg){
 	padding				: 1.5vw;
 	font-size			: 2vw;
 	line-height			: 4.5vw;
+}
+.meetbutton > div{
+	line-height			: 2vw;	
 }
 .meetbuttonimg{
 	height				: 4.5vw;

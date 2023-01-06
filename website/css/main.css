@@ -325,6 +325,27 @@ div:has(> #groupname){
 	height				: 14vw;
 	vertical-align		: top;
 }
+span.eventitem.bkcolorB{
+	height				: 9vw;
+}
+input.eventitem{
+	height				: auto;
+	border				: 0;
+	display				: inline-grid;
+	font-size			: 0;
+	border-radius		: 0;
+}
+input[type=date]:before {
+    position			: relative;
+    content				: attr(data-date);
+}
+input[type=time]{
+	display				: inline;
+}
+input[type=time]:before {
+    position			: relative;
+    content				: attr(data-time);
+}
 div:has(> #date), div:has(> .meettick){
 	position			: relative;
 }

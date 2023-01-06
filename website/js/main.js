@@ -138,6 +138,10 @@ function OnClick() {
 		xmlhttp.open('GET', 'login.txt?'+timetag, true);
 		xmlhttp.send();
 	}
+	else if ($(this).is('input')){
+		if ($('[id$=editimg]').attr('src').indexOf('save') != -1)
+			this.showPicker();
+	}
 	else if (clickid.substr(0, 5) == 'close'){
 		if ($('#'+clickid.substr(0, 6)).html().indexOf('down') != -1){
 			$('#'+clickid.substr(0, 6)).html('收起 <span class="fa fa-chevron-up">');
@@ -220,6 +224,25 @@ function OnEnter(e){
 		$('#login').click();
 	}
 }
+function OnComment(){
+	alert('comment');
+//	$(this).css('height', $(this).prop('scrollHeight')+"px");
+}
+function OnDate(){
+    this.setAttribute('data-date', moment(this.value).locale('zh-hk').format("YYYY年M月D日 (dddd)"));
+}
+function OnTime(){
+    this.setAttribute('data-time', moment(this.value, 'hh:mm').locale('zh-hk').format("a hh時mm分"));
+	$(this).attr('value', moment(this.value, 'HH:mm').format("HH:mm"));
+	if ($(this).attr('id').indexOf('starttime') != -1){
+		$('#endtime'+$(this).attr('id').substr(9, 1)).attr('value', moment(this.value, 'HH:mm').add(45, 'minute').format("HH:mm"));
+		$('#endtime'+$(this).attr('id').substr(9, 1)).trigger('change');
+	}
+	if ($(this).attr('id').indexOf('startgroup') != -1){
+		$('#endgroup'+$(this).attr('id').substr(10, 1)).attr('value', moment(this.value, 'HH:mm').add(60, 'minute').format("HH:mm"));
+		$('#endgroup'+$(this).attr('id').substr(10, 1)).trigger('change');
+	}
+}
 function replacehtml(text){
 	let type = sessionStorage.getItem('type');
 	if ($('#clientbox').length != 0 && $(text).filter('#clientbox').length){
@@ -257,49 +280,59 @@ function replacehtml(text){
 		});
 	}
 	direction();
-	$('#login').unbind('click');
-	$('#logout').unbind('click');
-	$('#carer').unbind('click');
-	$('#howlogin').unbind('click');
-	$('#howgroup').unbind('click');
-	$('.mcitem').unbind('click');	
-	$('[id$=editimg]').unbind('click');	
-	$('#mctotaleditimg').unbind('click');
-	$('#groupsongimg').unbind('click');
-	$('[id^=close].item6').unbind('click');
-	$('#zoomlink').unbind('click');
-	$('.atttick').unbind('click');
-	$('.timetitle .fa').unbind('click');
-	$('#timebox .item6 .yesno').unbind('click');
-	$('.learnvideo').unbind('click');
-	$('.selectbox:not("#groupname4")').unbind('click');
-	$('[id^=memgp]').unbind('click');
-	$('[id^=groupmem]').unbind('click');
+	$('#login').off('click');
+	$('#logout').off('click');
+	$('#carer').off('click');
+	$('#howlogin').off('click');
+	$('#howgroup').off('click');
+	$('.mcitem').off('click');	
+	$('[id$=editimg]').off('click');	
+	$('#mctotaleditimg').off('click');
+	$('#groupsongimg').off('click');
+	$('[id^=close].item6').off('click');
+	$('#zoomlink').off('click');
+	$('.atttick').off('click');
+	$('.timetitle .fa').off('click');
+	$('#timebox .item6 .yesno').off('click');
+	$('.learnvideo').off('click');
+	$('.selectbox:not("#groupname4")').off('click');
+	$('[id^=memgp]').off('click');
+	$('[id^=groupmem]').off('click');
+	$('#id').off('keypress');
+	$('#password').off('keypress');
+	$("input.eventitem").off("change", OnDate).trigger("change");
+	$("input.eventitem").off('click');
 	for (let loop=1; loop<=4; loop++){
 		$('#buttonbox'+loop+' > img').each(function(){
 			$(this).unbind('click');
 			$(this).click(OnClick);
 		})
 	}
-	$('#login').click(OnClick);
-	$('#logout').click(OnClick);
-	$('#carer').click(OnClick);
-	$('#howlogin').click(OnClick);
-	$('#howgroup').click(OnClick);
-	$('.bdcolor1 +#mc .mcitem').click(OnClick);	
-	$('[id$=editimg]').click(OnClick);
-//	$('#groupsongimg').click(OnClick);
-	$('[id^=close].item6').click(OnClick);
-	$('#zoomlink').click(OnClick);
-	$('.atttick').click(OnClick);
-	$('.timetitle .fa').click(OnClick);
-	$('#timebox .item6 .yesno').click(OnClick);
-	$('.learnvideo').click(OnClick);
-	$('.selectbox:not("#groupname4")').click(OnClick);
-	$('[id^=memgp]').click(OnClick);
-	$('[id^=groupmem]').click(OnClick);
+	$('#login').on('click', OnClick);
+	$('#logout').on('click', OnClick);
+	$('#carer').on('click', OnClick);
+	$('#howlogin').on('click', OnClick);
+	$('#howgroup').on('click', OnClick);
+	$('.bdcolor1 +#mc .mcitem').on('click', OnClick);	
+	$('[id$=editimg]').on('click', OnClick);
+//	$('#groupsongimg').on('click', OnClick);
+	$('[id^=close].item6').on('click', OnClick);
+	$('#zoomlink').on('click', OnClick);
+	$('.atttick').on('click', OnClick);
+	$('.timetitle .fa').on('click', OnClick);
+	$('#timebox .item6 .yesno').on('click', OnClick);
+	$('.learnvideo').on('click', OnClick);
+	$('.selectbox:not("#groupname4")').on('click', OnClick);
+	$('[id^=memgp]').on('click', OnClick);
+	$('[id^=groupmem]').on('click', OnClick);
 	$('#id').on('keypress', OnEnter);
 	$('#password').on('keypress', OnEnter);
+	$("input[type=date]").on("change", OnDate).trigger("change");
+	$("input[type=date]").click(OnClick);
+	$("input[type=time]").on("change", OnTime).trigger("change");
+	$("input[type=time]").click(OnClick);
+	$('.meetbutton.color0').on('mouseenter', OnComment);
+	$('.meetbutton.color0').on('click', OnComment);
 	$('html,body').animate({scrollTop:0}, 'slow');
 }
 function direction(){
