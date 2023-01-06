@@ -334,6 +334,7 @@ input.eventitem{
 	display				: inline-grid;
 	font-size			: 0;
 	border-radius		: 0;
+	width				: inherit;
 }
 input[type=date]:before {
     position			: relative;
@@ -454,6 +455,18 @@ div:has(> #timenoteimg){
 .meetbuttonimg{
 	position			: absolute;
 	left				: 2vw;
+}
+#commentbox{
+	display				: none;
+	width				: 20vw;
+	height				: 15vw;
+	position			: fixed;
+	border-width		: 3px;
+	border-radius		: 2vw;
+	border-style		: solid;
+	padding				: 1vw;
+	font-size			: 2.5vw;
+	z-index				: 99;
 }
 #notebox{
 	margin-top			: calc(var(--vh, 1vh) * 7);
