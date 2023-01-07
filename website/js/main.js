@@ -224,23 +224,35 @@ function OnEnter(e){
 		$('#login').click();
 	}
 }
-function OnComment(e){
-	$('#commentbox').css('top', e.pageY);
-	$('#commentbox').css('left', e.pageX);
-	$('#commentbox').css('display', 'block');
+function OnPopup(e){
+	$('#popupbox').css('top', e.pageY);
+	$('#popupbox').css('left', e.pageX);
+	$('#popupbox').css('display', 'block');
 	// for test only
-	if ($(this).parent().parent().parent().attr('id').substr(2, 1) == '1')
-		$('#commentbox').text('主要關注如何回應重覆的問題');
-	else if ($(this).parent().parent().parent().attr('id').substr(2, 1) == '2')
-		$('#commentbox').text('發現媽媽重覆洗衫是因為受腦退化症影響');
-	else if ($(this).parent().parent().parent().attr('id').substr(2, 1) == '3')
-		$('#commentbox').text('因生症未能參與小組。日期待定');
-	else if ($(this).parent().parent().parent().attr('id').substr(2, 1) == '4')
-		$('#commentbox').text('No comment');
+	if ($(this).attr('class').indexOf('color0') != -1){
+		if ($(this).parent().parent().parent().attr('id').substr(2, 1) == '1')
+			$('#popupbox').text('主要關注如何回應重覆的問題');
+		else if ($(this).parent().parent().parent().attr('id').substr(2, 1) == '2')
+			$('#popupbox').text('發現媽媽重覆洗衫是因為受腦退化症影響');
+		else if ($(this).parent().parent().parent().attr('id').substr(2, 1) == '3')
+			$('#popupbox').text('因生症未能參與小組。日期待定');
+		else if ($(this).parent().parent().parent().attr('id').substr(2, 1) == '4')
+			$('#popupbox').text('No comment');
+	}
+	else{
+		if ($(this).parent().parent().parent().attr('id').substr(2, 1) == '1')
+			$('#popupbox').text('12345678');
+		else if ($(this).parent().parent().parent().attr('id').substr(2, 1) == '2')
+			$('#popupbox').text('www.google.com');
+		else if ($(this).parent().parent().parent().attr('id').substr(2, 1) == '3')
+			$('#popupbox').text('98765432');
+		else if ($(this).parent().parent().parent().attr('id').substr(2, 1) == '4')
+			$('#popupbox').text('No');
+	}		
 	//
 }
-function OnHideComment(){
-	$('#commentbox').css('display', 'none');
+function OnHidePopup(){
+	$('#popupbox').css('display', 'none');
 }
 function OnDate(){
     this.setAttribute('data-date', moment(this.value).locale('zh-hk').format("YYYY年M月D日 (dddd)"));
@@ -346,7 +358,7 @@ function replacehtml(text){
 	$("input[type=date]").click(OnClick);
 	$("input[type=time]").on("change", OnTime).trigger("change");
 	$("input[type=time]").click(OnClick);
-	$('.meetbutton.color0').hover(OnComment, OnHideComment);
+	$('.meetbutton').hover(OnPopup, OnHidePopup);
 	$('html,body').animate({scrollTop:0}, 'slow');
 }
 function direction(){

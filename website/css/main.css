@@ -466,7 +466,7 @@ div:has(> #timenoteimg){
 	position			: absolute;
 	left				: 2vw;
 }
-#commentbox{
+#popupbox{
 	display				: none;
 	width				: 20vw;
 	height				: 15vw;
