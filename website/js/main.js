@@ -269,6 +269,28 @@ function OnTime(){
 		$('#endgroup'+$(this).attr('id').substr(10, 1)).trigger('change');
 	}
 }
+function setjplayer(){
+	$('[id^=jquery_jplayer_]').jPlayer({
+		ready: function(){
+			let sound = [
+				{"title":"sound file 1", "mp3":"https://punalex.github.io/website/audio/Bon_Jovi_-_Its_My_Life.mp3"},
+				{"title":"sound file 2", "mp3":"https://punalex.github.io/website/audio/Bon_Jovi_-_Its_My_Life.mp3"},
+				{"title":"sound file 3", "mp3":"https://punalex.github.io/website/audio/Bon_Jovi_-_Its_My_Life.mp3"},
+				{"title":"sound file 4", "mp3":"https://punalex.github.io/website/audio/Bon_Jovi_-_Its_My_Life.mp3"}
+			];
+			$(this).jPlayer('setMedia', sound[parseInt(clickid.substr(clickid.length-1, 1))-1]);
+		},
+		cssSelectorAncestor: '[id^=jp_container_]',
+		swfPath: './',
+		supplied: 'mp3',
+		useStateClassSkin: true,
+		autoBlur: false,
+		smoothPlayBar: true,
+		keyEnabled: true,
+		remainingDuration: true,
+		toggleDuration: true
+	});
+}
 function replacehtml(text){
 	let type = sessionStorage.getItem('type');
 	if ($('#clientbox').length != 0 && $(text).filter('#clientbox').length){
@@ -375,28 +397,6 @@ function direction(){
 function resetvh(){
 	let vh = Math.min(window.innerHeight, document.documentElement.clientHeight) * 0.01;
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
-}
-function setjplayer(){
-	$('#jquery_jplayer_1').jPlayer({
-		ready: function(){
-			let sound = [
-				{"title":"sound file 1", "mp3":"https://punalex.github.io/website/audio/Bon_Jovi_-_Its_My_Life.mp3"},
-				{"title":"sound file 2", "mp3":"https://punalex.github.io/website/audio/Bon_Jovi_-_Its_My_Life.mp3"},
-				{"title":"sound file 3", "mp3":"https://punalex.github.io/website/audio/Bon_Jovi_-_Its_My_Life.mp3"},
-				{"title":"sound file 4", "mp3":"https://punalex.github.io/website/audio/Bon_Jovi_-_Its_My_Life.mp3"}
-			];
-			$(this).jPlayer('setMedia', sound[parseInt(clickid.substr(clickid.length-1, 1))-1]);
-		},
-		cssSelectorAncestor: '#jp_container_1',
-		swfPath: './',
-		supplied: 'mp3',
-		useStateClassSkin: true,
-		autoBlur: false,
-		smoothPlayBar: true,
-		keyEnabled: true,
-		remainingDuration: true,
-		toggleDuration: true
-	});
 }
 $(document).ready(function(){
 	resetvh();
