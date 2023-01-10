@@ -1,6 +1,4 @@
 var timetag="20221111161803";
-var timetag="20221111161803";
-var timetag="20221111161803";
 var audio=new Audio;
 var timeout=0;
 var windowresize=0;
