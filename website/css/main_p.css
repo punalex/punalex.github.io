@@ -184,7 +184,10 @@ div:has(> #groupnametext){
 #reminder{
 	font-size			: 2.5vw;
 }
-#membox, #detailbox, #groupbox, #mediabox{
+#mediabox{
+	height				: calc((var(--vh, 1vh) * 81) - 29vw);
+}
+#membox, #detailbox, #groupbox, #whiteframe:has(> .accessories) #mediabox{
 	height				: calc((var(--vh, 1vh) * 74) - 30vw);
 	margin-top			: calc(var(--vh, 1vh) * 14);
 }

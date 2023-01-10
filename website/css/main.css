@@ -736,3 +736,19 @@ div:has(> .groupitem){
 .jp-title{
 	font-size			: 2.5vw;
 }
+.jp-controls button, .jp-progress, .jp-seek-bar{
+	display				: flex;
+}
+.jp-controls{
+	background			: #0E6634;
+}
+.jp-seek-bar:after, .jp-play:after, .jp-stop:after, .jp-seek-bar:after{
+    content				: "";
+    position			: relative;
+    width				: inherit;
+    height				: inherit;
+    background			: inherit;
+    filter				: invert(100%);
+    -webkit-filter		: invert(100%);
+    z-index				: 99;
+}
