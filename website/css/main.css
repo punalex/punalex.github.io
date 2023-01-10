@@ -739,8 +739,11 @@ div:has(> .groupitem){
 .jp-controls button, .jp-progress, .jp-seek-bar{
 	display				: flex;
 }
-.jp-controls{
+#jp_container_1 .jp-controls{
 	background			: #0E6634;
+}
+#jp_container_2 .jp-controls{
+	background			: #C16D00;
 }
 #jp_container_1 .jp-seek-bar:after, #jp_container_1 .jp-play:after, #jp_container_1 .jp-stop:after, #jp_container_1 .jp-seek-bar:after{
     content				: "";
