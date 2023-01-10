@@ -742,7 +742,7 @@ div:has(> .groupitem){
 .jp-controls{
 	background			: #0E6634;
 }
-.jp-seek-bar:after, .jp-play:after, .jp-stop:after, .jp-seek-bar:after{
+#jp_container_1 .jp-seek-bar:after, #jp_container_1 .jp-play:after, #jp_container_1 .jp-stop:after, #jp_container_1 .jp-seek-bar:after{
     content				: "";
     position			: relative;
     width				: inherit;
@@ -750,5 +750,15 @@ div:has(> .groupitem){
     background			: inherit;
     filter				: invert(100%);
     -webkit-filter		: invert(100%);
+    z-index				: 99;
+}
+#jp_container_2 .jp-seek-bar:after, #jp_container_2 .jp-play:after, #jp_container_2 .jp-stop:after, #jp_container_2 .jp-seek-bar:after{
+    content				: "";
+    position			: relative;
+    width				: inherit;
+    height				: inherit;
+    background			: inherit;
+    filter				: invert(100%) hue-rotate(266deg);
+    -webkit-filter		: invert(100%) hue-rotate(266deg);
     z-index				: 99;
 }
