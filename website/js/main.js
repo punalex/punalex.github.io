@@ -1,4 +1,6 @@
 var timetag="20221111161803";
+var timetag="20221111161803";
+var timetag="20221111161803";
 var audio=new Audio;
 var timeout=0;
 var windowresize=0;
@@ -379,10 +381,13 @@ function resetvh(){
 function setjplayer(){
 	$('#jquery_jplayer_1').jPlayer({
 		ready: function(){
-			$(this).jPlayer('setMedia', {
-				title: 'test sound',
-				mp3: 'https://punalex.github.io/website/audio/Bon_Jovi_-_Its_My_Life.mp3'
-			});
+			let sound = [
+				{"title":"sound file 1", "mp3":"https://punalex.github.io/website/audio/Bon_Jovi_-_Its_My_Life.mp3"},
+				{"title":"sound file 2", "mp3":"https://punalex.github.io/website/audio/Bon_Jovi_-_Its_My_Life.mp3"},
+				{"title":"sound file 3", "mp3":"https://punalex.github.io/website/audio/Bon_Jovi_-_Its_My_Life.mp3"},
+				{"title":"sound file 4", "mp3":"https://punalex.github.io/website/audio/Bon_Jovi_-_Its_My_Life.mp3"}
+			];
+			$(this).jPlayer('setMedia', sound[parseInt(clickid.substr(clickid.length-1, 1))-1]);
 		},
 		cssSelectorAncestor: '#jp_container_1',
 		swfPath: './',
@@ -391,9 +396,6 @@ function setjplayer(){
 		autoBlur: false,
 		smoothPlayBar: true,
 		keyEnabled: true,
-		size: {
-			width: '5vw',
-		},
 		remainingDuration: true,
 		toggleDuration: true
 	});
