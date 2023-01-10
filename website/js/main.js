@@ -360,6 +360,7 @@ function replacehtml(text){
 	$("input[type=time]").click(OnClick);
 	$('.meetbutton').hover(OnPopup, OnHidePopup);
 	$('html,body').animate({scrollTop:0}, 'slow');
+	setjplayer();
 }
 function direction(){
 	if (window.orientation == 90 || window.orientation == -90 || (window.orientation == undefined && $(window).width() >= $(window).height())){
@@ -374,6 +375,28 @@ function direction(){
 function resetvh(){
 	let vh = Math.min(window.innerHeight, document.documentElement.clientHeight) * 0.01;
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+function setjplayer(){
+	$('#jquery_jplayer_1').jPlayer({
+		ready: function(){
+			$(this).jPlayer('setMedia', {
+				title: 'test sound',
+				mp3: 'https://punalex.github.io/website/audio/Bon_Jovi_-_Its_My_Life.mp3'
+			});
+		},
+		cssSelectorAncestor: '#jp_container_1',
+		swfPath: './',
+		supplied: 'mp3',
+		useStateClassSkin: true,
+		autoBlur: false,
+		smoothPlayBar: true,
+		keyEnabled: true,
+		size: {
+			width: '5vw',
+		},
+		remainingDuration: true,
+		toggleDuration: true
+	});
 }
 $(document).ready(function(){
 	resetvh();

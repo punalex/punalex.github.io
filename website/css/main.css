@@ -727,3 +727,12 @@ div:has(> .groupitem){
 .mcquestion > div{
 	padding				: calc(var(--vh, 1vh) * 0.5) 0 calc(var(--vh, 1vh) * 0.5) 1vw;
 }
+.jp-audio{
+	border-radius		: 1.5vw;
+}
+.jp-audio .jp-controls-holder{
+	height				: 50px;
+}
+.jp-title{
+	font-size			: 2.5vw;
+}

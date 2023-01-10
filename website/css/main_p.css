@@ -540,3 +540,6 @@ div:has(> .memgpphoto){
 .mcquestion > div{
 	width				: 50vw;
 }
+.jp-audio{
+	border-width		: 5px;
+}

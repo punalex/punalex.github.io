@@ -600,3 +600,8 @@ div:has(> .groupitem){
 .mcquestion > div{
 	width				: 42vw;
 }
+.jp-audio{
+	border-width		: 3px;
+	transform			: scale(0.7);
+	transform-origin	: 0;
+}
