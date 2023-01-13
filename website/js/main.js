@@ -161,6 +161,8 @@ function OnClick() {
 		$(this).attr('src', function(index, srcname){
 			if ($(this).attr('src').indexOf('edit') != -1)
 				return srcname.replace(/edit/, 'save');
+			else if ($(this).attr('src').indexOf('redsave') != -1)
+				return srcname.replace(/redsave/, 'edit');
 			else
 				return srcname.replace(/save/, 'edit');
 		});
@@ -179,8 +181,10 @@ function OnClick() {
 		window.open($('#zoomlinkimg').attr('alt'), '_blank');
 	}
 	else if ($(this).attr('class').indexOf('atttick') != -1 || $(this).attr('class').indexOf('yesno') != -1){
-		if ($('[id$=editimg]').attr('src').indexOf('edit') == -1)
+		if ($('[id$=editimg]').attr('src').indexOf('edit') == -1){
 			$(this).attr('src', 'images/img_'+(($(this).attr('src').indexOf('yes') != -1)?('no'):(($(this).attr('src').indexOf('no') != -1)?('null'):('yes')))+'.png');
+			OnTextChange();
+		}
 	}
 	else if ($(this).attr('class').indexOf('fa-star') != -1){
 		if ($('[id$=editimg]').attr('src').indexOf('edit') == -1){
@@ -194,6 +198,7 @@ function OnClick() {
 					$(this).removeClass('fa-star').addClass('fa-star-o');
 				});
 			}
+			OnTextChange();
 		}
 	}
 	else if (this.className.indexOf('mcitem') != -1){
@@ -225,9 +230,11 @@ function OnEnter(e){
 	}
 }
 function OnPopup(e){
-	$('#popupbox').css('top', e.pageY);
-	$('#popupbox').css('left', e.pageX);
-	$('#popupbox').css('display', 'block');
+	if ($('#popupbox').css('display').indexOf('none') != -1){
+		$('#popupbox').css('top', e.pageY);
+		$('#popupbox').css('left', e.pageX);
+		$('#popupbox').css('display', 'block');
+	}
 	// for test only
 	if ($(this).attr('class').indexOf('color0') != -1){
 		if ($(this).parent().parent().parent().attr('id').substr(2, 1) == '1')
@@ -251,8 +258,9 @@ function OnPopup(e){
 	}		
 	//
 }
-function OnHidePopup(){
-	$('#popupbox').css('display', 'none');
+function OnHidePopup(event){
+	if (!$('#popupbox').is(event.target))
+		$('#popupbox').css('display', 'none');
 }
 function OnDate(){
     this.setAttribute('data-date', moment(this.value).locale('zh-hk').format("YYYY年M月D日 (dddd)"));
@@ -268,6 +276,12 @@ function OnTime(){
 		$('#endgroup'+$(this).attr('id').substr(10, 1)).attr('value', moment(this.value, 'HH:mm').add(60, 'minute').format("HH:mm"));
 		$('#endgroup'+$(this).attr('id').substr(10, 1)).trigger('change');
 	}
+}
+function OnTextChange(){
+	$('[id$=editimg]').attr('src', function(index, srcname){
+		if ($(this).attr('src').indexOf('redsave') == -1)
+			return srcname.replace(/save/, 'redsave');
+	});
 }
 function setjplayer(){
 	$('[id^=jquery_jplayer_]').jPlayer({
@@ -348,9 +362,12 @@ function replacehtml(text){
 	$('[id^=groupmem]').off('click');
 	$('#id').off('keypress');
 	$('#password').off('keypress');
-	$("input.eventitem").off("change", OnDate).trigger("change");
-	$("input.eventitem").off('click');
-	$('.meetbutton.color0').off('mouseenter');
+	$('input.eventitem').off('change', OnDate).trigger('change');
+	$('input.eventitem').off('click');
+	$('.meetbutton').off('mouseenter');
+	$('input, textarea, #mc div, #timebox div').off('input');
+	$('select').off('change');
+	$(document).off('mousedown');
 	for (let loop=1; loop<=4; loop++){
 		$('#buttonbox'+loop+' > img').each(function(){
 			$(this).off('click');
@@ -376,11 +393,14 @@ function replacehtml(text){
 	$('[id^=groupmem]').on('click', OnClick);
 	$('#id').on('keypress', OnEnter);
 	$('#password').on('keypress', OnEnter);
-	$("input[type=date]").on("change", OnDate).trigger("change");
-	$("input[type=date]").click(OnClick);
-	$("input[type=time]").on("change", OnTime).trigger("change");
-	$("input[type=time]").click(OnClick);
-	$('.meetbutton').hover(OnPopup, OnHidePopup);
+	$('input[type=date]').on('change', OnDate).trigger('change');
+	$('input[type=date]').click(OnClick);
+	$('input[type=time]').on("change", OnTime).trigger('change');
+	$('input[type=time]').click(OnClick);
+	$('.meetbutton').on('mouseenter', OnPopup);
+	$('input, textarea, #mc div, #timebox div').on('input', OnTextChange);
+	$('select').on('change', OnTextChange);
+	$(document).on('mousedown', OnHidePopup);
 	$('html,body').animate({scrollTop:0}, 'slow');
 	setjplayer();
 }

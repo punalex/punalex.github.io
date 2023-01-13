@@ -252,8 +252,12 @@ div:has(> .labelwidth1, > .labelwidth2, > #input){
 	display				: flex;
 	align-items			: center;
 }
-div:has(> .infoinput):not(:has(> .mcitem)), div:has(> .infotext){
+div:has(> .infoinput):not(:has(> .mcitem)):not(:has(> .eventinput)), div:has(> .infotext){
 	display				: grid;
+	align-items			: center;
+}
+div:has(> .eventinput){
+	display				: inline-flex;
 	align-items			: center;
 }
 .infotextsmall:not(#introtextsmall){
@@ -309,7 +313,9 @@ div:has(> #groupname){
 	margin-left			: 3vw;
 }
 .eventinput{
-	line-height			: 3.5vw;
+	white-space			: break-spaces;
+	word-break			: break-all;
+	display				: inline-block;
 }
 .timetitle{
 	display				: inline-block;
