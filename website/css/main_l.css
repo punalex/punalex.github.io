@@ -159,7 +159,7 @@ div:has(> #infothemelogoimg){
 	font-size			: calc(var(--vh, 1vh) * 4);
 	line-height			: calc(var(--vh, 1vh) * 4);
 }
-div:has(> .infoinput, > .infotext):not(:has(> .mcitem)){
+div:has(> .infoinput, > .infotext):not(:has(> .mcitem)):not(:has(> .eventinput)){
 	height				: calc(var(--vh, 1vh) * 9.5);
 }
 .accessories > div:has(> .infoinput.bkcolor7, > .infotext.color3){
@@ -241,6 +241,7 @@ div:has(> #groupnametext){
 .eventinput{
 	font-size			: 2.5vw;
 	width				: 42vw;
+	line-height			: 3.5vw;
 }
 #whiteframe > #eventtitle{
 	margin-top			: calc(var(--vh, 1vh) * 20);
