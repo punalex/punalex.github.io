@@ -409,11 +409,11 @@ div:has(> #date), div:has(> .meettick){
 	width				: 8vw;	
 }
 div:has(> .yesno){
-	display				: table-cell;
+	display				: flex;
 	width				: inherit;
 	height				: inherit;
-	text-align			: center;
-	vertical-align		: middle;
+	justify-content		: center;
+	align-content		: center;
 }
 #eventtitle, .event{
 	margin-left			: 2vw;
