@@ -415,6 +415,7 @@ div:has(> .yesno){
 	height				: inherit;
 	justify-content		: center;
 	align-content		: center;
+	flex-wrap			: wrap;
 }
 #eventtitle, .event{
 	margin-left			: 2vw;
