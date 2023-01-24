@@ -270,6 +270,12 @@ div:has(> .eventinput){
 	border-radius		: 15px;
 	padding				: calc(var(--vh, 1vh) * 0.5) 0 calc(var(--vh, 1vh) * 0.5) 1vw;
 }
+div:has(.labelwidth2) .input{
+	box-sizing			: content-box;
+}
+.inputdrop{
+	pointer-events		: none;
+}
 .inputarea{
 	outline				: none!important;
 	border				: 0;
