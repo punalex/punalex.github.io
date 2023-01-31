@@ -364,7 +364,7 @@ function replacehtml(text){
 	$('#password').off('keypress');
 	$('input.eventitem').off('change', OnDate).trigger('change');
 	$('input.eventitem').off('click');
-	$('.meetbutton').off('mouseenter');
+	$('.meetbutton').off('click');
 	$('input, textarea, #mc div, #timebox div').off('input');
 	$('select').off('change');
 	$(document).off('mousedown');
@@ -397,7 +397,7 @@ function replacehtml(text){
 	$('input[type=date]').click(OnClick);
 	$('input[type=time]').on("change", OnTime).trigger('change');
 	$('input[type=time]').click(OnClick);
-	$('.meetbutton').on('mouseenter', OnPopup);
+	$('.meetbutton').on('click', OnPopup);
 	$('input, textarea, #mc div, #timebox div').on('input', OnTextChange);
 	$('select').on('change', OnTextChange);
 	$(document).on('mousedown', OnHidePopup);
