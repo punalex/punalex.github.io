@@ -358,6 +358,9 @@ div:has(> #timenoteimg){
 	text-align			: center;
 	margin				: auto;
 }
+#mc .notetext{
+	width				: 20vw;
+}
 .noteimg{
 	width				: 16vw;
 }
