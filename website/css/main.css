@@ -575,7 +575,7 @@ audio::::-webkit-media-controls
 	overflow-wrap		: break-word;
 }
 .mcitem{
-	white-space			: nowrap;
+	display				: flex;
 }
 .mcletter{
 	font-weight			: normal;
