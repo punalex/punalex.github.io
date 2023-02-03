@@ -162,6 +162,19 @@ function OnClick() {
 			if ($(this).attr('src').indexOf('edit') != -1)
 				return srcname.replace(/edit/, 'save');
 			else if ($(this).attr('src').indexOf('redsave') != -1)
+				let datas = new Object;
+				datas['page'] = ((window.location.href.indexOf('#') != -1 && window.location.href.indexOf('!') != -1 && window.location.href.split("!")[1] != '')?(window.location.href.split("!")[1]):('main'));
+				$('.form').each(function(){
+					let id = $(this).attr('id');
+					let checkobject = $(this).clone();
+					while (checkobject.html().indexOf('<input') != -1)
+						checkobject.find('input:first').replaceWith(checkobject.find('input').val());
+					let value = checkobject.text();
+					datas[id] = encodeURIComponent(value);
+				});//
+				$.post('/target.php', datas, function(result){
+					alert(result);
+				});
 				return srcname.replace(/redsave/, 'edit');
 			else
 				return srcname.replace(/save/, 'edit');
