@@ -471,6 +471,7 @@ audio
 .mcletter{
 	border-width		: medium;
 	padding				: 0 1vw;
+	height				: 3vw;
 }
 #detaileditimg{
 	width				: calc(var(--vh, 1vh) * 4 + 3vw);
