@@ -424,6 +424,7 @@ audio
 .mcletter{
 	border-width		: thick;
 	padding				: 0 1.5vw;
+	height				: 6vw;
 }
 .accessories > #label:has(> .color3) div{
 	padding				: calc(var(--vh, 1vh) * 0.5) 0 calc(var(--vh, 1vh) * 0.5) 1vw;
