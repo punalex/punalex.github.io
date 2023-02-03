@@ -577,6 +577,9 @@ audio::::-webkit-media-controls
 .mcitem{
 	display				: flex;
 }
+.mcitem > span:not(.mcletter){
+	padding-top			: 3px;
+}
 .mcletter{
 	font-weight			: normal;
 	border-color		: rgba(14, 102, 52, 0);
