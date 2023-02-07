@@ -161,7 +161,7 @@ function OnClick() {
 		$(this).attr('src', function(index, srcname){
 			if ($(this).attr('src').indexOf('edit') != -1)
 				return srcname.replace(/edit/, 'save');
-			else if ($(this).attr('src').indexOf('redsave') != -1)
+			else if ($(this).attr('src').indexOf('redsave') != -1){
 				let datas = new Object;
 				datas['page'] = ((window.location.href.indexOf('#') != -1 && window.location.href.indexOf('!') != -1 && window.location.href.split("!")[1] != '')?(window.location.href.split("!")[1]):('main'));
 				$('.form').each(function(){
