@@ -176,6 +176,7 @@ function OnClick() {
 					alert(result);
 				});
 				return srcname.replace(/redsave/, 'edit');
+			}
 			else
 				return srcname.replace(/save/, 'edit');
 		});
