@@ -367,7 +367,7 @@ input[type="time"]::-webkit-calendar-picker-indicator{
 }
 input[type="date"],
 input[type="time"]{
-	outline				: none!important;
+	appearance			: none!important;
 	-webkit-appearance	: none!important;
 }
 div:has(> #date), div:has(> .meettick){
