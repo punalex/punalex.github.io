@@ -373,6 +373,10 @@ input[type="time"]{
 div:has(> #date), div:has(> .meettick){
 	position			: relative;
 }
+div:has(> .meettick){
+	display				: flex;
+	align-items			: center;
+}
 .calendar{
 	display				: inline-block;
 	position			: absolute;
@@ -466,8 +470,11 @@ div:has(> #timenoteimg){
 	padding				: 1vw;
 	margin-left			: -2vw;
 }
-.meettopic, .meetbuttonbox{
+.meetbuttonbox{
 	position			: absolute;
+}
+meettopic{
+	position			: relative;
 }
 .meetbutton{
 	border-radius		: 1vw;
