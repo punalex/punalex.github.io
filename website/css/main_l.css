@@ -339,8 +339,8 @@ div:has(> #timenoteimg){
 }
 .meettopic{
 	font-size			: 2.5vw;
-	top					: 2.5vw;
-	left				: 6.5vw;
+	top					: 0.5vw;
+	width				: 28vw;
 }
 .meetbuttonbox{
 	right				: 1.5vw;
