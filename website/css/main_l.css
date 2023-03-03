@@ -365,8 +365,6 @@ div:has(> #timenoteimg){
 }
 .notepart{
 	width				: calc(40vw - (var(--vh, 1vh) * 11));
-	height				: calc(var(--vh, 1vh) * 68);
-	overflow			: auto;
 }
 .notepart:has(> .bkcolorC){
 	height				: calc(var(--vh, 1vh) * 62 - 4vw);
@@ -396,15 +394,13 @@ div:has(> #timenoteimg){
 #exdo, .closexy, #eydo{
 	display				: none;
 }
-#exd{
+#exd, #eyd{
 	font-size			: 2vw;
-	display				: contents;
+	display				: inline-block;
 	width				: 30vw;
-}
-#eyd{
-	display				: contents;
-	width				: 30vw;
-}
+	height				: calc(var(--vh, 1vh) * 60);
+	overflow			: auto;
+}	
 .learnvideo{
 	width				: 12vw;
 	display				: inline-block;
