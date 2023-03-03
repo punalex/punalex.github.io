@@ -473,7 +473,7 @@ div:has(> #timenoteimg){
 .meetbuttonbox{
 	position			: absolute;
 }
-meettopic{
+.meettopic{
 	position			: relative;
 	left				: 2vw;
 }
