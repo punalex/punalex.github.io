@@ -528,6 +528,7 @@ div:has(> #timenoteimg){
 .learnvideo{
 	display				: inline-block;
 	margin-top			: 4vw;
+	vertical-align		: top;
 }
 #mediabox{
 	padding				: 0 7vw 0 7vw;
