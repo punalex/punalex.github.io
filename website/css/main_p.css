@@ -449,6 +449,9 @@ audio
 .elderbox{
 	width				: 72vw;
 }
+#notebox:has(> div > .bkcolorC){
+	margin-top			: calc(var(--vh, 1vh) * 13 + 4vw);	
+}
 #upload{
 	top					: 0;
 	right				: 0vw;
