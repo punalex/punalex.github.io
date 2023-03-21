@@ -362,6 +362,8 @@ div:has(> #timenoteimg){
 #notebox{
 	display				: flex;
 	justify-content		: center;
+	position			: relative;
+	z-index				: 0;
 }
 .notepart{
 	width				: calc(40vw - (var(--vh, 1vh) * 11));
