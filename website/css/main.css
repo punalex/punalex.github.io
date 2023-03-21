@@ -506,9 +506,6 @@ div:has(> #timenoteimg){
 #notebox{
 	margin-top			: calc(var(--vh, 1vh) * 7);
 }
-#notebox:has(> div > .bkcolorC){
-	margin-top			: calc(var(--vh, 1vh) * 13 + 4vw);	
-}
 #notebox > hr{
 	border-style		: solid;
 }
