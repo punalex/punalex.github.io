@@ -1,0 +1,18 @@
+{
+	"content_scripts": [
+		{
+			"js": ["filling.js", "jquery-3.7.0.min.js", "jszip.js", "xlsx.mini.js", "moment.min.js", "init.js"],
+			"matches": [
+				"https://webportal.tgt.hk/customer/webportal/working_permit/working_permit_add.php",
+				"https://webportal.tgt.hk/customer/webportal/equipment_movement/equipment_movement_add.php"
+			]
+		}
+	],
+	"options_page": "options.html",
+	"permissions": [
+		"storage"
+	],	
+	"manifest_version": 3,
+	"name": "Form filling extension for TST",
+	"version": "1.0.2"
+}

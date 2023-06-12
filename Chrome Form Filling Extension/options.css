@@ -1,0 +1,32 @@
+body{
+	background-color : #BBBBDF;
+}
+table{
+	width : 800px;
+	font-size : medium;
+	font-weight : bold;
+}
+table, th, td {
+	border : 1px solid #333333;
+	border-radius : 10px;
+}
+th, td {
+	background-color : #FFFFFF;
+}
+input{
+	width : 90%;
+	padding : 5px;
+}
+select{
+	width : 98%;
+	padding : 5px;
+}
+button, th, td{
+	padding : 10px;
+}
+.default{
+	background-color : #BBBBBB;
+}
+.black{
+	background-color : #333333;
+}

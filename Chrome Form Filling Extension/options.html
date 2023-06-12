@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Form Filling Extension Options</title>
+	<link rel="stylesheet" type="text/css" href="options.css" />
+	
+	</head>
+	<body>
+		<h1>Setting</h1>
+		<table class="black">
+		<tr><th width="40%">Form Field</th><th width="35%">HTML name/<font class="default">id</font></th><th width="25%">Excel cell/<font class="default">Default</font></th></tr>
+		<tr><td>Start Date:</td><td><input id="startdatehtml"></td><td><input id="startdatexls"></td></tr>
+		<tr><td>End Date:</td><td><input id="enddatehtml"></td><td><input id="enddatexls" value="D10"></td></tr>
+		<tr><td>Start Time:</td><td><input id="starttimehtml"></td><td><input id="starttimexls"></td></tr>
+		<tr><td>End Time:</td><td><input id="endtimehtml"></td><td><input id="endtimexls"></td></tr>
+		<tr><td>Location:</td><td><input id="locatehtml"></td><td><input id="locatexls"></td></tr>		
+		<tr><td>Rack:</td><td><input id="rackhtml"></td><td><input id="rackxls"></td></tr>
+		<tr><td>Contact Person:</td><td rowspan="2" style="vertical-align:top"><input id="contacthtml"></td><td><input id="contactxls"></td></tr>
+		<tr><td>Contact No:</td><td><input id="contactnoxls"></td></tr>
+		<tr><td>Maximum Visitor:</td><td class="black"></td><td><input id="maxvisitorxls"></td></tr>
+		<tr><td>First Visitor Name:</td><td class="default"><input id="visitorhtml"></td><td><input id="visitorxls"></td></tr>
+		<tr><td>Preselect Visitor ID type:</td><td class="default"><input id="visitortypehtml"></td><td class="default"><input id="visitortypexls"></td></tr>
+		<tr><td>First Visitor ID:</td><td class="default"><input id="visitoridhtml"></td><td><input id="visitoridxls"></td></tr>
+		<tr><td>First Visitor Contact:</td><td class="default"><input id="visitornohtml"></td><td><input id="visitornoxls"></td></tr>
+		<tr><td>Maximum Equipment:</td><td class="black"></td><td><input id="maxequipmentxls"></td></tr>
+		<tr><td rowspan="3" style="vertical-align:top">First Equipment Desc:</td><td rowspan="3" style="vertical-align:top"><input id="equipmenthtml"></td><td><input id="equipmentxls1"></td></tr>
+		<tr><td><input id="equipmentxls2"></td></tr>
+		<tr><td><input id="equipmentxls3"></td></tr>
+		<tr><td>First Serial No:</td><td><input id="equipmentnohtml"></td><td><input id="equipmentnoxls"></td></tr>
+		<tr><td>First Rack:</td><td><input id="equipmentrackhtml"></td><td><input id="equipmentrackxls"></td></tr>
+		<tr><td>First Qty:</td><td><input id="equipmentqtyhtml"></td><td><input id="equipmentqtyxls"></td></tr>
+		<tr><td>First Move In/Out:</td><td><input id="equipmentmovehtml"></td><td><input id="equipmentmovexls"></td></tr>
+		<tr><td rowspan="2" style="vertical-align:top">Preselect Site:</td><td class="default"><input id="sitehtml"></td><td rowspan="2" style="vertical-align:top" class="default"><input id="sitexls"></td></tr>		
+		<tr><td><input id="site2html"></td></tr>		
+		<tr><td>Preselect Reason:</td><td class="default"><input id="reasonhtml"></td><td class="default"><input id="reasonxls"></td></tr>
+		<tr><td>Undertake:</td><td><input id="undertakehtml"></td>
+		<td class="default"><select id="undertakexls">
+			<option value="true">checked</option>
+			<option value="false">unchecked</option>
+			</select>
+		</td></tr>
+		<tr><td>Terms:</td><td><input id="termshtml"></td>
+		<td class="default"><select id="termsxls">
+			<option value="true">checked</option>
+			<option value="false">unchecked</option>
+			</select>
+		</td></tr>
+		</table>
+		<br>
+		<button id="save">Save</button>
+		<script src="init.js"></script>
+		<script src="options.js"></script>
+	</body>
+</html>
